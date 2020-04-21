@@ -9,6 +9,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-component`,
+    `gatsby-plugin-styled-components`,
   ],
 }
