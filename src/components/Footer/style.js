@@ -1,0 +1,63 @@
+import styled from "styled-components"
+import { device } from "../../util/screensizes"
+
+export const Container = styled.div`
+  font-family: "Poppins";
+  font-weight: 200;
+  background-color: #37375c;
+  padding: 10% 5%;
+  color: white;
+  font-size: 0.7em;
+  position: relative;
+
+  /* display: flex;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: flex-start; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  justify-items: start;
+
+  div {
+    max-width: 120px;
+    /* margin-right: 5%; */
+    margin-bottom: 10%;
+    display: inline-block;
+    flex-direction: column;
+    font-size: 12px;
+
+    a {
+      display: block;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  #copy {
+    position: absolute;
+    bottom: 0px; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2.5%;
+
+    span {
+      font-size: 0.6em;
+    }
+  }
+
+  @media ${device.tablet} {
+    padding: 5%;
+    div {
+      width: auto;
+      margin-right: 5%;
+      margin-bottom: 5%;
+    }
+  }
+`

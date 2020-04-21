@@ -1,5 +1,11 @@
-import React from "react";
+import React from "react"
 
-const VideoContainer = () => <div>Video</div>;
+import { Container } from "./style"
 
-export default VideoContainer;
+const VideoContainer = () => (
+  <Container>
+    <span>VIDEO</span>
+  </Container>
+)
+
+export default VideoContainer

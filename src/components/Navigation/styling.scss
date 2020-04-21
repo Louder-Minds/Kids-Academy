@@ -1,0 +1,111 @@
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.navbar {
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    padding: 0px 5%;
+    min-height: 80px;
+    font-family: "Poppins";
+
+    button {
+        border: none;
+        outline: none;
+    }
+}
+
+.nav-link {
+    margin-bottom: 1em !important;
+}
+
+.dropdown-menu {
+    margin-bottom: 10% !important;
+    background: none;
+    color: white;
+    border: none;
+
+    button {
+        color: white;
+    }
+
+    button:hover {
+        background: none;
+        color: rgb(200, 200, 200);
+    }
+}
+
+.dropdown-menu.show {
+    animation-name: show;
+    animation-duration: 0.25s;
+}
+
+.dropdown-toggle:after {
+    margin-left: 10px;
+}
+
+nav>div>ul>li {
+    margin: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+
+    img {
+        height: 30px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    a {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.nav-link {
+    font-size: 14px;
+    transition: all 0.25s ease-in;
+    color: white !important;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+    .dropdown-menu {
+        padding: 10% 5%;
+        background: rgba(0, 0, 0, 0.85)
+    }
+
+    .dropdown-item {
+        margin-bottom: 10px;
+    }
+
+    .nav-link:hover {
+        color: rgb(202, 28, 28) !important;
+    }
+
+    .navbar-nav>li>a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+        margin-bottom: 0 !important;
+        margin-left: 20px !important;
+    }
+}
