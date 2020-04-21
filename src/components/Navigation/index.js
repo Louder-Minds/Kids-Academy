@@ -74,7 +74,7 @@ const Navigation = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
-        <RedButton id="navbut">Neem een gratis proefles</RedButton>
+        <RedButton id="navbut">Plan een gratis proefles</RedButton>
       </Collapse>
     </Navbar>
   )
