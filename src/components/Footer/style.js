@@ -15,24 +15,27 @@ export const Container = styled.div`
   align-content: center;
   justify-content: flex-start; */
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  justify-items: start;
+  #content {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: start;
 
-  div {
-    max-width: 120px;
-    /* margin-right: 5%; */
-    margin-bottom: 10%;
-    display: inline-block;
-    flex-direction: column;
-    font-size: 12px;
+    div {
+      max-width: 120px;
+      /* margin-right: 5%; */
+      margin-bottom: 10%;
+      display: inline-block;
+      flex-direction: column;
+      font-size: 12px;
 
-    a {
-      display: block;
-    }
+      a {
+        display: block;
+      }
 
-    span {
-      display: block;
+      span {
+        display: block;
+      }
     }
   }
 
@@ -58,6 +61,19 @@ export const Container = styled.div`
       width: auto;
       margin-right: 5%;
       margin-bottom: 5%;
+    }
+
+    #content {
+      padding: 0 10%;
+      div {
+        font-size: 14px;
+      }
+    }
+
+    #copy {
+      span {
+        font-size: 1em;
+      }
     }
   }
 `

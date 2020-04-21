@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
@@ -14,7 +13,7 @@ import {
 } from "reactstrap"
 
 import { NavbarToggle } from "./styles"
-
+import RedButton from "../RedButton"
 import lg from "./logo-wit.png"
 
 import "./styling.scss"
@@ -59,9 +58,11 @@ const Navigation = () => {
             <DropdownMenu left>
               <DropdownItem>Over ons</DropdownItem>
               <DropdownItem>Ervaringen</DropdownItem>
-              <DropdownItem>Blog</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
+          <NavItem>
+            <NavLink href="/blog">BLOG</NavLink>
+          </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               CONTACT
@@ -73,6 +74,7 @@ const Navigation = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
+        <RedButton id="navbut">Neem een gratis proefles</RedButton>
       </Collapse>
     </Navbar>
   )

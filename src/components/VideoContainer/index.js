@@ -4,7 +4,9 @@ import { Container } from "./style"
 
 const VideoContainer = () => (
   <Container>
-    <span>VIDEO</span>
+    <div>
+      <span>VIDEO</span>
+    </div>
   </Container>
 )
 

@@ -13,7 +13,7 @@
 .navbar {
     backdrop-filter: blur(10px) !important;
     background-color: rgba(0, 0, 0, 0.85) !important;
-    padding: 0px 5%;
+    padding: 0px 2.5%;
     min-height: 80px;
     font-family: "Poppins";
 
@@ -86,6 +86,11 @@ nav>div>ul>li {
     padding: 9px 10px !important;
 }
 
+#navbut {
+    display: none;
+}
+
+
 @media (min-width: 768px) {
     .dropdown-menu {
         padding: 10% 5%;
@@ -106,6 +111,31 @@ nav>div>ul>li {
         padding-bottom: 26.5px;
         line-height: 27px;
         margin-bottom: 0 !important;
-        margin-left: 20px !important;
+        margin-left: 10px !important;
+    }
+}
+
+@media (min-width: 900px) {
+    #navbut {
+        display: block;
+        padding: 0 2% !important;
+        margin-left: 2%;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .navbar {
+        min-height: 100px;
+    }
+
+    .navbar-brand {
+        img {
+            height: 50px;
+        }
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 }

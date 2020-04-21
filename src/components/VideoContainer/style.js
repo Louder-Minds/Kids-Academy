@@ -1,13 +1,16 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(30, 30, 30);
-  color: white;
+  padding: 5%;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
 
-  width: 100vw;
-  height: 50vw;
-  max-width: 100%;
+    width: 100%;
+    min-height: 56vh;
+    max-width: 100%;
+  }
 `

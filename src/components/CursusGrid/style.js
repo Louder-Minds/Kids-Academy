@@ -13,4 +13,8 @@ export const Container = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-bottom: 5%;
   }
+
+  @media ${device.laptop} {
+    margin-bottom: 2.5%;
+  }
 `

@@ -34,13 +34,24 @@ export const Container = styled.div`
     align-items: center;
 
     div {
-      max-width: 50%;
+      width: 50%;
       display: inline-block;
     }
 
     img {
       width: 50%;
       display: inline-block;
+    }
+  }
+
+  @media ${device.laptop} {
+    padding: 10%;
+    div {
+      width: 60%;
+      margin-right: 5%;
+    }
+    img {
+      width: 40%;
     }
   }
 `

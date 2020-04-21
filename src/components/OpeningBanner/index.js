@@ -1,11 +1,12 @@
 import React from "react"
 
 import { Container } from "./style"
+import Redbutton from "../RedButton"
 
 const OpeningBanner = () => (
   <Container>
     <h1>Met zelfvertrouwen en plezier naar school</h1>
-    <button>Schrijf je direct in</button>
+    <Redbutton full={false}>Plan een gratis proefles</Redbutton>
   </Container>
 )
 

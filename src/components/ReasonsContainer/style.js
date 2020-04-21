@@ -42,24 +42,6 @@ export const Container = styled.div`
     }
   }
 
-  button {
-    font-family: "Poppins";
-    font-weight: 500;
-    text-transform: uppercase;
-    width: 100%;
-    height: 50px;
-    background-color: red;
-    border: none;
-    color: white;
-    background: rgb(202, 28, 28);
-    border-radius: 2px;
-    /* background: linear-gradient(
-      90deg,
-      rgba(208, 0, 0, 1) 0%,
-      rgba(111, 0, 0, 1) 100%
-    ); */
-  }
-
   @media ${device.tablet} {
     height: 100%;
     min-height: 90vh;
@@ -70,6 +52,12 @@ export const Container = styled.div`
 
     ul li {
       margin-bottom: 30px;
+    }
+  }
+
+  @media ${device.laptop} {
+    h1 {
+      font-size: 2em;
     }
   }
 `

@@ -20,29 +20,10 @@ export const Container = styled.div`
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     color: white;
     margin-bottom: 10%;
-  }
-
-  button {
-    text-transform: uppercase;
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 16px;
-    width: 200px;
-    height: 50px;
-    background-color: red;
-    border: none;
-    color: white;
-    background: rgb(202, 28, 28);
-    border-radius: 2px;
-    /* background: linear-gradient(
-      90deg,
-      rgba(208, 0, 0, 1) 0%,
-      rgba(111, 0, 0, 1) 100%
-    ); */
   }
 
   @media ${device.tablet} {
@@ -55,6 +36,13 @@ export const Container = styled.div`
 
     h1 {
       font-size: 2.2em;
+    }
+  }
+
+  @media ${device.laptop} {
+    padding: 5%;
+    h1 {
+      font-size: 3em;
     }
   }
 `

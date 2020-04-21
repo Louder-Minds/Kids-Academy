@@ -20,14 +20,23 @@ export const Container = styled.div`
     }
   }
 
-  @media ${device.tablet} {
-    padding: 5%;
-    margin-bottom: 0;
-  }
-
   hr {
     height: 2px;
     background-color: rgba(0, 0, 0, 0.85);
     margin: 0;
   }
+
+  @media ${device.tablet} {
+    padding: 5%;
+    margin-bottom: 0;
+  }
+
+  @media ${device.laptop} {
+      padding: 10%;
+    p {
+      max-width: 750px;
+      margin-bottom: 5% !important;
+    }
+  }
+}
 `

@@ -2,6 +2,8 @@ import React from "react"
 
 import { Container } from "./style"
 
+import Redbutton from "../RedButton"
+
 const uil = require("./uiltje-wit.png")
 
 const ReasonsContainer = () => (
@@ -31,7 +33,7 @@ const ReasonsContainer = () => (
         Schrijf je nu in en start binnen een week
       </li>
     </ul>
-    <button>Plan je gratis proefles</button>
+    <Redbutton full={false}>Schrijf je direct in</Redbutton>
   </Container>
 )
 
