@@ -12,6 +12,8 @@ import {
   DropdownItem,
 } from "reactstrap"
 
+import { Link } from "gatsby"
+
 import { NavbarToggle } from "./styles"
 import RedButton from "../RedButton"
 import lg from "./logo-wit.png"
@@ -26,7 +28,7 @@ const Navigation = () => {
   return (
     <Navbar color="dark" dark expand="md" className="sticky-top" id="nav">
       <NavbarBrand href="/">
-        <img src={lg} />
+        <img src={lg} alt="logo" />
       </NavbarBrand>
       <NavbarToggle onClick={toggle} isToggled={isOpen}>
         <div id="one" />
@@ -41,7 +43,7 @@ const Navigation = () => {
             <DropdownToggle nav caret>
               CURSUSSEN
             </DropdownToggle>
-            <DropdownMenu left>
+            <DropdownMenu>
               <DropdownItem>Rekenen</DropdownItem>
               <DropdownItem>Taal Cursus</DropdownItem>
               <DropdownItem>CITO Training</DropdownItem>
@@ -49,14 +51,18 @@ const Navigation = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
           <NavItem>
-            <NavLink href="/tarieven">TARIEVEN</NavLink>
+            <Link className="nav-link" to="/tarieven">
+              TARIEVEN
+            </Link>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               OVER ONS
             </DropdownToggle>
-            <DropdownMenu left>
-              <DropdownItem>Over ons</DropdownItem>
+            <DropdownMenu>
+              <DropdownItem>
+                <Link to="/over-ons">Over ons</Link>
+              </DropdownItem>
               <DropdownItem>Ervaringen</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
@@ -67,7 +73,7 @@ const Navigation = () => {
             <DropdownToggle nav caret>
               CONTACT
             </DropdownToggle>
-            <DropdownMenu right>
+            <DropdownMenu>
               <DropdownItem>Contact</DropdownItem>
               <DropdownItem>Gratis proefles</DropdownItem>
               <DropdownItem>Inschrijven</DropdownItem>

@@ -10,8 +10,9 @@ const CursusBlock = props => (
       tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <div>
-      <img src={"https://source.unsplash.com/300x200"}></img>
+      <img src={"https://source.unsplash.com/300x200"} alt="cursus"></img>
     </div>
+    <div id="flag" />
   </Container>
 )
 
