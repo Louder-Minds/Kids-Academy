@@ -3,10 +3,8 @@ import styled from "styled-components"
 import { device } from "../../util/screensizes"
 
 export const Container = styled.div`
-  padding: 5%;
-  font-family: "Poppins";
-  margin-bottom: 5%;
-  background-color: rgb(0, 0, 0, 0.1);
+  padding: 10% 5%;
+  position: relative;
 
   .content {
     h1 {
@@ -20,23 +18,22 @@ export const Container = styled.div`
     }
   }
 
-  hr {
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.85);
-    margin: 0;
-  }
-
   @media ${device.tablet} {
     padding: 5%;
     margin-bottom: 0;
+
+    .content {
+      p {
+        margin-bottom: 5%;
+      }
+    }
   }
 
   @media ${device.laptop} {
-      padding: 10%;
+    padding: 2.5% 10%;
     p {
       max-width: 750px;
       margin-bottom: 5% !important;
     }
   }
-}
 `

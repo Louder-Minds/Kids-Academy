@@ -13,9 +13,8 @@
 .navbar {
     backdrop-filter: blur(10px) !important;
     background-color: rgba(0, 0, 0, 0.85) !important;
-    padding: 0px 2.5%;
+    padding: 0px 5%;
     min-height: 80px;
-    font-family: "Poppins";
 
     button {
         border: none;
@@ -90,11 +89,20 @@ nav>div>ul>li {
     display: none;
 }
 
-
 @media (min-width: 768px) {
+    .navbar {
+        padding: 0 2.5%;
+    }
+
+    .navbar-brand {
+        img {
+            height: 40px;
+        }
+    }
+
     .dropdown-menu {
         padding: 10% 5%;
-        background: rgba(0, 0, 0, 0.85)
+        background: rgba(0, 0, 0, 0.85);
     }
 
     .dropdown-item {

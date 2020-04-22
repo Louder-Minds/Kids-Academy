@@ -3,11 +3,8 @@ import styled from "styled-components"
 import { device } from "../../util/screensizes"
 
 export const Container = styled.div`
-  padding: 10% 5%;
+  padding: 5%;
   background-color: #37375c;
-  width: 100%;
-  height: 50%;
-
   color: white;
 
   box-sizing: border-box;
@@ -21,7 +18,6 @@ export const Container = styled.div`
     margin-bottom: 10px;
     font-size: 20px;
     color: white;
-    font-family: "Poppins";
     font-weight: 600;
   }
 
@@ -32,7 +28,6 @@ export const Container = styled.div`
       align-items: center;
       font-size: 16px;
       margin-bottom: 30px;
-      font-family: "Poppins";
       font-weight: 200;
 
       img {

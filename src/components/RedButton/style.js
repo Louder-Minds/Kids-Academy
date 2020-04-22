@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const Button = styled.button`
-  font-family: "Poppins";
   font-weight: 500;
   text-transform: uppercase;
   width: ${props => (props.full ? "100%" : "auto")};

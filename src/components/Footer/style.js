@@ -2,18 +2,12 @@ import styled from "styled-components"
 import { device } from "../../util/screensizes"
 
 export const Container = styled.div`
-  font-family: "Poppins";
   font-weight: 200;
   background-color: #37375c;
-  padding: 10% 5%;
+  padding: 5%;
   color: white;
   font-size: 0.7em;
   position: relative;
-
-  /* display: flex;
-  flex-flow: wrap;
-  align-content: center;
-  justify-content: flex-start; */
 
   #content {
     margin: auto;
@@ -41,8 +35,8 @@ export const Container = styled.div`
 
   #copy {
     position: absolute;
-    bottom: 0px; /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
+    bottom: 0px;
+    left: 50%;
 
     transform: translate(-50%);
     width: 100%;

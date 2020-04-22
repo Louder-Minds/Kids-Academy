@@ -3,18 +3,20 @@ import styled from "styled-components"
 import { device } from "../../util/screensizes"
 
 export const Container = styled.div`
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-gap: 5%;
-  margin-bottom: 10%;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  justify-items: center;
 
   @media ${device.tablet} {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin-bottom: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5%;
+    grid-row-gap: 30px;
   }
 
   @media ${device.laptop} {
-    margin-bottom: 2.5%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `

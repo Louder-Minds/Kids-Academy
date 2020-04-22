@@ -18,12 +18,16 @@ export const Container = styled.div`
 
   h1 {
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1;
     color: white;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media ${device.tablet} {
