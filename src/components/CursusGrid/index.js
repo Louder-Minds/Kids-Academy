@@ -2,12 +2,18 @@ import React from "react"
 import { Container } from "./style"
 import CursusBlock from "../CursusBlock"
 
-const classes = ["Rekenen", "Taal", "Cambridge Chinese", "Courses in English"]
+const classes = [
+  "Rekenen",
+  "Taal",
+  "Cito Training",
+  "Cambridge Chinese",
+  "Courses in English",
+]
 
 const CursusGrid = () => (
   <Container>
-    {classes.map(i => (
-      <CursusBlock name={i} />
+    {classes.map((i, j) => (
+      <CursusBlock key={j} name={i} />
     ))}
   </Container>
 )

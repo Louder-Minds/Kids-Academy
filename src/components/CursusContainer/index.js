@@ -19,7 +19,6 @@ const CursusContainer = () => (
       </p>
     </div>
     <CursusGrid />
-    {/* <hr /> */}
   </Container>
 )
 

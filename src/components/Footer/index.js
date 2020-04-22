@@ -6,14 +6,14 @@ const Footer = () => (
   <Container>
     <div id="content">
       <div>
-        <a>Home</a>
-        <a>Cursussen</a>
-        <a>Tarieven</a>
-        <a>Over ons</a>
-        <a>Ervaringen</a>
-        <a>Blog</a>
-        <a>Contact</a>
-        <a>Algemene voorwaarden</a>
+        <a href="/">Home</a>
+        <a href="/cursussen">Cursussen</a>
+        <a href="/tarieven">Tarieven</a>
+        <a href="/over-ons">Over ons</a>
+        <a href="/">Ervaringen</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+        <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
       </div>
 
       <div>
