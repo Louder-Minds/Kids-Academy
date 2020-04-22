@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import { Container } from "./style"
+import { Container } from './style';
 
-const FlexContainer = ({ children }) => <Container>{children}</Container>
+const FlexContainer = ({ children }) => <Container>{children}</Container>;
 
-export default FlexContainer
+export default FlexContainer;

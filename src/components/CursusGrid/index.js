@@ -1,21 +1,21 @@
-import React from "react"
-import { Container } from "./style"
-import CursusBlock from "../CursusBlock"
+import React from 'react';
+import { Container } from './style';
+import CursusBlock from '../CursusBlock';
 
 const classes = [
-  "Rekenen",
-  "Taal",
-  "Cito Training",
-  "Cambridge Chinese",
-  "Courses in English",
-]
+    'Rekenen',
+    'Taal',
+    'Cito Training',
+    'Cambridge Chinese',
+    'Courses in English',
+];
 
 const CursusGrid = () => (
-  <Container>
-    {classes.map((i, j) => (
-      <CursusBlock key={j} name={i} />
-    ))}
-  </Container>
-)
+    <Container>
+        {classes.map((i, j) => (
+            <CursusBlock key={j} name={i} />
+        ))}
+    </Container>
+);
 
-export default CursusGrid
+export default CursusGrid;
