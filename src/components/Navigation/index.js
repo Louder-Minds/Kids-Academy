@@ -12,29 +12,15 @@ import {
     DropdownItem,
 } from 'reactstrap';
 
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import { NavbarToggle } from './styles';
 import RedButton from '../RedButton';
-import Img from 'gatsby-image';
-// import lg from './logo-wit.png';
+import lg from './logo-wit.png';
 
 import './styling.scss';
 
 const Navigation = () => {
-    const data = useStaticQuery(graphql`
-        query Images {
-            image: file(relativePath: { eq: "logo-wit.png" }) {
-                childImageSharp {
-                    fluid(maxWidth: 100, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `);
-
-    console.log(data.image.childImageSharp);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -42,7 +28,7 @@ const Navigation = () => {
     return (
         <Navbar color="dark" dark expand="md" className="sticky-top" id="nav">
             <NavbarBrand href="/">
-                <Img fluid={data.image.childImageSharp.fluid} alt="logo" />
+                <img src={lg} alt="logo" />
             </NavbarBrand>
             <NavbarToggle onClick={toggle} isToggled={isOpen}>
                 <div id="one" />
