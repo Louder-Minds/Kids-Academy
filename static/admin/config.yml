@@ -8,14 +8,18 @@ media_folder: src/images
 public_folder: /images
 
 collections:
-    - name: Home
-      label: Home
-      folder: src/data/home
-      fields:
-          - { name: path, label: Path }
-          - { name: date, label: Date, widget: datetime }
-          - { name: title, label: Title }
-          - { name: body, label: Body, widget: markdown }
+    - name: "home"
+    label: "Home"
+    folder: "src/data/home"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
     - name: Over-ons
       label: Over-ons
