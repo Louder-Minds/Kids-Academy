@@ -12,24 +12,36 @@ collections:
       label: Home
       folder: src/data/home
       fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
 
     - name: Over-ons
       label: Over-ons
       folder: src/data/over-ons
       fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
 
     - name: Tarieven
       label: Tarieven
       folder: src/data/tarieven
       fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
 
     - name: Contact
       label: Contact
       folder: src/data/contact
       fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
 
     - name: Cursus
@@ -37,4 +49,7 @@ collections:
       folder: src/data/cursus
       create: true
       fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: datetime }
+          - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
