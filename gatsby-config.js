@@ -11,12 +11,6 @@ module.exports = {
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-netlify-cms`,
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/src/images`,
-        //     },
-        // },
         {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {

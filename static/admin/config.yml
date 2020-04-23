@@ -10,31 +10,31 @@ public_folder: /images
 collections:
     - name: Home
       label: Home
-      folder: home
+      folder: src/data/home
       fields:
           - { name: body, label: Body, widget: markdown }
 
     - name: Over-ons
       label: Over-ons
-      folder: over-ons
+      folder: src/data/over-ons
       fields:
           - { name: body, label: Body, widget: markdown }
 
     - name: Tarieven
       label: Tarieven
-      folder: tarieven
+      folder: src/data/tarieven
       fields:
           - { name: body, label: Body, widget: markdown }
 
     - name: Contact
       label: Contact
-      folder: contact
+      folder: src/data/contact
       fields:
           - { name: body, label: Body, widget: markdown }
 
     - name: Cursus
       label: Cursus
-      folder: cursus
+      folder: src/data/cursus
       create: true
       fields:
           - { name: body, label: Body, widget: markdown }
