@@ -10,19 +10,18 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
-        // `gatsby-plugin-netlify-cms`,
+        `gatsby-plugin-netlify-cms`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `images`,
                 path: `${__dirname}/src/images`,
             },
         },
-        // {
-        //     resolve: `gatsby-plugin-netlify-cms`,
-        //     options: {
-        //         enableIdentityWidget: true,
-        //     },
-        // },
+        {
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {
+                enableIdentityWidget: true,
+            },
+        },
     ],
 };
