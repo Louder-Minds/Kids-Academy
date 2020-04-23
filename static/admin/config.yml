@@ -1,0 +1,40 @@
+backend:
+    name: git-gateway
+    branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: src/images
+public_folder: /images
+
+collections:
+    - name: Home
+      label: Home
+      folder: home
+      fields:
+          - { name: body, label: Body, widget: markdown }
+
+    - name: Over-ons
+      label: Over-ons
+      folder: over-ons
+      fields:
+          - { name: body, label: Body, widget: markdown }
+
+    - name: Tarieven
+      label: Tarieven
+      folder: tarieven
+      fields:
+          - { name: body, label: Body, widget: markdown }
+
+    - name: Contact
+      label: Contact
+      folder: contact
+      fields:
+          - { name: body, label: Body, widget: markdown }
+
+    - name: Cursus
+      label: Cursus
+      folder: cursus
+      create: true
+      fields:
+          - { name: body, label: Body, widget: markdown }

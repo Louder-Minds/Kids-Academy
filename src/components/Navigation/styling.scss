@@ -51,7 +51,7 @@
     margin-left: 10px;
 }
 
-nav > div > ul > li {
+nav>div>ul>li {
     margin: 0;
 }
 
@@ -113,7 +113,7 @@ nav > div > ul > li {
         color: rgb(202, 28, 28) !important;
     }
 
-    .navbar-nav > li > a {
+    .navbar-nav>li>a {
         /* (80px - line-height of 27px) / 2 = 26.5px */
         padding-top: 26.5px;
         padding-bottom: 26.5px;
@@ -145,5 +145,9 @@ nav > div > ul > li {
 
     .nav-link {
         font-size: 16px;
+    }
+
+    .dropdown-menu {
+        top: calc(100% + 15px);
     }
 }

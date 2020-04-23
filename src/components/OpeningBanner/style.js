@@ -22,7 +22,7 @@ export const Container = styled.div`
         font-weight: 700;
         line-height: 1;
         color: white;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
     }
 
     button {
