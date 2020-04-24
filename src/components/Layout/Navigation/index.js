@@ -15,7 +15,7 @@ import {
 import { Link } from 'gatsby';
 
 import { NavbarToggle } from './styles';
-import RedButton from '../RedButton';
+import RedButton from '../../RedButton';
 import lg from './logo-wit.png';
 
 import './styling.scss';

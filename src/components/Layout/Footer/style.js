@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../util/screensizes';
+import { device } from '../../../util/screensizes';
 
 export const Container = styled.div`
     font-weight: 200;
