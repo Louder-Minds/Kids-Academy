@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../../util/screensizes';
 
-export const Container = styled.div`
+export const Container = styled.footer`
     font-weight: 200;
     background-color: #37375c;
     padding: 5%;
@@ -9,6 +9,9 @@ export const Container = styled.div`
     font-size: 0.7em;
     position: relative;
 
+    img {
+        max-width: 100%;
+    }
     #content {
         margin: auto;
         display: grid;
@@ -21,7 +24,7 @@ export const Container = styled.div`
             margin-bottom: 10%;
             display: inline-block;
             flex-direction: column;
-            font-size: 12px;
+            font-size: 14px;
 
             a {
                 display: block;
@@ -45,7 +48,7 @@ export const Container = styled.div`
         margin-bottom: 2.5%;
 
         span {
-            font-size: 0.6em;
+            font-size: 1em;
         }
     }
 

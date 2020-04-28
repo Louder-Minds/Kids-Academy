@@ -8,6 +8,7 @@ import VideoContainer from '../components/VideoContainer';
 import ExplanationContainer from '../components/ExplanationContainer';
 import OpeningHome from '../components/OpeningHome';
 import FlexContainer from '../components/FlexContainer';
+import Divider from '../components/Divider';
 
 const index = () => (
     <Layout padding={false}>
@@ -16,14 +17,7 @@ const index = () => (
             <ReasonsContainer />
         </FlexContainer>
         <CursusContainer />
-        <hr
-            style={{
-                height: '2px',
-                backgroundColor: '#37375c',
-                width: '80%',
-                margin: '0 auto',
-            }}
-        />
+        <Divider />
         <ExplanationContainer />
         <VideoContainer />
     </Layout>

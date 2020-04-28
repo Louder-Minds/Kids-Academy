@@ -2,6 +2,9 @@ import React from 'react';
 
 import { Container } from './style';
 
+import kennemer from './Kennemer-Lyceum.png';
+import kidsproof from './kidsproof1.png';
+
 const Footer = () => (
     <Container>
         <div id="content">
@@ -43,6 +46,13 @@ const Footer = () => (
 
             <div>
                 <span>Hoofdkantoor: 020 717 30 60</span>
+            </div>
+
+            <div>
+                <img src={kennemer} alt="afbeelding kennemer logo" />
+            </div>
+            <div>
+                <img src={kidsproof} alt="afbeelding kidsproof logo" />
             </div>
         </div>
 

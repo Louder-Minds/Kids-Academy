@@ -44,6 +44,7 @@ const Navigation = () => {
                             CURSUSSEN
                         </DropdownToggle>
                         <DropdownMenu>
+                            <DropdownItem>Cursussen</DropdownItem>
                             <DropdownItem>Rekenen</DropdownItem>
                             <DropdownItem>Taal Cursus</DropdownItem>
                             <DropdownItem>CITO Training</DropdownItem>

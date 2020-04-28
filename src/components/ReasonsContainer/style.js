@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: ${layout.padding.width.mobile} ${layout.padding.height.mobile};
     background-color: #37375c;
     color: white;
 
     box-sizing: border-box;
+
+    width: 100%;
 
     hr {
         background: white;
@@ -43,7 +46,7 @@ export const Container = styled.div`
         max-height: 700px;
         max-width: 50%;
 
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
 
         ul li {
             margin-bottom: 30px;
@@ -54,5 +57,6 @@ export const Container = styled.div`
         h1 {
             font-size: 2em;
         }
+        padding: 5%;
     }
 `;

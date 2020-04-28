@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container } from './style';
-import CursusGrid from '../CursusGrid';
+import CursusGrid from './CursusGrid';
+import Paragraph from '../Typography/Paragraph';
 
 const CursusContainer = () => (
     <Container>
         <div className="content">
             <h1>CURSUSSEN KIDS ACADEMY</h1>
-            <p>
+            <Paragraph>
                 Bij Kids Academy is iedereen uit groep 5, 6, 7 & 8 van de
                 basisschool welkom. Wij zijn er van overtuigd dat je in 12 weken
                 alles kunt leren met goede begeleiding en hard werken. Elke
@@ -17,7 +18,7 @@ const CursusContainer = () => (
                 op voor een proefles van één van onze onderstaande cursussen om
                 te kijken of Kids Acdemy iets voor je is, of doe mee met een
                 cito-toets training.
-            </p>
+            </Paragraph>
         </div>
         <CursusGrid />
     </Container>

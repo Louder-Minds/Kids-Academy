@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const Layout = ({ padding, children }) => (
+const Layout = ({ children }) => (
     <>
         <Navigation />
-        <Container padding={padding}>{children}</Container>
+        <Container>{children}</Container>
         <Footer />
     </>
 );

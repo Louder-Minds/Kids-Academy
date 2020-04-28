@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import speelplaats from './speelplaats.jpeg';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    width: 100%;
     height: 300px;
 
-    padding: 10% 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     margin: 0;
 
     background-image: url(${speelplaats});
@@ -25,18 +25,13 @@ export const Container = styled.div`
         margin-bottom: 10%;
     }
 
-    button {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     @media ${device.tablet} {
         min-height: 90vh;
         height: 100%;
         max-height: 90vh;
 
         max-width: 50%;
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
 
         h1 {
             font-size: 2.2em;
@@ -45,6 +40,7 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: 5%;
+
         h1 {
             font-size: 3em;
         }

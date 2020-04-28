@@ -1,16 +1,30 @@
-<div>
-            <Title type="h2">Wil je solliciteren?</Title>
+import React from 'react';
+
+import Title from '../Typography/Title';
+import Paragraph from '../Typography/Paragraph';
+import RedButton from '../RedButton';
+import { Container } from './style';
+
+const Solliciteren = () => (
+    <Container>
+        <Title type="h2">Wil je solliciteren?</Title>
+        <div className="text-container">
             <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Omdat we kwalitatief hoogwaardige cursussen willen bieden aan
+                onze leerlingen, stellen we hoge eisen aan onze docenten.
+                Daarentegen is het niet nodig om ervaring te hebben met het
+                geven van (bij)les, omdat je als nieuwe docent een uitgebreid
+                opleidingstraject bij ons volgt.
             </Paragraph>
             <Paragraph>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                Studeer je aan de UVA, VU of andere universiteit en sta je
+                bovengemiddeld goed, mail dan je c.v. met cijferlijst en we
+                nemen contact met je op. Een referentiecheck en Verklaring
+                Omtrent Gedrag maken onderdeel uit van de sollicitatieprocedure.
             </Paragraph>
-            <RedButton>Stuur direct een email</RedButton>
         </div>
+        <RedButton>Stuur direct een email</RedButton>
+    </Container>
+);
+
+export default Solliciteren;
