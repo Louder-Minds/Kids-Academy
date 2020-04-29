@@ -37,7 +37,10 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         padding: 5%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-column-gap: 5%;
+        justify-items: center;
         align-items: center;
 
         div {
@@ -45,7 +48,7 @@ export const Container = styled.div`
         }
 
         img {
-            width: 40%;
+            width: 100%;
             display: inline-block;
         }
     }
@@ -53,12 +56,13 @@ export const Container = styled.div`
     @media ${device.laptop} {
         padding: 2.5% 10%;
         padding-bottom: 0%;
+
         div {
-            width: 60%;
+            width: 100%;
             margin-right: 5%;
         }
         img {
-            width: 40%;
+            width: 100%;
         }
     }
 `;

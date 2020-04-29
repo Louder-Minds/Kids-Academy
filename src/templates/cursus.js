@@ -1,30 +1,66 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import RedButton from '../components/RedButton';
+import Title from '../components/Typography/Title';
+import Ervaringen from '../components/Ervaringen';
+import Divider from '../components/Divider';
 
-const index = ({ name, explanation, tagline, description }) => (
-    <Layout>
-        <h1>{name}</h1>
-        <h2>Voor wie is deze cursus?</h2>
-        <p>{explanation}</p>
-        <img src={'https://source.unsplash.com/400x400'} alt={'people'} />
-        <RedButton>Schrijf direct in</RedButton>
-        <RedButton>Plan je gratis proefles</RedButton>
-        <hr />
-        <h2>{tagline}</h2>
-        <div>{description}</div>
-        <hr />
-        {/* <NumberBanner/> */}
-        <hr />
-        <h2>Ervaringen</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-        </p>
-    </Layout>
-);
+import OpeningCursus from '../components/OpeningCursus';
+import CursusExplanation from '../components/CursusExplanation';
+import { graphql } from 'gatsby';
+
+export const query = graphql`
+    query($slug: String!) {
+        contentfulCursus(titel: { eq: $slug }) {
+            titel
+            voorWieIsDezeCursus {
+                json
+            }
+            kind {
+                file {
+                    url
+                }
+            }
+            tagline
+            cursusUitleg {
+                json
+            }
+            fotoVanDeCursus {
+                file {
+                    url
+                }
+            }
+        }
+    }
+`;
+
+const index = ({ data }) => {
+    const {
+        titel,
+        voorWieIsDezeCursus,
+        kind,
+        tagline,
+        cursusUitleg,
+        fotoVanDeCursus,
+    } = data.contentfulCursus;
+
+    console.log(data);
+    return (
+        <Layout>
+            <Title type="h1">{titel}</Title>
+            <OpeningCursus explanation={voorWieIsDezeCursus} kind={kind} />
+            <Divider />
+            <CursusExplanation
+                tagline={tagline}
+                description={cursusUitleg}
+                fotoCursus={fotoVanDeCursus}
+            />
+            {/* <Divider /> */}
+            {/* <NumberBanner/> */}
+            <Divider />
+            <Ervaringen />
+        </Layout>
+    );
+};
 
 export default index;

@@ -2,10 +2,10 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
-const Blog = () => (
+const Inschrijven = () => (
     <Layout>
-        <h1>Blog</h1>
+        <h1>Inschrijven</h1>
     </Layout>
 );
 
-export default Blog;
+export default Inschrijven;

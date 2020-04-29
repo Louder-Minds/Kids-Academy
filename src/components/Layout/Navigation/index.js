@@ -44,11 +44,21 @@ const Navigation = () => {
                             CURSUSSEN
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem>Cursussen</DropdownItem>
-                            <DropdownItem>Rekenen</DropdownItem>
-                            <DropdownItem>Taal Cursus</DropdownItem>
-                            <DropdownItem>CITO Training</DropdownItem>
-                            <DropdownItem>English Course</DropdownItem>
+                            <DropdownItem>
+                                <Link to="/cursussen">Cursussen</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/rekenen">Rekenen</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/taalcursus">Taal Cursus</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/cito">CITO Training</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/english">English Course</Link>
+                            </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <NavItem>
@@ -64,7 +74,11 @@ const Navigation = () => {
                             <DropdownItem>
                                 <Link to="/over-ons">Over ons</Link>
                             </DropdownItem>
-                            <DropdownItem>Ervaringen</DropdownItem>
+                            <DropdownItem>
+                                <Link to="/over-ons#ervaringen">
+                                    Ervaringen
+                                </Link>
+                            </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <NavItem>
@@ -75,9 +89,17 @@ const Navigation = () => {
                             CONTACT
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem>Contact</DropdownItem>
-                            <DropdownItem>Gratis proefles</DropdownItem>
-                            <DropdownItem>Inschrijven</DropdownItem>
+                            <DropdownItem>
+                                <Link to="/contact">Contact</Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/gratis-proefles">
+                                    Gratis proefles
+                                </Link>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <Link to="/inschrijven">Inschrijven</Link>
+                            </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                 </Nav>

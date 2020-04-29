@@ -7,7 +7,7 @@ import RedButton from '../RedButton';
 import { Container } from './style';
 
 const Ervaringen = () => (
-    <Container>
+    <Container id="ervaringen">
         <Title type="h2">Ervaringen</Title>
         <img src={'https://source.unsplash.com/200x200'} alt="test" />
         <Paragraph>

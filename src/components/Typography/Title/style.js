@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { colors } from '../../../util/styling_vars';
-import { device } from '../../../util/screensizes';
+// import { device } from '../../../util/screensizes';
 
 export const H1 = styled.h1`
     color: ${colors.blue};
