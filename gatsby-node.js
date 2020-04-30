@@ -1,7 +1,8 @@
+const path = require(`path`);
+
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
     return new Promise((resolve, reject) => {
-        const cursusTemplate = require.resolve('./src/templates/Cursus.js');
         resolve(
             graphql(`
                 {
@@ -20,8 +21,8 @@ exports.createPages = ({ graphql, actions }) => {
                 result.data.allContentfulCursus.edges.forEach(({ node }) => {
                     const titel = node.titel.toLowerCase();
                     createPage({
-                        path: `/${titel}`,
-                        component: cursusTemplate,
+                        path: titel,
+                        component: path.resolve('./src/templates/Cursus.js');,
                         context: {
                             slug: node.titel,
                         },
