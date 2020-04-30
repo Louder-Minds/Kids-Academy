@@ -17,7 +17,6 @@ const OpeningCursus = ({ explanation, kind }) => {
         },
     };
 
-    console.log(explanation);
     
     return (
         <Container>

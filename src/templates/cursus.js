@@ -46,7 +46,6 @@ const Cursus = ({ data }) => {
         fotoVanDeCursus,
     } = data.contentfulCursus;
 
-    console.log(data);
     return (
         <Layout>
             <SEO title={`Cursus ${titel}`} />

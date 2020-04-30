@@ -17,7 +17,6 @@ const ExplanationContainer = ({ headline, content }) => {
         },
     };
 
-    // console.log(content);
 
     return (
         <Container>

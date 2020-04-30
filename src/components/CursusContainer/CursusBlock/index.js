@@ -15,7 +15,6 @@ const CursusBlock = ({ name, description, image }) => {
         },
     };
 
-    console.log(description);
     return (
         <Container>
             <h3>{name}</h3>
