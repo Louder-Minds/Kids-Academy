@@ -22,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                     const titel = node.titel.toLowerCase();
                     createPage({
                         path: titel,
-                        component: path.resolve('./src/templates/Cursus.js'),
+                        component: path.resolve('src/templates/cursus.js'),
                         context: {
                             slug: node.titel,
                         },
