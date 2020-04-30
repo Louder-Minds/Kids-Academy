@@ -13,13 +13,13 @@ export const Container = styled.div`
     }
 
     div {
-        margin-bottom: 2em;
         display: block;
 
-        h2 {
+        h5 {
             font-size: 18px;
             font-weight: 500;
-            margin-bottom: 0.6em;
+            margin-bottom: 0.4em;
+            margin-top: 1.4em;
         }
 
         p {

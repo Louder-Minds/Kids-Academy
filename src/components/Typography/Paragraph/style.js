@@ -12,6 +12,6 @@ export const P = styled.p`
     margin-bottom: 10%;
 
     @media ${device.tablet} {
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
 `;

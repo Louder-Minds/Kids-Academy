@@ -3,19 +3,29 @@ import React from 'react';
 import { Container } from './style';
 
 import Paragraph from '../../Typography/Paragraph';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
-const CursusBlock = (props) => (
-    <Container>
-        <h3>{props.name}</h3>
-        <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </Paragraph>
-        <div>
-            <img src={'https://source.unsplash.com/300x200'} alt="cursus"></img>
-        </div>
-        <div id="flag" />
-    </Container>
-);
+const CursusBlock = ({ name, description, image }) => {
+    const options = {
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (node, children) => (
+                <Paragraph>{children}</Paragraph>
+            ),
+        },
+    };
+
+    console.log(description);
+    return (
+        <Container>
+            <h3>{name}</h3>
+            {documentToReactComponents(description.json, options)}
+            <div>
+                <img src={image.file.url} alt="foto van kind"></img>
+            </div>
+            <div id="flag" />
+        </Container>
+    );
+};
 
 export default CursusBlock;

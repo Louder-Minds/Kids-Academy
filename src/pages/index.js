@@ -9,18 +9,43 @@ import ExplanationContainer from '../components/ExplanationContainer';
 import OpeningHome from '../components/OpeningHome';
 import FlexContainer from '../components/FlexContainer';
 import Divider from '../components/Divider';
+import { graphql } from 'gatsby';
 
-const index = () => (
-    <Layout padding={false}>
-        <FlexContainer>
-            <OpeningHome />
-            <ReasonsContainer />
-        </FlexContainer>
-        <CursusContainer />
-        <Divider />
-        <ExplanationContainer />
-        <VideoContainer />
-    </Layout>
-);
+export const query = graphql`
+    query {
+        contentfulHome {
+            kop1
+            paragraaf1 {
+                json
+            }
+            kop2
+            paragraaf2 {
+                json
+            }
+            video {
+                file {
+                    url
+                }
+            }
+        }
+    }
+`;
+
+const index = ({ data }) => {
+    const { kop1, paragraaf1, kop2, paragraaf2, video } = data.contentfulHome;
+
+    return (
+        <Layout padding={false}>
+            <FlexContainer>
+                <OpeningHome />
+                <ReasonsContainer />
+            </FlexContainer>
+            <CursusContainer headline={kop1} content={paragraaf1} />
+            <Divider />
+            <ExplanationContainer headline={kop2} content={paragraaf2} />
+            <VideoContainer video={video} />
+        </Layout>
+    );
+};
 
 export default index;

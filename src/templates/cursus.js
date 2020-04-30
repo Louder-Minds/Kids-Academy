@@ -9,6 +9,8 @@ import OpeningCursus from '../components/OpeningCursus';
 import CursusExplanation from '../components/CursusExplanation';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/SEO';
+
 export const query = graphql`
     query($slug: String!) {
         contentfulCursus(titel: { eq: $slug }) {
@@ -34,7 +36,7 @@ export const query = graphql`
     }
 `;
 
-const index = ({ data }) => {
+const Cursus = ({ data }) => {
     const {
         titel,
         voorWieIsDezeCursus,
@@ -47,6 +49,7 @@ const index = ({ data }) => {
     console.log(data);
     return (
         <Layout>
+            <SEO title={`Cursus ${titel}`} />
             <Title type="h1">{titel}</Title>
             <OpeningCursus explanation={voorWieIsDezeCursus} kind={kind} />
             <Divider />
@@ -63,4 +66,4 @@ const index = ({ data }) => {
     );
 };
 
-export default index;
+export default Cursus;

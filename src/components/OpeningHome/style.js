@@ -15,6 +15,7 @@ export const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 50%;
 
     h1 {
         text-transform: uppercase;

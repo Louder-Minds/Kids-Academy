@@ -3,7 +3,7 @@ const path = require('path');
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
     return new Promise((resolve, reject) => {
-        const cursusTemplate = path.resolve('src/templates/cursus.js');
+        const cursusTemplate = path.resolve('src/templates/Cursus.js');
         resolve(
             graphql(`
                 {

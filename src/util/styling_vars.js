@@ -7,7 +7,7 @@ export const layout = {
         },
         height: {
             mobile: '5%',
-            tablet: '10%',
+            tablet: '5%',
             laptop: '2.5%',
         },
     },

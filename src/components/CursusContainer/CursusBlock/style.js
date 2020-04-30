@@ -23,8 +23,9 @@ export const Container = styled.div`
     }
 
     img {
+        object-fit: cover;
         width: 100%;
-        transition: all 0.25s ease-in;
+        height: 150px;
     }
 
     #flag {

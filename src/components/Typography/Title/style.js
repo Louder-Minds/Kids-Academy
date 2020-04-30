@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { colors } from '../../../util/styling_vars';
-// import { device } from '../../../util/screensizes';
+import { device } from '../../../util/screensizes';
 
 export const H1 = styled.h1`
     color: ${colors.blue};
@@ -9,6 +9,10 @@ export const H1 = styled.h1`
     text-align: center;
     font-weight: 700;
     margin: 2.5%;
+
+    @media ${device.tablet} {
+        margin-bottom: 0;
+    }
 `;
 
 export const H2 = styled.h2`

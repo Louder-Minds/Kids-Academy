@@ -4,7 +4,7 @@ import Title from '../Typography/Title';
 import Paragraph from '../Typography/Paragraph';
 
 import { Container } from './style';
-import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const CursusExplanation = ({ tagline, description, fotoCursus }) => {

@@ -1,21 +1,44 @@
 import React from 'react';
 import { Container } from './style';
 import CursusBlock from '../CursusBlock';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const classes = [
-    'Rekenen',
-    'Taal',
-    'Cito Training',
-    'Cambridge Chinese',
-    'Courses in English',
-];
+const CursusGrid = () => {
+    const data = useStaticQuery(graphql`
+        query names {
+            allContentfulCursus {
+                edges {
+                    node {
+                        titel
+                        kind {
+                            file {
+                                url
+                            }
+                        }
+                        korteUitlegOverDeCursus {
+                            json
+                        }
+                    }
+                }
+            }
+        }
+    `);
 
-const CursusGrid = () => (
-    <Container>
-        {classes.map((i, j) => (
-            <CursusBlock key={j} name={i} />
-        ))}
-    </Container>
-);
+    return (
+        <Container>
+            {data.allContentfulCursus.edges.map(({ node }, j) => {
+                const { titel, kind, korteUitlegOverDeCursus } = node;
+                return (
+                    <CursusBlock
+                        key={j}
+                        name={titel}
+                        description={korteUitlegOverDeCursus}
+                        image={kind}
+                    />
+                );
+            })}
+        </Container>
+    );
+};
 
 export default CursusGrid;
