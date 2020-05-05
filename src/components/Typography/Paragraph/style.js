@@ -6,7 +6,7 @@ export const P = styled.p`
     text-align: justify;
     hyphens: auto;
 
-    font-size: 14px;
+    font-size: 1em;
     line-height: 1.9;
 
     margin-bottom: 10%;

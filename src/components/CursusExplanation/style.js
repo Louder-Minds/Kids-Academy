@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { device } from '../../util/screensizes';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: 10% 5%;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -21,20 +21,6 @@ export const Container = styled.div`
             max-height: 300px;
             max-width: 100%;
             box-shadow: -15px 15px 0 rgb(180, 0, 0);
-        }
-    }
-
-    .content {
-        div {
-            p {
-                text-align: justify;
-                hyphens: auto;
-
-                font-size: 14px;
-                line-height: 1.9;
-
-                margin-bottom: 2.5%;
-            }
         }
     }
 

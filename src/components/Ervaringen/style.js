@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+
     img {
         width: 100px;
         border-radius: 100%;
         margin: auto;
         display: block;
-        margin-bottom: 2.5%;
+        margin-bottom: 5%;
     }
 
     p {
-        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -26,6 +27,26 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
+        .ervaring {
+            display: flex;
+            justify-content: center;
+            .persoon {
+                span {
+                    display: block;
+                    margin: auto;
+                }
+                img {
+                    margin-right: 5%;
+                }
+            }
+
+            p {
+                margin-bottom: 0px;
+            }
+
+            margin-bottom: 5%;
+        }
+
         div {
             display: flex;
             justify-content: space-between;

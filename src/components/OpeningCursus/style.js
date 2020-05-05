@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { device } from '../../util/screensizes';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: 10% 5%;
 
     .content {
         display: grid;

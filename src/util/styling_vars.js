@@ -6,7 +6,7 @@ export const layout = {
             laptop: '10%',
         },
         height: {
-            mobile: '5%',
+            mobile: '10%',
             tablet: '5%',
             laptop: '2.5%',
         },

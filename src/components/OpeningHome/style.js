@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     h1 {
         text-transform: uppercase;
-        font-size: 24px;
+        font-size: 2em;
         font-weight: 700;
         line-height: 1;
         color: white;
@@ -27,7 +27,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        min-height: 90vh;
+        min-height: 700px;
         height: 100%;
         max-height: 90vh;
 

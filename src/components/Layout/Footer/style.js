@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+
 import { device } from '../../../util/screensizes';
+import { layout } from '../../../util/styling_vars';
 
 export const Container = styled.footer`
     font-weight: 200;
     background-color: #37375c;
-    padding: 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     color: white;
     font-size: 0.7em;
     position: relative;
@@ -12,10 +14,11 @@ export const Container = styled.footer`
     img {
         max-width: 100%;
     }
+
     #content {
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         justify-items: start;
 
         div {
@@ -24,7 +27,7 @@ export const Container = styled.footer`
             margin-bottom: 10%;
             display: inline-block;
             flex-direction: column;
-            font-size: 14px;
+            font-size: 16px;
 
             a {
                 display: block;

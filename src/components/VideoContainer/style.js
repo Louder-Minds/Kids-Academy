@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    padding: 5%;
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(30, 30, 30);
-        color: white;
+import { layout } from '../../util/styling_vars';
 
-        width: 100%;
-        min-height: 56vh;
+export const Container = styled.div`
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    video {
         max-width: 100%;
+        outline: none;
     }
 `;

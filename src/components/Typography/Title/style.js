@@ -8,7 +8,7 @@ export const H1 = styled.h1`
     font-size: 60px;
     text-align: center;
     font-weight: 700;
-    margin: 2.5%;
+    margin-top: 10%;
 
     @media ${device.tablet} {
         margin-bottom: 0;

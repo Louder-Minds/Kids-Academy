@@ -35,7 +35,7 @@ const index = ({ data }) => {
     const { kop1, paragraaf1, kop2, paragraaf2, video } = data.contentfulHome;
 
     return (
-        <Layout padding={false}>
+        <Layout>
             <FlexContainer>
                 <OpeningHome />
                 <ReasonsContainer />

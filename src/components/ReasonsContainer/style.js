@@ -4,7 +4,7 @@ import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: ${layout.padding.width.mobile} ${layout.padding.height.mobile};
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     background-color: #37375c;
     color: white;
 
@@ -42,7 +42,7 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         height: 100%;
-        min-height: 90vh;
+        min-height: 700px;
         max-height: 700px;
         max-width: 50%;
 

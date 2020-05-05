@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     color: black;
 
     h1 {
@@ -23,11 +24,7 @@ export const Container = styled.div`
         }
 
         p {
-            font-size: 14px;
             margin-bottom: 0.6em;
-            line-height: 1.9;
-            text-align: justify;
-            hyphens: auto;
         }
     }
 
@@ -43,10 +40,6 @@ export const Container = styled.div`
         justify-items: center;
         align-items: center;
 
-        div {
-            margin-right: 5%;
-        }
-
         img {
             width: 100%;
             display: inline-block;
@@ -57,10 +50,6 @@ export const Container = styled.div`
         padding: 2.5% 10%;
         padding-bottom: 0%;
 
-        div {
-            width: 100%;
-            margin-right: 5%;
-        }
         img {
             width: 100%;
         }
