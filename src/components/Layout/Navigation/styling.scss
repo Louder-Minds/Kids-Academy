@@ -20,11 +20,12 @@
         border: none;
         outline: none;
     }
+
 }
 
 .nav-link {
-    margin-bottom: 1em !important;
-    font-size: 1.2em !important;
+    margin-bottom: 0.6em !important;
+    font-size: 14px !important;
 }
 
 .dropdown-menu {
@@ -33,23 +34,21 @@
     color: white;
     border: none;
 
-    button {
-        color: white;
-    }
-
-    button:hover {
+    a:hover {
         background: none;
-        color: rgb(200, 200, 200);
+        color: rgb(150, 150, 150);
     }
 }
 
 .dropdown-item {
     font-size: 1em;
+    color: white;
 }
 
 .dropdown-menu.show {
     animation-name: show;
-    animation-duration: 0.25s;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
 }
 
 .dropdown-toggle:after {
@@ -63,6 +62,7 @@ nav>div>ul>li {
 .navbar-brand {
     padding: 0;
     margin: 0;
+    margin-right: 2.5%;
     height: 80px;
     line-height: 80px;
 
@@ -90,28 +90,15 @@ nav>div>ul>li {
     padding: 9px 10px !important;
 }
 
-#navbut {
-    display: none;
-}
-
 @media (min-width: 768px) {
     .navbar {
-        padding: 0 2.5%;
+        padding: 0 5%;
     }
 
     .navbar-brand {
         img {
             height: 40px;
         }
-    }
-
-    .dropdown-menu {
-        padding: 10% 5%;
-        background: rgba(0, 0, 0, 0.85);
-    }
-
-    .dropdown-item {
-        margin-bottom: 10px;
     }
 
     .nav-link:hover {
@@ -126,14 +113,21 @@ nav>div>ul>li {
         margin-bottom: 0 !important;
         margin-left: 10px !important;
     }
-}
 
-@media (min-width: 900px) {
-    #navbut {
-        display: block;
-        padding: 0 2% !important;
-        margin-left: 2%;
-        font-size: 14px;
+    .dropdown-menu.show {
+        background-color: white;
+        box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
+        padding: 30%;
+
+        .dropdown-item {
+            color: black;
+            padding: 0;
+            margin-bottom: 10%;
+        }
+
+        .dropdown-item:hover {
+            color: rgb(202, 28, 28) !important;
+        }
     }
 }
 
@@ -149,10 +143,10 @@ nav>div>ul>li {
     }
 
     .nav-link {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .dropdown-menu {
-        top: calc(100% + 15px);
+        top: 110%;
     }
 }
