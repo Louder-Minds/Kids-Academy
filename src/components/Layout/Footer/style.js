@@ -56,7 +56,8 @@ export const Container = styled.footer`
     }
 
     @media ${device.tablet} {
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+
         div {
             width: auto;
             margin-right: 5%;
@@ -64,7 +65,6 @@ export const Container = styled.footer`
         }
 
         #content {
-            padding: 0 10%;
             div {
                 font-size: 14px;
             }
@@ -75,5 +75,9 @@ export const Container = styled.footer`
                 font-size: 1em;
             }
         }
+    }
+
+    @media ${device.laptop} {
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
     }
 `;

@@ -33,7 +33,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-column-gap: 5%;
@@ -47,8 +47,7 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        padding: 2.5% 10%;
-        padding-bottom: 0%;
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
 
         img {
             width: 100%;

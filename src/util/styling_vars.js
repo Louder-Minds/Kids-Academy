@@ -1,14 +1,14 @@
 export const layout = {
     padding: {
+        height: {
+            mobile: '10%',
+            tablet: '5%',
+            laptop: '5%',
+        },
         width: {
             mobile: '5%',
             tablet: '5%',
             laptop: '10%',
-        },
-        height: {
-            mobile: '10%',
-            tablet: '5%',
-            laptop: '2.5%',
         },
     },
 };

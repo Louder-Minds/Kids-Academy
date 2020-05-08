@@ -15,7 +15,7 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-        .content p {
+        .content {
             margin-bottom: 10%;
         }
     }
@@ -23,9 +23,8 @@ export const Container = styled.div`
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
 
-        .content p {
+        .content {
             margin-bottom: 5%;
-            max-width: 750px;
         }
     }
 `;

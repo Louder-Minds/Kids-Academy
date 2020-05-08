@@ -16,7 +16,7 @@ export const Container = styled.div`
     }
 
     p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.6;
         margin-bottom: 10px;
         text-align: justify;
