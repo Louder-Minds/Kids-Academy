@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
 
     div {
         display: grid;
@@ -43,6 +44,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         div {
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 5%;
@@ -51,6 +53,7 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
         div {
             grid-template-columns: 1fr 1fr 1fr;
             grid-row-gap: 30px;

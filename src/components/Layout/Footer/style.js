@@ -23,7 +23,6 @@ export const Container = styled.footer`
 
         div {
             max-width: 120px;
-            /* margin-right: 5%; */
             margin-bottom: 10%;
             display: inline-block;
             flex-direction: column;

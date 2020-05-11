@@ -11,7 +11,12 @@ export const P = styled.p`
 
     margin-bottom: 10%;
 
+    
     @media ${device.tablet} {
-        margin-bottom: 10%;
+        margin-bottom: 5%;
+
+        &:last-child {
+            margin-bottom: 0%;
+        }
     }
 `;

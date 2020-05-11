@@ -27,6 +27,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         .ervaring {
             display: flex;
             justify-content: center;
@@ -47,12 +48,18 @@ export const Container = styled.div`
             margin-bottom: 5%;
         }
 
-        div {
+        .buttons {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+
             button {
-                width: 45%;
+                width: auto;
+                margin-bottom: 0;
             }
         }
+    }
+
+    @media ${device.laptop} {
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
     }
 `;

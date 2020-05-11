@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     width: ${(props) => (props.full ? '100%' : 'auto')};
     height: 50px;
@@ -13,6 +13,8 @@ export const Button = styled.button`
     );
     border: none;
     color: white;
-    padding: 0 5%;
+    padding: 0 2.5%;
     border-radius: 2px;
+    line-height: 0;
+    letter-spacing: 0.5px;
 `;
