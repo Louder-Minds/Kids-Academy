@@ -10,8 +10,8 @@ import './styling.scss';
 
 const Navigation = () => (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top sticky-top">
-            <a className="navbar-brand" href="#">
-              <img src={lg} alt="logo" />
+            <a className="navbar-brand" href="#"><Link to="/.">
+              <img src={lg} alt="logo" /></Link>
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -61,6 +61,7 @@ const Navigation = () => (
                   </li>
                 </ul>
             </div>
+        <RedButton>Kennismakingsgesprek</RedButton>
         </nav>
     );
 
