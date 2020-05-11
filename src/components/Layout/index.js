@@ -7,7 +7,7 @@ import Footer from './Footer';
 const Layout = ({ children }) => (
     <>
         <Navigation />
-        {children}
+            {children}
         <Footer />
     </>
 );

@@ -21,7 +21,7 @@ const Ervaringen = () => (
                 nisi ut aliquip ex ea commodo consequat.
             </Paragraph>
         </div>
-        <div>
+        <div className="buttons">
             <RedButton>Schrijf direct in</RedButton>
             <RedButton>Plan je gratis proefles</RedButton>
         </div>

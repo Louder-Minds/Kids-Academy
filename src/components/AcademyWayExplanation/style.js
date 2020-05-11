@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
     @media ${device.tablet} {
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+    }
+
+    @media ${device.laptop} {
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
     }
 `;
 

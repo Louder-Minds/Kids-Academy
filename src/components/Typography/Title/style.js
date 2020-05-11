@@ -9,9 +9,18 @@ export const H1 = styled.h1`
     text-align: center;
     font-weight: 700;
     margin-top: 10%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    hyphens: auto;
 
     @media ${device.tablet} {
         margin-bottom: 0;
+        margin-top: 5%;
+    }
+
+    @media ${device.laptop} {
+        font-size: 80px;
+        margin-top: 2.5%;
     }
 `;
 

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
+import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: 10% 5%;
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
     display: grid;
     grid-template-columns: 1fr;
@@ -25,6 +26,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         grid-column-gap: 50px;
         align-items: center;
         grid-template-columns: 3fr 2fr;
@@ -38,5 +40,9 @@ export const Container = styled.div`
                 }
             }
         }
+    }
+
+    @media ${device.laptop} {
+        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
     }
 `;

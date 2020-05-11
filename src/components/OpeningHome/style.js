@@ -23,7 +23,7 @@ export const Container = styled.div`
         font-weight: 700;
         line-height: 1;
         color: white;
-        margin-bottom: 10%;
+        margin-bottom: 0%;
     }
 
     @media ${device.tablet} {
