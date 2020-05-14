@@ -8,23 +8,26 @@ export const Container = styled.div`
     position: relative;
 
     .content {
+        padding-top: 5%;
         h1 {
             font-size: 24px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 0px;
         }
     }
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-        .content {
-            margin-bottom: 10%;
-        }
     }
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+    }
 
-        .content {
-            margin-bottom: 5%;
-        }
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

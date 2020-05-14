@@ -13,6 +13,10 @@ export const Container = styled.div`
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
     }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+    }
 `;
 
 export const Grid = styled.div`

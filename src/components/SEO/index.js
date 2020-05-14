@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 const SEO = ({ title }) => (
     <Helmet>
-        <title>{title}</title>
+        <title>{`KidsAcademy | ${title}`}</title>
     </Helmet>
 );
 

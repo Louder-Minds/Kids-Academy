@@ -4,11 +4,13 @@ export const layout = {
             mobile: '10%',
             tablet: '5%',
             laptop: '5%',
+            desktop: '2.5%',
         },
         width: {
             mobile: '5%',
             tablet: '5%',
             laptop: '12.5%',
+            desktop: '25%',
         },
     },
 };

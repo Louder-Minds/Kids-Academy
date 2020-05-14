@@ -24,7 +24,34 @@ export const Container = styled.div`
                 max-width: 100%;
                 box-shadow: -30px 30px 0 rgb(180, 0, 0);
             }
+        }
+    }
 
+    hr {
+        height: 2px;
+        background: black;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    ul {
+        margin: 0;
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #14B09C;
+
+            img {
+                margin-right: 15px;
+                width: 15px;
+            }
         }
     }
 
@@ -34,7 +61,7 @@ export const Container = styled.div`
             margin-bottom: 5%;
         }
 
-        button:nth-child(2) {
+        button:last-child {
             margin-bottom: 0;
         }
     }
@@ -46,21 +73,31 @@ export const Container = styled.div`
             grid-column-gap: 50px;
             align-items: center;
             grid-template-columns: 3fr 2fr;
-            
         }
 
         .buttons {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
             button {
                 width: auto;
                 margin-bottom: 0;
             }
         }
+
+        ul {
+            li {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
     }
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+    }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

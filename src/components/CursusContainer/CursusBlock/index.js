@@ -5,6 +5,7 @@ import { Container } from './style';
 import Paragraph from '../../Typography/Paragraph';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
+import Button from '../../Button';
 
 const CursusBlock = ({ name, description, image }) => {
     const options = {
@@ -18,11 +19,12 @@ const CursusBlock = ({ name, description, image }) => {
     return (
         <Container>
             <h3>{name}</h3>
-            {documentToReactComponents(description.json, options)}
             <div>
                 <img src={image.file.url} alt="foto van kind"></img>
+                <div id="flag" />
             </div>
-            <div id="flag" />
+            {documentToReactComponents(description.json, options)}
+            <Button>Bekijk de cursus</Button>
         </Container>
     );
 };

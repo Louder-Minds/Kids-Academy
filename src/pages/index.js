@@ -43,8 +43,8 @@ const index = ({ data }) => {
             <CursusContainer headline={kop1} content={paragraaf1} />
             <Divider />
             <ExplanationContainer headline={kop2} content={paragraaf2} />
-            <Divider />
-            <VideoContainer video={video} />
+            {/* <Divider />
+            <VideoContainer video={video} /> */}
         </Layout>
     );
 };

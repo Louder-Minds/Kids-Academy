@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { device } from '../../../util/screensizes';
 
-export const NavbarToggle = styled.div`
+export const NavbarToggle = styled.button`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

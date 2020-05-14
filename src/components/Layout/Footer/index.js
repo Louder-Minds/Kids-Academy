@@ -50,10 +50,10 @@ const Footer = () => (
 
             <div>
                 <img src={kennemer} alt="afbeelding kennemer logo" />
-            </div>
-            <div>
                 <img src={kidsproof} alt="afbeelding kidsproof logo" />
             </div>
+            {/* <div>
+            </div> */}
         </div>
 
         <div id="copy">

@@ -24,7 +24,7 @@ export const Container = styled.div`
         .img {
             width: 100%;
             height: auto;
-            box-shadow: -15px 15px 0 rgb(180, 0, 0);
+            box-shadow: -15px 15px 0 #14B09C;
         }
     }
 
@@ -37,5 +37,9 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+    }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

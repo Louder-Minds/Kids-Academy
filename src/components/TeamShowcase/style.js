@@ -32,7 +32,7 @@ export const Container = styled.div`
                 margin: 0;
                 font-size: 12px;
                 margin-bottom: 5%;
-                color: rgb(202, 52, 52);
+                color: #14B09C;
                 font-weight: 700;
             }
 
@@ -58,5 +58,9 @@ export const Container = styled.div`
             grid-template-columns: 1fr 1fr 1fr;
             grid-row-gap: 30px;
         }
+    }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

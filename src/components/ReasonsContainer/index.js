@@ -2,13 +2,15 @@ import React from 'react';
 
 import { Container } from './style';
 
-import Redbutton from '../RedButton';
+import Button from '../Button';
+import Divider from '../Divider';
 
-import uil from './uiltje-wit.png';
+import uil from './uiltje.png';
 
 const ReasonsContainer = () => (
     <Container>
-        <h1>5 REDENEN OM VOOR KIDS ACADEMY TE KIEZEN</h1>
+        <h1>Summercourse 2020</h1>
+        <h5>Mei - Juni - Juli - Augustus</h5>
         <hr />
         <ul>
             <li>
@@ -33,7 +35,8 @@ const ReasonsContainer = () => (
                 Schrijf je nu in en start binnen een week
             </li>
         </ul>
-        <Redbutton full={false}>Schrijf je direct in</Redbutton>
+        <Button full={false}>Schrijf je direct in</Button>
+        <hr style={{marginBottom: '0'}} />
     </Container>
 );
 

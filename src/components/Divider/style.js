@@ -17,4 +17,8 @@ export const Hr = styled.hr`
     @media ${device.laptop} {
         width: calc(100% - (${layout.padding.width.laptop} * 2));
     }
+
+    @media ${device.desktop} {
+        width: calc(100% - (${layout.padding.width.desktop} * 2));
+    }
 `;

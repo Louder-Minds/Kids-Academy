@@ -2,13 +2,13 @@ import React from 'react';
 
 import Title from '../Typography/Title';
 import Paragraph from '../Typography/Paragraph';
-import RedButton from '../RedButton';
+import Button from '../Button';
 import { Container } from './style';
 
 const Solliciteren = () => (
     <Container>
         <Title type="h2">Wil je solliciteren?</Title>
-        <div className="text-container">
+        <div className="text-container" id="solliciteren">
             <Paragraph>
                 Omdat we kwalitatief hoogwaardige cursussen willen bieden aan
                 onze leerlingen, stellen we hoge eisen aan onze docenten.
@@ -23,7 +23,7 @@ const Solliciteren = () => (
                 Omtrent Gedrag maken onderdeel uit van de sollicitatieprocedure.
             </Paragraph>
         </div>
-        <RedButton>Stuur direct een email</RedButton>
+        <Button>Stuur direct een email</Button>
     </Container>
 );
 

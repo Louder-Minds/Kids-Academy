@@ -12,13 +12,16 @@ export const Container = styled.footer`
     position: relative;
 
     img {
-        max-width: 100%;
+        max-width: 50%;
+        display: block;
+        margin-bottom: 25%;
     }
 
     #content {
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-row-gap: 10px;
         justify-items: start;
 
         div {
@@ -78,5 +81,9 @@ export const Container = styled.footer`
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+    }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import Title from '../components/Typography/Title';
-import Ervaringen from '../components/Ervaringen';
+import ErvaringenContainer from '../components/ErvaringenContainer';
 import Divider from '../components/Divider';
 
 import OpeningCursus from '../components/OpeningCursus';
@@ -17,11 +17,6 @@ export const query = graphql`
             titel
             voorWieIsDezeCursus {
                 json
-            }
-            kind {
-                file {
-                    url
-                }
             }
             tagline
             cursusUitleg {
@@ -40,7 +35,6 @@ const Cursus = ({ data }) => {
     const {
         titel,
         voorWieIsDezeCursus,
-        kind,
         tagline,
         cursusUitleg,
         fotoVanDeCursus,
@@ -50,7 +44,7 @@ const Cursus = ({ data }) => {
         <Layout>
             <SEO title={`Cursus ${titel}`} />
             <Title type="h1">{titel}</Title>
-            <OpeningCursus explanation={voorWieIsDezeCursus} kind={kind} />
+            <OpeningCursus explanation={voorWieIsDezeCursus} />
             <Divider />
             <CursusExplanation
                 tagline={tagline}
@@ -60,7 +54,7 @@ const Cursus = ({ data }) => {
             {/* <Divider /> */}
             {/* <NumberBanner/> */}
             <Divider />
-            <Ervaringen />
+            <ErvaringenContainer />
         </Layout>
     );
 };

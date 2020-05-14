@@ -9,5 +9,6 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         flex-direction: row;
+        /* border-bottom: 3px rgb(55, 55, 92) solid; */
     }
 `;

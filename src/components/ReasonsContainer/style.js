@@ -5,23 +5,30 @@ import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
-    background-color: #37375c;
-    color: white;
-
-    box-sizing: border-box;
-
-    width: 100%;
+    background-color: white;
+    color: rgb(55, 55, 92);
+    position: relative;
 
     hr {
-        background: white;
+        background: rgb(55,55,92);
         height: 2px;
     }
 
     h1 {
         margin-bottom: 10px;
-        font-size: 20px;
-        color: white;
+        font-size: 2em;
+        color: rgb(55, 55, 92);
         font-weight: 600;
+    }
+
+    h1, h5 {
+        text-align: center;
+    }
+
+    button {
+        margin: auto;
+        display: block;
+        margin-bottom: 10%;
     }
 
     ul {
@@ -31,7 +38,8 @@ export const Container = styled.div`
             align-items: center;
             font-size: 16px;
             margin-bottom: 30px;
-            font-weight: 200;
+            font-weight: 500;
+            color: #14B09C;
 
             img {
                 margin-right: 15px;
@@ -41,22 +49,30 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        height: 100%;
-        min-height: 700px;
-        max-height: 700px;
-        max-width: 50%;
-
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-
+        padding-bottom: 0%;
+        min-width: 50%;
         ul li {
             margin-bottom: 30px;
+        }
+
+        button {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 7.5%;
+        }
+
+        h1 {
+            font-size: 2em;
         }
     }
 
     @media ${device.laptop} {
         h1 {
-            font-size: 2em;
+            font-size: 3em;
         }
         padding: 5%;
+        padding-bottom: 0%;
     }
 `;

@@ -53,4 +53,8 @@ export const Container = styled.div`
             width: 100%;
         }
     }
+
+    @media ${device.desktop} {
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+    }
 `;

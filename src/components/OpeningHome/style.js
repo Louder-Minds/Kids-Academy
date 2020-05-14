@@ -6,8 +6,6 @@ import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    height: 300px;
-
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     margin: 0;
 
@@ -16,6 +14,7 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 50%;
+    /* min-height: 350px; */
 
     h1 {
         text-transform: uppercase;
@@ -23,16 +22,13 @@ export const Container = styled.div`
         font-weight: 700;
         line-height: 1;
         color: white;
-        margin-bottom: 0%;
+        margin-bottom: 10%;
     }
 
     @media ${device.tablet} {
-        min-height: 700px;
-        height: 100%;
-        max-height: 90vh;
-
         max-width: 50%;
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+        padding-bottom: 0%;
 
         h1 {
             font-size: 2.2em;
@@ -41,6 +37,7 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: 5%;
+        padding-bottom: 0%;
 
         h1 {
             font-size: 3em;

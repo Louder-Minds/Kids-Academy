@@ -7,7 +7,7 @@ import AcademyWayExplanation from '../components/AcademyWayExplanation';
 import TeamShowcase from '../components/TeamShowcase';
 import Solliciteren from '../components/Solliciteren';
 import Title from '../components/Typography/Title';
-import Ervaringen from '../components/Ervaringen';
+import ErvaringenContainer from '../components/ErvaringenContainer';
 
 const index = () => (
     <Layout padding={true}>
@@ -18,7 +18,7 @@ const index = () => (
         <Divider />
         <TeamShowcase />
         <Divider />
-        <Ervaringen />
+        <ErvaringenContainer />
         <Divider />
         <Solliciteren />
     </Layout>
