@@ -9,7 +9,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import uil from './uiltje.png';
 
-const OpeningCursus = ({ explanation, kind }) => {
+const OpeningCursus = ({ explanation }) => {
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => (
