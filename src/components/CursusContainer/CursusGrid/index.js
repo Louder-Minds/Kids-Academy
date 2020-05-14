@@ -10,7 +10,7 @@ const CursusGrid = () => {
                 edges {
                     node {
                         titel
-                        kind {
+                        fotoVanDeCursus {
                             file {
                                 url
                             }
@@ -27,13 +27,13 @@ const CursusGrid = () => {
     return (
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
-                const { titel, kind, korteUitlegOverDeCursus } = node;
+                const { titel, fotoVanDeCursus, korteUitlegOverDeCursus } = node;
                 return (
                     <CursusBlock
                         key={j}
                         name={titel}
                         description={korteUitlegOverDeCursus}
-                        image={kind}
+                        image={fotoVanDeCursus}
                     />
                 );
             })}
