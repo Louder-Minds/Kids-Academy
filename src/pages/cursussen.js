@@ -8,23 +8,6 @@ import SEO from '../components/SEO';
 import CursusGrid from '../components/CursusContainer/CursusGrid';
 import Title from '../components/Typography/Title';
 
-export const query = graphql`
-    {
-        allContentfulCursus {
-            edges {
-                node {
-                    titel
-                    kind {
-                        file {
-                            url
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;
-
 const Container = styled.div`
     padding: 5%;
 `;
