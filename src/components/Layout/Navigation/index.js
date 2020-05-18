@@ -22,7 +22,7 @@ const Navigation = () => {
      }
 `);
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top sticky-top">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <Link className="navbar-brand" to="/">
         <img src={lg} alt="logo" />
       </Link>
@@ -33,40 +33,40 @@ const Navigation = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <Link className="nav-link" to="/">HOME</Link>
+          <AniLink paintDrip hex={`${colors.turqouise}`} className="nav-link" to="/">Home</AniLink>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              CURSUSSEN
+              Cursussen
                     </a>
             <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-             { data.allContentfulCursus.edges.map(({ node }, j) => <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase().replace(/\s/g, '')}`}>{node.titel}</AniLink>)}
+             { data.allContentfulCursus.edges.map(({ node }, j) => <AniLink cover bg={`${colors.turqouise}`} className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase().replace(/\s/g, '-')}`}>{node.titel}</AniLink>)}
             </div>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              OVER ONS
+              Over ons
                     </a>
             <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-              <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/over-ons">Over ons</AniLink>
-              <Link className="dropdown-item" to="/over-ons#ervaringen">Ervaringen</Link>
-              <Link className="dropdown-item" to="/over-ons#solliciteren">Solliciteren</Link>
+             <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/over-ons">Over ons</AniLink>
+             <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/over-ons#ervaringen">Ervaringen</AniLink>
+             <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/over-ons#solliciteren">Solliciteren</AniLink>
             </div>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/blog">BLOG</Link>
+          <AniLink paintDrip hex={`${colors.turqouise}`} className="nav-link" to="/blog">Blog</AniLink>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              CONTACT
+              Contact
                     </a>
             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" to="/contact">Contact</Link>
-              <Link className="dropdown-item" to="/proefles">Kennismakingsgesprek</Link>
+            <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/contact">Contact</AniLink>
+            <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/kennismakingsgesprek">Kennismakingsgesprek</AniLink>
             </div>
           </li>
           <li className="nav-item" id="navcta">
-            <Link className="nav-link" to="/inschrijven">INSCHRIJVEN</Link>
+           <AniLink paintDrip hex={`${colors.turqouise}`} className="nav-link" to="/inschrijven">Inschrijven</AniLink>
           </li>
         </ul>
       </div>

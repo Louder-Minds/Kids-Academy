@@ -17,6 +17,13 @@ export const Container = styled.footer`
         margin-bottom: 25%;
     }
 
+    a {
+        display: block;
+        color: ${colors.turqouise};
+        font-weight: 400;
+        text-decoration: underline;
+    }
+
     #content {
         margin: auto;
         display: grid;
@@ -30,13 +37,6 @@ export const Container = styled.footer`
             display: inline-block;
             flex-direction: column;
             font-size: 16px;
-
-            a {
-                display: block;
-                color: ${colors.turqouise};
-                font-weight: 400;
-                text-decoration: underline;
-            }
 
             span {
                 display: block;

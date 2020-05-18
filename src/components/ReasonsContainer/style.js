@@ -27,8 +27,6 @@ export const Container = styled.div`
     }
 
     button {
-        margin: auto;
-        display: block;
         margin-bottom: 10%;
     }
 

@@ -10,6 +10,7 @@ import CursusExplanation from '../components/CursusExplanation';
 import { graphql } from 'gatsby';
 
 import SEO from '../components/SEO';
+import Numberblock from '../components/Numberblock';
 
 export const query = graphql`
     query($slug: String!) {
@@ -42,7 +43,7 @@ const Cursus = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title={`Cursus ${titel}`} />
+            <SEO title={`${titel}`} />
             <Title type="h1">{titel}</Title>
             <OpeningCursus explanation={voorWieIsDezeCursus} />
             <Divider />
@@ -51,9 +52,7 @@ const Cursus = ({ data }) => {
                 description={cursusUitleg}
                 fotoCursus={fotoVanDeCursus}
             />
-            {/* <Divider /> */}
-            {/* <NumberBanner/> */}
-            <Divider />
+            <Numberblock/>
             <ErvaringenContainer />
         </Layout>
     );

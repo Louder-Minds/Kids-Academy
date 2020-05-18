@@ -43,7 +43,8 @@ const Footer = () => (
             </div>
 
             <div>
-                <span>Hoofdkantoor: 020 717 30 60</span>
+                <span>Hoofdkantoor: <a href="tel:0207173060">020 717 30 60</a></span>
+                <span>Email: <a href="mailto:info@kidsacademy.nl">Info@kidsacademy.nl</a></span>
             </div>
 
             <div>

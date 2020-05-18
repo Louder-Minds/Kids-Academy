@@ -10,7 +10,7 @@ import Title from '../components/Typography/Title';
 import ErvaringenContainer from '../components/ErvaringenContainer';
 
 const index = () => (
-    <Layout padding={true}>
+    <Layout>
         <Title type="h1">Over ons</Title>
         <OpeningAbout />
         <Divider />
