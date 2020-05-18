@@ -8,6 +8,7 @@ export const Container = styled.div`
     background-color: white;
     color: rgb(55, 55, 92);
     position: relative;
+    padding-bottom: 0%;
 
     hr {
         background: rgb(55,55,92);

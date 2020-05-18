@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { device } from '../../../util/screensizes';
 
 export const Container = styled.div`
+    margin-bottom: 5%;
     .ervaring {
         display: flex;
         flex-direction: column;
@@ -15,6 +16,8 @@ export const Container = styled.div`
 
             img {
                 width: 100px;
+                height: 100px;
+                object-fit: cover;
                 border-radius: 100%;
                 margin: auto;
                 display: block;

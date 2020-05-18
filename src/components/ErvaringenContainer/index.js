@@ -1,8 +1,8 @@
 import React from 'react';
 
-import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
+import "./style.scss"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
+import { useStaticQuery, graphql } from 'gatsby';
 import Ervaring from './Ervaring';
 import Title from '../Typography/Title';
 import Button from '../Button';
@@ -31,6 +31,25 @@ const list = [
 ];
 
 const ErvaringenContainer = () => {
+    const data = useStaticQuery(graphql`
+    query ervaring {
+        allContentfulErvaring {
+          edges {
+            node {
+              naamVanDePersoon
+              fotoVanDePersoon {
+                file {
+                  url
+                }
+              }
+              content {
+                content
+              }
+            }
+          }
+        }
+    }
+    `);
 
     
     // const shuffle = () => {
@@ -44,9 +63,9 @@ const ErvaringenContainer = () => {
     return (
         <Container id="ervaringen">
             <Title type="h2">Ervaringen van onze leerlingen</Title>
-            <Carousel infiniteLoop>
-                {list.map(({naam, foto, review}, i) => (
-                    <Ervaring naam={naam} foto={foto} review={review}/>
+            <Carousel infiniteLoop showThumbs={false}>
+                {data.allContentfulErvaring.edges.map(({node}, i) => (
+                    <Ervaring key={node.naamVanDePersoon} naam={node.naamVanDePersoon} foto={node.fotoVanDePersoon} content={node.content}/>
                 ))}
             </Carousel>
             <div className="buttons">

@@ -12,6 +12,10 @@ const CursusContainer = ({ headline, content }) => {
             [BLOCKS.PARAGRAPH]: (node, children) => (
                 <Paragraph>{children}</Paragraph>
             ),
+            // [BLOCKS.HEADING_5]: (node, children) => (
+            //     <h5>{children}</h5>
+            // ),
+
         },
     };
     

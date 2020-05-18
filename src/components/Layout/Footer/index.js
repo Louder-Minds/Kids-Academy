@@ -11,9 +11,7 @@ const Footer = () => (
             <div>
                 <a href="/">Home</a>
                 <a href="/cursussen">Cursussen</a>
-                <a href="/tarieven">Tarieven</a>
                 <a href="/over-ons">Over ons</a>
-                <a href="/">Ervaringen</a>
                 <a href="/blog">Blog</a>
                 <a href="/contact">Contact</a>
                 <a href="/algemene-voorwaarden">Algemene voorwaarden</a>

@@ -13,9 +13,8 @@ export const Container = styled.div`
             font-size: 24px;
             font-weight: 600;
         }
-
-        p {
-            margin-bottom: 0px;
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 
