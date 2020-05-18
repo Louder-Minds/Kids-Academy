@@ -15,18 +15,25 @@ export const Container = styled.div`
     }
 
     p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 5%;
-        text-align: justify;
-        margin-top: 5%;
+        display: none;
     }
 
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 200px;
-        border-radius: 2px;
+    ul {
+        margin: 0;
+        margin-top: 5%;
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 5%;
+            font-weight: 500;
+            color: #14B09C;
+
+            img {
+                margin-right: 15px;
+                width: 15px;
+            }
+        }
     }
 
     div {
@@ -40,6 +47,12 @@ export const Container = styled.div`
             height: 20px;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJFBMVEWvGychRoz+/v6vGSX/+/37/P8aRpH/9vgmRH6kFyP///35//9qTZEIAAABT0lEQVR4nO3QC2rDMBBAwa37T+9/35amCrYe9AQzEIIjr5a8GQAAAAAAAAAAAAAAAAAAAOBfz+zmk928s5svdvPCbg52mpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJ/Ta5/fj7Xp/zT8dxeV7n6+y4rdH7C4/xNbRmL5edXuua6/na/Lj9vnXbcpxmT5etHWv8cfv1/54bzCu7+WA3b+zmiZ0mpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSWlSmpQmpUlpUpqUJqVJaVKalCalSX0Ddov4F+NoZDcAAAAASUVORK5CYII=');
             background-size: cover;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
         }
     }
 

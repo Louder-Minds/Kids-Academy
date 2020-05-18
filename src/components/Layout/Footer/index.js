@@ -56,6 +56,9 @@ const Footer = () => (
             </div> */}
         </div>
 
+        <div id="copy1">
+            <span>Developed by: <a href="https://rubennijhuis.com" target="_">Ruben Nijhuis</a></span>
+        </div>
         <div id="copy">
             <span>©Copyright 2020 | Kids Academy | All rights reserved</span>
         </div>

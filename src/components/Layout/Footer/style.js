@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../../util/screensizes';
-import { layout } from '../../../util/styling_vars';
+import { layout, colors } from '../../../util/styling_vars';
 
 export const Container = styled.footer`
     font-weight: 200;
@@ -33,6 +33,9 @@ export const Container = styled.footer`
 
             a {
                 display: block;
+                color: ${colors.turqouise};
+                font-weight: 400;
+                text-decoration: underline;
             }
 
             span {
@@ -44,6 +47,21 @@ export const Container = styled.footer`
     #copy {
         position: absolute;
         bottom: 0px;
+        left: 50%;
+
+        transform: translate(-50%);
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 2.5%;
+
+        span {
+            font-size: 1em;
+        }
+    }
+    #copy1 {
+        position: absolute;
+        bottom: 20px;
         left: 50%;
 
         transform: translate(-50%);

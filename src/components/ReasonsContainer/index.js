@@ -9,7 +9,7 @@ import uil from './uiltje.png';
 
 const ReasonsContainer = () => (
     <Container>
-        <h1>Summercourse 2020</h1>
+        <h1>Summerschool 2020</h1>
         <h5>Mei - Juni - Juli - Augustus</h5>
         <hr />
         <ul>

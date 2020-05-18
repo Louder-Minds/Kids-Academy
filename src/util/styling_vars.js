@@ -17,6 +17,7 @@ export const layout = {
 
 export const colors = {
     blue: 'rgb(55, 55, 92)',
+    turqouise: '#14b09c',
     white: 'rgb(255,255,255)',
     black: 'rgb(0,0,0)',
 };
