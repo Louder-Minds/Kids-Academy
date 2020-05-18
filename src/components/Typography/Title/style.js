@@ -27,7 +27,7 @@ export const H1 = styled.h1`
 
     @media ${device.laptop} {
         font-size: 80px;
-        margin-top: 2.5%;
+        margin-top: 5%;
     }
 `;
 

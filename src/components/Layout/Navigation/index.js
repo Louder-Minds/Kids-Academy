@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { colors } from '../../../util/styling_vars'
 // import Button from '../../Button';
@@ -23,9 +22,9 @@ const Navigation = () => {
 `);
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <Link className="navbar-brand" to="/">
+      <AniLink paintDrip hex={`${colors.turqouise}`} className="navbar-brand" to="/">
         <img src={lg} alt="logo" />
-      </Link>
+      </AniLink>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

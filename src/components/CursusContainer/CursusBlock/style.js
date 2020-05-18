@@ -1,17 +1,29 @@
 import styled from 'styled-components';
+import { device } from '../../../util/screensizes';
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
 
     h3 {
         font-size: 24px;
         font-weight: 600;
-        margin-bottom: 10px;
-        margin-top: 5%;
         text-align: center;
+    }
+
+    .titelcont {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        min-height: 80px;
+        background-color: rgb(0,0,0,0.05);
+        h3 {
+            margin-bottom: 0px;
+        }
     }
 
     p {
@@ -30,10 +42,14 @@ export const Container = styled.div`
             color: #14B09C;
 
             img {
-                margin-right: 15px;
-                width: 15px;
+                margin-right: 8px;
+                width: 8px;
             }
         }
+    }
+
+    button {
+        width: 100%;
     }
 
     div {
@@ -58,5 +74,31 @@ export const Container = styled.div`
 
     :hover {
         cursor: pointer;
+    }
+
+    @media ${device.tablet} {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0;
+            margin-top: 5%;
+            min-height: 150px;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                margin-bottom: 5%;
+                font-weight: 500;
+                color: #14B09C;
+    
+                img {
+                    align-self: flex-start;
+                    margin-right: 8px;
+                    margin-top: 5px;
+                    width: 8px;
+                }
+            }
+        }
     }
 `;

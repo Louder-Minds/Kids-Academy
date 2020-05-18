@@ -53,23 +53,22 @@ export const Container = styled.footer`
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: 2.5%;
 
         span {
             font-size: 1em;
         }
+        margin-bottom:.52%;
     }
     #copy1 {
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         left: 50%;
 
         transform: translate(-50%);
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: 2.5%;
-
+        margin-bottom: .5%;
         span {
             font-size: 1em;
         }

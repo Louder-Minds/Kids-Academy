@@ -10,8 +10,12 @@ export const Container = styled.div`
     justify-items: center;
     margin-bottom: 10%;
 
-    @media ${device.tablet} {
+    @media (min-width: 550px) {
         grid-template-columns: 1fr 1fr;
+    }
+
+    @media ${device.tablet} {
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 5%;
         grid-row-gap: 30px;
         margin-bottom: 5%;
@@ -19,6 +23,11 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 120px;
         margin-bottom: 2.5%;
+    }
+    
+    @media ${device.desktop} {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 `;

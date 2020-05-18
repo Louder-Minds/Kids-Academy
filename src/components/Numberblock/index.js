@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './style';
-import 'odometer-theme-car.css'
+// import 'odometer-theme-car.css'
 
 const NumberBlock = () => (
     <Container>
