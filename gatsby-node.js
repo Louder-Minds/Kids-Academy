@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                     reject(result.errors);
                 }
                 result.data.allContentfulCursus.edges.forEach(({ node }) => {
-                    const titel = node.titel.toLowerCase();
+                    const titel = node.titel.toLowerCase().replace(/\s/g, '');
                     createPage({
                         path: titel,
                         component: path.resolve('src/templates/cursus.js'),

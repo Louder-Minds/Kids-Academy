@@ -40,7 +40,7 @@ const Navigation = () => {
               CURSUSSEN
                     </a>
             <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-             { data.allContentfulCursus.edges.map(({ node }, j) => <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase()}`}>{node.titel}</AniLink>)}
+             { data.allContentfulCursus.edges.map(({ node }, j) => <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase().replace(/\s/g, '')}`}>{node.titel}</AniLink>)}
             </div>
           </li>
           <li className="nav-item dropdown">
