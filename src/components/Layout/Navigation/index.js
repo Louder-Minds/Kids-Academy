@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { Link, useStaticQuery, graphql } from 'gatsby';
-
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { colors } from '../../../util/styling_vars'
 // import Button from '../../Button';
 import lg from './logo-wit.png';
 
@@ -38,13 +40,7 @@ const Navigation = () => {
               CURSUSSEN
                     </a>
             <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-             { data.allContentfulCursus.edges.map(({ node }, j) => {
-               return (
-
-                 <Link className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase()}`}>{node.titel}</Link>
-               )
-             
-             })}
+             { data.allContentfulCursus.edges.map(({ node }, j) => <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" key={`${node.titel}`} to={`/${node.titel.toLowerCase()}`}>{node.titel}</AniLink>)}
             </div>
           </li>
           <li className="nav-item dropdown">
@@ -52,7 +48,7 @@ const Navigation = () => {
               OVER ONS
                     </a>
             <div className="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" to="/over-ons">Over ons</Link>
+              <AniLink paintDrip hex={`${colors.turqouise}`} className="dropdown-item" to="/over-ons">Over ons</AniLink>
               <Link className="dropdown-item" to="/over-ons#ervaringen">Ervaringen</Link>
               <Link className="dropdown-item" to="/over-ons#solliciteren">Solliciteren</Link>
             </div>
