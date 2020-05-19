@@ -35,7 +35,7 @@ const ReasonsContainer = () => (
                 Schrijf je nu in en start binnen een week
             </li>
         </ul>
-        <Button full={false}>Schrijf je direct in</Button>
+        <Button pagename="contact" text="Schrijf je direct in"/>
         <hr style={{marginBottom: '0'}} />
     </Container>
 );

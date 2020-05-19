@@ -44,6 +44,7 @@ export const Container = styled.div`
             img {
                 margin-right: 8px;
                 width: 8px;
+
             }
         }
     }
@@ -68,6 +69,9 @@ export const Container = styled.div`
         img {
             width: 100%;
             max-width: 100%;
+            height: 200px;
+            max-height: 200px;
+            min0=-height: 200px;
             object-fit: cover;
         }
     }

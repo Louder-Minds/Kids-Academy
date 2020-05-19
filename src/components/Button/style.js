@@ -18,4 +18,7 @@ export const Button = styled.button`
     letter-spacing: 0.5px;
     white-space: nowrap;
     text-align: center;
+    a {
+        color: white;
+    }
 `;

@@ -2,16 +2,24 @@ import React from 'react';
 
 import Helmet from 'react-helmet';
 
-const SEO = ({ title }) => (
+const SEO = ({ title, lang = 'nl' }) => {
+  let text = '';
+  if (title == undefined) {
+    text = 'KidsAcademy';
+  } else {
+    text = `KidsAcademy | ${title}`;
+  }
+  return (
     <Helmet
-      title="Gatsby Default Starter"
+      title={text}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     >
-        <html lang="nl" />
+        <html lang={lang} />
     </Helmet>
-);
+  )
+};
 
 export default SEO;

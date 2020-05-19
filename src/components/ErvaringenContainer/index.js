@@ -69,8 +69,8 @@ const ErvaringenContainer = () => {
                 ))}
             </Carousel>
             <div className="buttons">
-                <Button>Schrijf direct in</Button>
-                <Button>Kennismakingsgesprek</Button>
+                <Button pagename='/inschrijven' text="Schrijf je direct in"/>
+                <Button pagename='/contact' text="Kennismakingsgesprek"/>
             </div>
         </Container>
     );

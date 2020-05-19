@@ -6,7 +6,7 @@ import Button from '../Button';
 const OpeningHome = () => (
     <Container>
         <h1>Met zelfvertrouwen en plezier naar school</h1>
-        <Button>Kennismakingsgesprek</Button>
+        <Button pagename="contact" text="Plan een kennismakingsgesprek"/>
     </Container>
 );
 

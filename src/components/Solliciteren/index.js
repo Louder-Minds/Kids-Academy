@@ -23,7 +23,7 @@ const Solliciteren = () => (
                 Omtrent Gedrag maken onderdeel uit van de sollicitatieprocedure.
             </Paragraph>
         </div>
-        <Button>Stuur direct een email</Button>
+        <Button pagename="mailto:info@kidsacademy.nl" text="Stuur direct een email"/>
     </Container>
 );
 

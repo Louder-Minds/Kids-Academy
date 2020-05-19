@@ -27,7 +27,7 @@ export const Container = styled.footer`
     #content {
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         grid-row-gap: 10px;
         justify-items: start;
 

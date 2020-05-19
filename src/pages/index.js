@@ -8,7 +8,8 @@ import VideoContainer from '../components/VideoContainer';
 import ExplanationContainer from '../components/ExplanationContainer';
 import OpeningHome from '../components/OpeningHome';
 import FlexContainer from '../components/FlexContainer';
-import Divider from '../components/Divider';
+import Numberblock from '../components/Numberblock';
+import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 
 export const query = graphql`
@@ -36,12 +37,13 @@ const index = ({ data }) => {
 
     return (
         <Layout>
+            <SEO/>
             <FlexContainer>
                 <OpeningHome />
                 <ReasonsContainer />
             </FlexContainer>
             <CursusContainer headline={kop1} content={paragraaf1} />
-            <Divider />
+            <Numberblock/>
             <ExplanationContainer headline={kop2} content={paragraaf2} />
             {/* <Divider />
             <VideoContainer video={video} /> */}

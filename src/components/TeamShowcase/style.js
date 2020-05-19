@@ -4,7 +4,7 @@ import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
     div {
         display: grid;

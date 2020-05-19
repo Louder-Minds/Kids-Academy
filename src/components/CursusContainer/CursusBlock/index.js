@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Container } from './style';
 import { colors } from '../../../util/styling_vars';
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../../Button';
@@ -35,9 +34,7 @@ const CursusBlock = ({ name, description, image }) => {
                 <div id="flag" />
             </div>
             {documentToReactComponents(description.json, options)}
-            <AniLink paintDrip hex={`${colors.turqouise}`} to={`/${name.toLowerCase().replace(/\s/g, '-')}`}>
-                <Button>Bekijk de cursus</Button>
-            </AniLink>
+            <Button pagename={name} text="Bekijk de cursus"/>
         </Container>
     );
 };

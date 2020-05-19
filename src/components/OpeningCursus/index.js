@@ -49,8 +49,8 @@ const OpeningCursus = ({ explanation }) => {
                 </div>
             </div>
             <div className="buttons">
-                <Button>Schrijf direct in</Button>
-                <Button>Kennismakingsgesprek</Button>
+                <Button pagename="inschrijven" text="Schrijf direct in"/>
+                <Button pagename="contact" text="Kennismakingsgesprek"/>
             </div>
         </Container>
     );
