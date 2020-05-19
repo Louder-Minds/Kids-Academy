@@ -22,8 +22,6 @@ const ContactForm = () => {
             <form
                 method="post"
                 name="contact"
-                action="
-                trusting-perlman-bc7d67.netlify.app/contact"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
             >
