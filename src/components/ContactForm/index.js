@@ -30,9 +30,9 @@ const ContactForm = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
                     <label>Voornaam kind*</label>
-                    <input type="text" name="name" id="name" />
+                    <input type="text" name="first_name_child" />
                     <label>Achternaam kind*</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="text\" name="last_name_child" />
                 </div>
                     <hr />
 
@@ -40,7 +40,7 @@ const ContactForm = () => {
                     <h3>Mijn kind zit in*</h3>
                     {klassen.map((item) => (
                         <>
-                            <input type="radio" name="groep" value={``} />
+                            <input type="radio" name="groep" value={`${item}`} />
                             <label for={`${item}`}>{item}</label>
                             <br />
                         </>
@@ -49,15 +49,14 @@ const ContactForm = () => {
                     <hr />
 
                 <div className="naamverzorger">
-                    <input type="hidden" name="bot-field" />
                     <label>Voornaam ouder/verzorger*</label>
-                    <input type="text" name="name" id="name" />
+                    <input type="text" name="first_name_parent"/>
                     <label>Achternaam ouder/verzorger*</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="text" name="last_name_parent"/>
                     <label>Telefoon*</label>
-                    <input type="email" name="email" id="email" />
-                    <label>email adres*</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="tel" name="telephone number"/>
+                    <label>Email adres*</label>
+                    <input type="email" name="email" />
                 </div>
 
                     <hr />
@@ -70,7 +69,6 @@ const ContactForm = () => {
                                 <input
                                     type="checkbox"
                                     name={`${titel}`}
-                                    value={`${titel}`}
                                 />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
@@ -84,7 +82,6 @@ const ContactForm = () => {
                     <input
                         type="checkbox"
                         name="kennismakingsgesprek"
-                        value="Ja"
                     />
                     <label for="kennismakingsgesprek">
                         Ik wil graag een kennismakingsgesprek plannen

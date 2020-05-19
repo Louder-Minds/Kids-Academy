@@ -71,7 +71,7 @@ export const Container = styled.div`
             max-width: 100%;
             height: 200px;
             max-height: 200px;
-            min0=-height: 200px;
+            min-height: 200px;
             object-fit: cover;
         }
     }
