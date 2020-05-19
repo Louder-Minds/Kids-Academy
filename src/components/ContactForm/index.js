@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
 const ContactForm = () => {
@@ -20,11 +21,13 @@ const ContactForm = () => {
         <Container>
             <h1>Kom in contact</h1>
             <form
-                method="post"
+                method="POST"
                 name="contact"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                action="/"
             >
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
                     <label>Voornaam kind*</label>
                     <input type="text" name="name" id="name" />
@@ -100,6 +103,7 @@ const ContactForm = () => {
                     <button type="submit">Verstuur</button>
                     <input type="reset" value="Reset formulier" />
                 </div>
+                {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" /> */}
             </form>
         </Container>
     );
