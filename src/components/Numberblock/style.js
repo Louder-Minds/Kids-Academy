@@ -9,12 +9,13 @@ export const Container = styled.div`
     align-items: center;
     height: auto;
 
-    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+    padding: calc(${layout.padding.height.mobile} - 5%)
+        ${layout.padding.width.mobile};
 
     div {
         display: inline-block;
         margin-bottom: 10%;
-        text-align:center;
+        text-align: center;
         span:first-child {
             font-size: 5em;
             font-weight: 100;
@@ -46,7 +47,7 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
-
+        padding: calc(${layout.padding.height.laptop} - 2.5%)
+            ${layout.padding.width.laptop};
     }
 `;

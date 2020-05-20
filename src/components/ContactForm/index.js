@@ -24,7 +24,6 @@ const ContactForm = () => {
                 name="contact"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
-                action="/"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
@@ -33,32 +32,36 @@ const ContactForm = () => {
                     <label>Achternaam kind*</label>
                     <input type="text\" name="last_name_child" />
                 </div>
-                    <hr />
+                <hr />
 
                 <div className="klas">
                     <h3>Mijn kind zit in*</h3>
                     {klassen.map((item) => (
                         <>
-                            <input type="radio" name="groep" value={`${item}`} />
+                            <input
+                                type="radio"
+                                name="groep"
+                                value={`${item}`}
+                            />
                             <label for={`${item}`}>{item}</label>
                             <br />
                         </>
                     ))}
                 </div>
-                    <hr />
+                <hr />
 
                 <div className="naamverzorger">
                     <label>Voornaam ouder/verzorger*</label>
-                    <input type="text" name="first_name_parent"/>
+                    <input type="text" name="first_name_parent" />
                     <label>Achternaam ouder/verzorger*</label>
-                    <input type="text" name="last_name_parent"/>
+                    <input type="text" name="last_name_parent" />
                     <label>Telefoon*</label>
-                    <input type="tel" name="telephone number"/>
+                    <input type="tel" name="telephone number" />
                     <label>Email adres*</label>
                     <input type="email" name="email" />
                 </div>
 
-                    <hr />
+                <hr />
                 <div className="interesse">
                     <h3>Ik heb interesse in</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
@@ -76,13 +79,10 @@ const ContactForm = () => {
                         );
                     })}
                 </div>
-                    <hr />
+                <hr />
 
                 <div className="info">
-                    <input
-                        type="checkbox"
-                        name="kennismakingsgesprek"
-                    />
+                    <input type="checkbox" name="kennismakingsgesprek" />
                     <label for="kennismakingsgesprek">
                         Ik wil graag een kennismakingsgesprek plannen
                     </label>

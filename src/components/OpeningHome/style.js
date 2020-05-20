@@ -8,12 +8,19 @@ import { layout } from '../../util/styling_vars';
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     margin: 0;
+    position: relative;
 
-    background-image: url(${speelplaats});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 50%;
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: auto;
+        object-fit: cover;
+        z-index: 0;
+    }
 
     h1 {
         text-transform: uppercase;
@@ -22,6 +29,11 @@ export const Container = styled.div`
         line-height: 1;
         color: white;
         margin-bottom: 10%;
+        position: relative;
+    }
+
+    button {
+        position: relative;
     }
 
     @media ${device.tablet} {

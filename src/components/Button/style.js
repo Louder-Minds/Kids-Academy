@@ -4,12 +4,8 @@ export const Button = styled.button`
     font-weight: 400;
     text-transform: uppercase;
     height: 50px;
-    background: #14B09C;
-    background: linear-gradient(
-        90deg,
-        #14B09C 0%,
-        #14b0b4 100%
-    );
+    background: #14b09c;
+    background: linear-gradient(90deg, #14b09c 0%, #14b0b4 100%);
     border: none;
     color: white;
     padding: 0 5%;
@@ -21,10 +17,5 @@ export const Button = styled.button`
     display: inline-block;
     a {
         color: white;
-        button {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
     }
 `;

@@ -20,7 +20,7 @@ export const Container = styled.div`
         align-items: center;
         justify-items: center;
         min-height: 80px;
-        background-color: rgb(0,0,0,0.05);
+        background-color: rgb(0, 0, 0, 0.05);
         h3 {
             margin-bottom: 0px;
         }
@@ -33,18 +33,22 @@ export const Container = styled.div`
     ul {
         margin: 0;
         margin-top: 5%;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
         li {
             display: flex;
             align-items: center;
             font-size: 16px;
             margin-bottom: 5%;
             font-weight: 500;
-            color: #14B09C;
+            color: #14b09c;
 
             img {
                 margin-right: 8px;
                 width: 8px;
-
             }
         }
     }
@@ -94,8 +98,8 @@ export const Container = styled.div`
                 font-size: 16px;
                 margin-bottom: 5%;
                 font-weight: 500;
-                color: #14B09C;
-    
+                color: #14b09c;
+
                 img {
                     align-self: flex-start;
                     margin-right: 8px;

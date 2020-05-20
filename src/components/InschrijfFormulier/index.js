@@ -5,9 +5,9 @@ import Title from '../Typography/Title';
 const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
 const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
 const prijzen = [
-    'Eenmalige betaling 12-weekse cursus ($)',
-    'Betaling in drie termijnen 12-weekse cursus ($3x)',
-    'Eenmalige betaling Cito-training of Summerschool ($)',
+    'Eenmalige betaling 12-weekse cursus (€)',
+    'Betaling in drie termijnen 12-weekse cursus (€ 3x)',
+    'Eenmalige betaling Cito-training of Summerschool (€)',
 ];
 
 const InschrijfFormulier = () => {
@@ -28,47 +28,64 @@ const InschrijfFormulier = () => {
             <Title type="h2">Schrijf je in voor KidsAcademy</Title>
             <form
                 method="POST"
-                name="contact"
+                name="inschrijven"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
-                action="/"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
-                    <label>Voornaam kind*</label>
-                    <input type="text" name="first_name_child" required />
-                    <label>Achternaam kind*</label>
-                    <input type="text\" name="last_name_child" required/>
+                    <div>
+                        <label>Voornaam kind*</label>
+                        <input type="text" name="first_name_child" required />
+                    </div>
+                    <div>
+                        <label>Achternaam kind*</label>
+                        <input type="text\" name="last_name_child" required />
+                    </div>
                 </div>
                 <hr />
 
                 <div className="naamverzorger">
-                    <label>Voornaam ouder/verzorger*</label>
-                    <input type="text" name="first_name_parent" required/>
-                    <label>Achternaam ouder/verzorger*</label>
-                    <input type="text" name="last_name_parent" required/>
-                    <label>Telefoon*</label>
-                    <input type="tel" name="telephone number" required/>
-                    <label>Email adres*</label>
-                    <input type="email" name="email" required/>
+                    <div>
+                        <label>Voornaam ouder/verzorger*</label>
+                        <input type="text" name="first_name_parent" required />
+                    </div>
+                    <div>
+                        <label>Achternaam ouder/verzorger*</label>
+                        <input type="text" name="last_name_parent" required />
+                    </div>
+                    <div>
+                        <label>Telefoon*</label>
+                        <input type="tel" name="telephone number" required />
+                    </div>
+                    <div>
+                        <label>Email adres*</label>
+                        <input type="email" name="email" required />
+                    </div>
                 </div>
-                <hr/>
+                <hr />
 
                 <div className="klas">
                     <h3>Mijn kind zit in*</h3>
-                    {klassen.map((item) => (
-                        <>
-                            <input type="radio" name="groep" value={`${item}`} />
-                            <label for={`${item}`}>{item}</label>
-                            <br />
-                        </>
-                    ))}
+                    <select name="klas">
+                        {klassen.map((item) => (
+                            <>
+                                <option
+                                    type="radio"
+                                    name="groep"
+                                    value={`${item}`}
+                                >
+                                    {item}
+                                </option>
+                                <br />
+                            </>
+                        ))}
+                    </select>
                 </div>
-                    <hr />
-
+                <hr />
 
                 <div className="interesse">
-                    <h3>Ik heb interesse in</h3>
+                    <h3>Ik heb interesse in*</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
@@ -88,35 +105,37 @@ const InschrijfFormulier = () => {
 
                 <div className="locatie">
                     <h3>Gewenste locatie*</h3>
-                    {locaties.map((item) => (
-                        <>
-                            <input
-                                type="radio"
-                                name="locatie"
-                                value={`${item}`}
-                                required
-                            />
-                            <label for={`${item}`}>{item}</label>
-                            <br />
-                        </>
-                    ))}
+                    <select>
+                        {locaties.map((item) => (
+                            <>
+                                <option
+                                    type="radio"
+                                    name="locatie"
+                                    value={`${item}`}
+                                    required
+                                >
+                                    {item}
+                                </option>
+                                <br />
+                            </>
+                        ))}
+                    </select>
                 </div>
-
                 <hr />
-
 
                 <div className="betaling">
                     <h3>Betaling*</h3>
                     {prijzen.map((item) => (
                         <>
-                            <input
-                                type="radio"
-                                name="betaling"
-                                value={`${item}`}
-                                required
-                            />
-                            <label for={`${item}`}>{item}</label>
-                            <br />
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="betaling"
+                                    value={`${item}`}
+                                    required
+                                />
+                                <label for={`${item}`}>{item}</label>
+                            </div>
                         </>
                     ))}
                 </div>
@@ -124,19 +143,21 @@ const InschrijfFormulier = () => {
 
                 <div className="dagdeel">
                     <label>Voorkeur dag/tijd</label>
-                    <input type="text" name="dagdeel" required/>
+                    <input
+                        type="text"
+                        name="dagdeel"
+                        placeholder="   Maandag 14:00"
+                        required
+                    />
                 </div>
-                <input type="checkbox" name="andere-vraag" value="Ja" />
-                <label for="andere-vraag">Ik heb een andere vraag</label>
-                <br />
                 <hr />
 
                 <div className="textmessage">
-                    <label>Vraag:</label>
-                    <textarea name="message" id="message" rows="5" />
+                    <label>Opmerking/Vraag:</label>
+                    <textarea name="message" id="message" rows="2" />
                 </div>
+                {/* <hr /> */}
                 <button type="submit">Verstuur</button>
-                <input type="reset" value="Reset formulier" />
                 {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" />*/}
             </form>
         </Container>
