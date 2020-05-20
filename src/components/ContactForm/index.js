@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
-import ReCAPTCHA from "react-google-recaptcha";
 
 const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
 const ContactForm = () => {
@@ -69,6 +68,7 @@ const ContactForm = () => {
                                 <input
                                     type="checkbox"
                                     name={`${titel}`}
+                                    value="✓"
                                 />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
@@ -88,7 +88,7 @@ const ContactForm = () => {
                     </label>
                     <br />
 
-                    <input type="checkbox" name="ander-vraag" value="Ja" />
+                    <input type="checkbox" name="andere-vraag" value="Ja" />
                     <label for="andere-vraag">Ik heb een andere vraag</label>
                     <br />
                     <hr />

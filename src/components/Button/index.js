@@ -4,9 +4,12 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { colors } from '../../util/styling_vars';
 
 const PageButton = ({pagename = '/', text = 'Bekijk de cursus', id}) => (
+    <Button>
+
+        <AniLink cover bg={`${colors.turqouise}`} to={`/${pagename.toLowerCase().replace(/\s/g, '-')}`}>
     <Button id={id}>
-        <AniLink paintDrip hex={`${colors.turqouise}`} to={`/${pagename.toLowerCase().replace(/\s/g, '-')}`}>
             {text}
+    </Button>
         </AniLink>
     </Button>
 );

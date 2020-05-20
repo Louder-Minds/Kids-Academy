@@ -9,10 +9,15 @@ export const Container = styled.div`
     color: rgb(55, 55, 92);
     position: relative;
     padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     hr {
         background: rgb(55,55,92);
         height: 2px;
+        width: 100%;
+        margin-top: 0;
     }
 
     h1 {
@@ -26,8 +31,13 @@ export const Container = styled.div`
         text-align: center;
     }
 
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     button {
-        margin-bottom: 10%;
+        margin-bottom: 30px;
+        min-width: 75%;
     }
 
     ul {
@@ -42,10 +52,12 @@ export const Container = styled.div`
 
             img {
                 margin-right: 15px;
-                width: 15px;
+                width: 10px;
             }
         }
     }
+
+}
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
@@ -53,13 +65,6 @@ export const Container = styled.div`
         min-width: 50%;
         ul li {
             margin-bottom: 30px;
-        }
-
-        button {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            margin-bottom: 7.5%;
         }
 
         h1 {

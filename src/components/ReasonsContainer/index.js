@@ -12,6 +12,7 @@ const ReasonsContainer = () => (
         <h1>Summerschool 2020</h1>
         <h5>Mei - Juni - Juli - Augustus</h5>
         <hr />
+        <div>
         <ul>
             <li>
                 <img src={uil} alt="uil-logo" />
@@ -36,6 +37,7 @@ const ReasonsContainer = () => (
             </li>
         </ul>
         <Button pagename="contact" text="Schrijf je direct in"/>
+        </div>
         <hr style={{marginBottom: '0'}} />
     </Container>
 );
