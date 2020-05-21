@@ -2,7 +2,13 @@ import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
-const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
+const klassen = [
+    'Groep 5',
+    'Groep 6',
+    'Groep 7',
+    'Groep 8',
+    'Voortgezet onderwijs',
+];
 const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
 const prijzen = [
     'Eenmalige betaling 12-weekse cursus (€)',
@@ -59,7 +65,7 @@ const InschrijfFormulier = () => {
                         <input type="tel" name="telephone number" required />
                     </div>
                     <div>
-                        <label>Email adres*</label>
+                        <label>E-mail adres*</label>
                         <input type="email" name="email" required />
                     </div>
                 </div>
@@ -85,7 +91,7 @@ const InschrijfFormulier = () => {
                 <hr />
 
                 <div className="interesse">
-                    <h3>Ik heb interesse in*</h3>
+                    <h3>Ik schrijf mijn kind in voor*</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
@@ -122,7 +128,7 @@ const InschrijfFormulier = () => {
                 </div>
                 <hr />
 
-                <div className="betaling">
+                {/* <div className="betaling">
                     <h3>Betaling*</h3>
                     {prijzen.map((item) => (
                         <>
@@ -138,22 +144,11 @@ const InschrijfFormulier = () => {
                         </>
                     ))}
                 </div>
-                <hr />
-
-                <div className="dagdeel">
-                    <label>Voorkeur dag/tijd</label>
-                    <input
-                        type="text"
-                        name="dagdeel"
-                        placeholder="   Maandag 14:00"
-                        required
-                    />
-                </div>
-                <hr />
+                <hr /> */}
 
                 <div className="textmessage">
                     <label>Opmerking/Vraag:</label>
-                    <textarea name="message" id="message" rows="2" />
+                    <textarea name="message" id="message" rows="5" />
                 </div>
                 {/* <hr /> */}
                 <button type="submit">Verstuur</button>

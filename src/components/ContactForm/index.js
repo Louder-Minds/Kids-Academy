@@ -2,12 +2,12 @@ import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
-const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
-const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
-const prijzen = [
-    'Eenmalige betaling 12-weekse cursus (€)',
-    'Betaling in drie termijnen 12-weekse cursus (€ 3x)',
-    'Eenmalige betaling Cito-training of Summerschool (€)',
+const klassen = [
+    'Groep 5',
+    'Groep 6',
+    'Groep 7',
+    'Groep 8',
+    'Voortgezet onderwijs',
 ];
 
 const InschrijfFormulier = () => {
@@ -25,7 +25,7 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Kom in contact met KidsAcademy</Title>
+            <Title type="h2">Kids Academy contact formulier</Title>
             <form
                 method="POST"
                 name="contact"
@@ -78,7 +78,7 @@ const InschrijfFormulier = () => {
                         <input type="tel" name="telephone number" required />
                     </div>
                     <div>
-                        <label>Email adres*</label>
+                        <label>E-mail adres*</label>
                         <input type="email" name="email" required />
                     </div>
                 </div>
@@ -103,20 +103,9 @@ const InschrijfFormulier = () => {
                 </div>
                 <hr />
 
-                <div className="dagdeel">
-                    <label>Voorkeur dag/tijd</label>
-                    <input
-                        type="text"
-                        name="dagdeel"
-                        placeholder="   Maandag 14:00"
-                        required
-                    />
-                </div>
-                <hr />
-
                 <div className="textmessage">
                     <label>Opmerking/Vraag:</label>
-                    <textarea name="message" id="message" rows="2" />
+                    <textarea name="message" id="message" rows="5" />
                 </div>
                 {/* <hr /> */}
                 <button type="submit">Verstuur</button>

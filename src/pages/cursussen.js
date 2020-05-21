@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -17,7 +16,7 @@ const Cursussen = ({ data }) => (
         <SEO title="Cursussen" />
         <Container>
             <Title type="h2">Al onze curssusen</Title>
-            <CursusGrid/>
+            <CursusGrid />
         </Container>
     </Layout>
 );
