@@ -43,8 +43,13 @@ const Footer = () => (
             </div>
 
             <div>
-                <span>Hoofdkantoor: <a href="tel:0207173060">020 717 30 60</a></span>
-                <span>Email: <a href="mailto:info@kidsacademy.nl">Info@kidsacademy.nl</a></span>
+                <span>
+                    Hoofdkantoor: <a href="tel:0207173060">020 717 30 60</a>
+                </span>
+                <span>
+                    Email:{' '}
+                    <a href="mailto:info@kidsacademy.nl">Info@kidsacademy.nl</a>
+                </span>
             </div>
 
             <div>
@@ -55,11 +60,21 @@ const Footer = () => (
             </div> */}
         </div>
 
-        <div id="copy1">
-            <span>Developed by: <a href="https://rubennijhuis.com" target="_">Ruben Nijhuis</a></span>
-        </div>
-        <div id="copy">
-            <span>©Copyright 2020 | Kids Academy | All rights reserved</span>
+        <div>
+            <div id="copy1">
+                <span>
+                    Developed by:{' '}
+                    <a href="https://rubennijhuis.com" target="_">
+                        Ruben Nijhuis
+                    </a>
+                </span>
+            </div>
+            <div id="copy">
+                <span>
+                    ©Copyright 2020 | Kids Academy | All rights reserved |
+                    Design by Christel Pronk{' '}
+                </span>
+            </div>
         </div>
     </Container>
 );

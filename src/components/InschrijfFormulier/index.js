@@ -67,7 +67,7 @@ const InschrijfFormulier = () => {
 
                 <div className="klas">
                     <h3>Mijn kind zit in*</h3>
-                    <select name="klas">
+                    <select name="klas" required>
                         {klassen.map((item) => (
                             <>
                                 <option
@@ -105,14 +105,13 @@ const InschrijfFormulier = () => {
 
                 <div className="locatie">
                     <h3>Gewenste locatie*</h3>
-                    <select>
+                    <select required name="locatie">
                         {locaties.map((item) => (
                             <>
                                 <option
                                     type="radio"
                                     name="locatie"
                                     value={`${item}`}
-                                    required
                                 >
                                     {item}
                                 </option>

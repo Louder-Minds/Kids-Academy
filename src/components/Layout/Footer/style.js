@@ -57,7 +57,7 @@ export const Container = styled.footer`
         span {
             font-size: 1em;
         }
-        margin-bottom:.52%;
+        margin-bottom: 1%;
     }
     #copy1 {
         position: absolute;
@@ -68,7 +68,7 @@ export const Container = styled.footer`
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-bottom: .5%;
+        margin-bottom: 2.5%;
         span {
             font-size: 1em;
         }
@@ -101,6 +101,7 @@ export const Container = styled.footer`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

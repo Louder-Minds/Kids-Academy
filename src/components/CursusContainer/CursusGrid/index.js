@@ -15,7 +15,7 @@ const CursusGrid = () => {
                                 url
                             }
                         }
-                        korteUitlegOverDeCursus {
+                        cursusPoints {
                             json
                         }
                     }
@@ -27,12 +27,13 @@ const CursusGrid = () => {
     return (
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
-                const { titel, fotoVanDeCursus, korteUitlegOverDeCursus } = node;
+                const { titel, cursusPoints, fotoVanDeCursus } = node;
+                console.log(cursusPoints);
                 return (
                     <CursusBlock
                         key={j}
                         name={titel}
-                        description={korteUitlegOverDeCursus}
+                        description={cursusPoints}
                         image={fotoVanDeCursus}
                     />
                 );

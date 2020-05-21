@@ -1,11 +1,18 @@
 import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import Title from '../Typography/Title';
 const klassen = ['Groep 5', 'Groep6', 'Groep7', 'Groep8', 'Middelbare school'];
-const ContactForm = () => {
+const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
+const prijzen = [
+    'Eenmalige betaling 12-weekse cursus (€)',
+    'Betaling in drie termijnen 12-weekse cursus (€ 3x)',
+    'Eenmalige betaling Cito-training of Summerschool (€)',
+];
+
+const InschrijfFormulier = () => {
     const data = useStaticQuery(graphql`
-        query interreses {
+        query {
             allContentfulCursus {
                 edges {
                     node {
@@ -18,7 +25,7 @@ const ContactForm = () => {
 
     return (
         <Container>
-            <h1>Kom in contact</h1>
+            <Title type="h2">Kom in contact met KidsAcademy</Title>
             <form
                 method="POST"
                 name="contact"
@@ -27,43 +34,58 @@ const ContactForm = () => {
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
-                    <label>Voornaam kind*</label>
-                    <input type="text" name="first_name_child" />
-                    <label>Achternaam kind*</label>
-                    <input type="text\" name="last_name_child" />
+                    <div>
+                        <label>Voornaam kind*</label>
+                        <input type="text" name="first_name_child" required />
+                    </div>
+                    <div>
+                        <label>Achternaam kind*</label>
+                        <input type="text\" name="last_name_child" required />
+                    </div>
                 </div>
                 <hr />
 
                 <div className="klas">
                     <h3>Mijn kind zit in*</h3>
-                    {klassen.map((item) => (
-                        <>
-                            <input
-                                type="radio"
-                                name="groep"
-                                value={`${item}`}
-                            />
-                            <label for={`${item}`}>{item}</label>
-                            <br />
-                        </>
-                    ))}
+                    <select name="klas" required>
+                        {klassen.map((item) => (
+                            <>
+                                <option
+                                    type="radio"
+                                    name="groep"
+                                    value={`${item}`}
+                                >
+                                    {item}
+                                </option>
+                                <br />
+                            </>
+                        ))}
+                    </select>
                 </div>
                 <hr />
 
                 <div className="naamverzorger">
-                    <label>Voornaam ouder/verzorger*</label>
-                    <input type="text" name="first_name_parent" />
-                    <label>Achternaam ouder/verzorger*</label>
-                    <input type="text" name="last_name_parent" />
-                    <label>Telefoon*</label>
-                    <input type="tel" name="telephone number" />
-                    <label>Email adres*</label>
-                    <input type="email" name="email" />
+                    <div>
+                        <label>Voornaam ouder/verzorger*</label>
+                        <input type="text" name="first_name_parent" required />
+                    </div>
+                    <div>
+                        <label>Achternaam ouder/verzorger*</label>
+                        <input type="text" name="last_name_parent" required />
+                    </div>
+                    <div>
+                        <label>Telefoon*</label>
+                        <input type="tel" name="telephone number" required />
+                    </div>
+                    <div>
+                        <label>Email adres*</label>
+                        <input type="email" name="email" required />
+                    </div>
                 </div>
-
                 <hr />
+
                 <div className="interesse">
-                    <h3>Ik heb interesse in</h3>
+                    <h3>Ik heb interesse in*</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
@@ -81,29 +103,27 @@ const ContactForm = () => {
                 </div>
                 <hr />
 
-                <div className="info">
-                    <input type="checkbox" name="kennismakingsgesprek" />
-                    <label for="kennismakingsgesprek">
-                        Ik wil graag een kennismakingsgesprek plannen
-                    </label>
-                    <br />
-
-                    <input type="checkbox" name="andere-vraag" value="Ja" />
-                    <label for="andere-vraag">Ik heb een andere vraag</label>
-                    <br />
-                    <hr />
-
-                    <div className="textmessage">
-                        <label>Vraag:</label>
-                        <textarea name="message" id="message" rows="5" />
-                    </div>
-                    <button type="submit">Verstuur</button>
-                    <input type="reset" value="Reset formulier" />
+                <div className="dagdeel">
+                    <label>Voorkeur dag/tijd</label>
+                    <input
+                        type="text"
+                        name="dagdeel"
+                        placeholder="   Maandag 14:00"
+                        required
+                    />
                 </div>
-                {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" /> */}
+                <hr />
+
+                <div className="textmessage">
+                    <label>Opmerking/Vraag:</label>
+                    <textarea name="message" id="message" rows="2" />
+                </div>
+                {/* <hr /> */}
+                <button type="submit">Verstuur</button>
+                {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" />*/}
             </form>
         </Container>
     );
 };
 
-export default ContactForm;
+export default InschrijfFormulier;

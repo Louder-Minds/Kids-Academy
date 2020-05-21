@@ -157,6 +157,12 @@ export const Container = styled.div`
         }
     }
 
+    h1 {
+        padding: 0 5%;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
     @media ${device.tablet} {
         .naamkind {
             flex-direction: row;
