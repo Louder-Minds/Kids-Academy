@@ -9,12 +9,20 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import uil from './uiltje.png';
 
-const OpeningCursus = ({ explanation }) => {
+const OpeningCursus = ({ explanation, points }) => {
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => (
                 <Paragraph>{children}</Paragraph>
             ),
+
+            [BLOCKS.LIST_ITEM]: (node, children) => (
+                <li>
+                    <img src={uil} alt="lg" />
+                    {children[0].props.children[0]}
+                </li>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
         },
     };
 
@@ -28,29 +36,12 @@ const OpeningCursus = ({ explanation }) => {
                 <div>
                     <h3>Voordelen van deze cursus</h3>
                     <hr />
-                    <ul>
-                        <li>
-                            <img src={uil} alt="uil-logo" />
-                            De beste voorbereiding op de Cito-toets
-                        </li>
-                        <li>
-                            <img src={uil} alt="uil-logo" />
-                            Behandelen van alle onderdelen van de Cito-toets
-                        </li>
-                        <li>
-                            <img src={uil} alt="uil-logo" />
-                            Aandacht voor achterstanden
-                        </li>
-                        <li>
-                            <img src={uil} alt="uil-logo" />
-                            Drie uur durende training
-                        </li>
-                    </ul>
+                    {documentToReactComponents(points.json, options)}
                 </div>
             </div>
             <div className="buttons">
-                <Button pagename="inschrijven" text="Schrijf direct in"/>
-                <Button pagename="contact" text="Kennismakingsgesprek"/>
+                <Button pagename="inschrijven" text="Schrijf direct in" />
+                <Button pagename="contact" text="Kennismakingsgesprek" />
             </div>
         </Container>
     );

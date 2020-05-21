@@ -16,6 +16,9 @@ export const query = graphql`
     query($slug: String!) {
         contentfulCursus(titel: { eq: $slug }) {
             titel
+            cursusPoints {
+                json
+            }
             voorWieIsDezeCursus {
                 json
             }
@@ -39,20 +42,24 @@ const Cursus = ({ data }) => {
         tagline,
         cursusUitleg,
         fotoVanDeCursus,
+        cursusPoints,
     } = data.contentfulCursus;
 
     return (
         <Layout>
             <SEO title={`${titel}`} />
             <Title type="h1">{titel}</Title>
-            <OpeningCursus explanation={voorWieIsDezeCursus} />
+            <OpeningCursus
+                explanation={voorWieIsDezeCursus}
+                points={cursusPoints}
+            />
             <Divider />
             <CursusExplanation
                 tagline={tagline}
                 description={cursusUitleg}
                 fotoCursus={fotoVanDeCursus}
             />
-            <Numberblock/>
+            <Numberblock />
             <ErvaringenContainer />
         </Layout>
     );
