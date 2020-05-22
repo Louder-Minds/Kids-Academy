@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { layout } from '../../util/styling_vars';
 import { device } from '../../util/screensizes';
 
-export const Container = styled.ul`
+export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     margin-bottom: 0;
 
@@ -36,7 +36,7 @@ export const Container = styled.ul`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;
-

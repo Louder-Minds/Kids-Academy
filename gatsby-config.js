@@ -22,6 +22,12 @@ module.exports = {
         //       }
         //  },
         {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-167433246-1',
+            },
+        },
+        {
             resolve: `gatsby-source-contentful`,
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,

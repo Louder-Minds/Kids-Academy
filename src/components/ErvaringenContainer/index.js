@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./style.scss"; // requires a loader
+import './style.scss'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { useStaticQuery, graphql } from 'gatsby';
 import Ervaring from './Ervaring';
@@ -32,26 +32,25 @@ const list = [
 
 const ErvaringenContainer = () => {
     const data = useStaticQuery(graphql`
-    query ervaring {
-        allContentfulErvaring {
-          edges {
-            node {
-              naamVanDePersoon
-              fotoVanDePersoon {
-                file {
-                  url
+        query ervaring {
+            allContentfulErvaring {
+                edges {
+                    node {
+                        naamVanDePersoon
+                        fotoVanDePersoon {
+                            file {
+                                url
+                            }
+                        }
+                        content {
+                            content
+                        }
+                    }
                 }
-              }
-              content {
-                content
-              }
             }
-          }
         }
-    }
     `);
 
-    
     // const shuffle = () => {
     //         for (let i = this.length - 1; i > 0; i--) {
     //             const j = Math.floor(Math.random() * (i + 1));
@@ -64,13 +63,18 @@ const ErvaringenContainer = () => {
         <Container id="ervaringen">
             <Title type="h2">Ervaringen van onze leerlingen</Title>
             <Carousel infiniteLoop showThumbs={false}>
-                {data.allContentfulErvaring.edges.map(({node}, i) => (
-                    <Ervaring key={node.naamVanDePersoon} naam={node.naamVanDePersoon} foto={node.fotoVanDePersoon} content={node.content}/>
+                {data.allContentfulErvaring.edges.map(({ node }, i) => (
+                    <Ervaring
+                        key={node.naamVanDePersoon}
+                        naam={node.naamVanDePersoon}
+                        foto={node.fotoVanDePersoon}
+                        content={node.content}
+                    />
                 ))}
             </Carousel>
             <div className="buttons">
-                <Button pagename='/inschrijven' text="Schrijf je direct in"/>
-                <Button pagename='/contact' text="Kennismakingsgesprek"/>
+                <Button pagename="/inschrijven" text="Schrijf je direct in" />
+                <Button pagename="/contact" text="Kennismakingsgesprek" />
             </div>
         </Container>
     );
