@@ -1,45 +1,37 @@
 import React from 'react';
 
 import { Container } from './style';
-
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../Button';
-import Divider from '../Divider';
 
 import uil from './uiltje.png';
 
-const ReasonsContainer = () => (
-    <Container>
-        <h1>Summerschool 2020</h1>
-        <h5>Mei - Juni - Juli - Augustus</h5>
-        <hr />
-        <div>
-        <ul>
-            <li>
-                <img src={uil} alt="uil-logo" />
-                Wij helpen uw kind met het wegwerken van achterstanden in taal
-                en rekenen
-            </li>
-            <li>
-                <img src={uil} alt="uil-logo" />
-                Kinderen presteren direct beter op school
-            </li>
-            <li>
-                <img src={uil} alt="uil-logo" />
-                Wij bereiden uw kind grondig voor op school- en Cito-toetsen
-            </li>
-            <li>
-                <img src={uil} alt="uil-logo" />
-                Overzichtelijke periode van 12 weken
-            </li>
-            <li>
-                <img src={uil} alt="uil-logo" />
-                Schrijf je nu in en start binnen een week
-            </li>
-        </ul>
-        <Button pagename="contact" text="Schrijf je direct in"/>
-        </div>
-        <hr style={{marginBottom: '0'}} />
-    </Container>
-);
+const ReasonsContainer = ({ points }) => {
+    const options = {
+        renderNode: {
+            [BLOCKS.LIST_ITEM]: (node, children) => (
+                <li>
+                    <img src={uil} alt="lg" />
+                    {children[0].props.children[0]}
+                </li>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+        },
+    };
+
+    return (
+        <Container>
+            <h1>Summerschool 2020</h1>
+            <h5>Mei - Juni - Juli - Augustus</h5>
+            <hr />
+            <div>{documentToReactComponents(points.json, options)}</div>
+            <div>
+                <Button pagename="contact" text="Schrijf je direct in" />
+            </div>
+            <hr style={{ marginBottom: '0' }} />
+        </Container>
+    );
+};
 
 export default ReasonsContainer;

@@ -11,21 +11,17 @@ export const Container = styled.div`
         margin-bottom: 1em;
         color: black;
         text-transform: uppercase;
+        display: block;
     }
 
-    div {
-        display: block;
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 1.6em;
+    }
 
-        h5 {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 0.4em;
-            margin-top: 1.4em;
-        }
-
-        p {
-            margin-bottom: 0.6em;
-        }
+    p {
+        margin-bottom: 0.6em;
     }
 
     img {
@@ -34,27 +30,41 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-column-gap: 5%;
-        justify-items: center;
-        align-items: center;
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5%;
+
+            div {
+                width: 45%;
+                margin-bottom: 0;
+                h5 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-top: 1.4em;
+                }
+
+                p {
+                    margin-bottom: 0.6em;
+                }
+            }
+        }
 
         img {
-            width: 100%;
-            display: inline-block;
+            max-width: 400px;
+            display: block;
+            margin: auto;
         }
     }
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
-
-        img {
-            width: 100%;
-        }
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

@@ -95,7 +95,7 @@ const InschrijfFormulier = () => {
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
-                            <>
+                            <div>
                                 <input
                                     type="checkbox"
                                     name={`${titel}`}
@@ -103,7 +103,7 @@ const InschrijfFormulier = () => {
                                 />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
-                            </>
+                            </div>
                         );
                     })}
                 </div>

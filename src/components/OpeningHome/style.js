@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
-import speelplaats from './speelplaats.jpeg';
-
+import Img from 'gatsby-image';
 import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
@@ -9,18 +7,7 @@ export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     margin: 0;
     position: relative;
-
-    img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        max-height: auto;
-        object-fit: cover;
-        z-index: 0;
-    }
+    min-width: 50%;
 
     h1 {
         text-transform: uppercase;
@@ -54,4 +41,16 @@ export const Container = styled.div`
             font-size: 3em;
         }
     }
+`;
+
+export const StyledImg = styled(Img)`
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: auto !important;
+    object-fit: cover !important;
+    z-index: 0 !important;
 `;

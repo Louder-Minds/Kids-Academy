@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Container } from './style';
-import { colors } from '../../../util/styling_vars';
+import { Container, StyledImg } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../../Button';
@@ -26,8 +25,8 @@ const CursusBlock = ({ name, description, image }) => {
                 <h3>{name}</h3>
             </div>
             <div>
-                <img src={image.file.url} alt="foto van kind"></img>
-                <div id="flag" />
+                <StyledImg fluid={image.fluid} />
+                <div className="flag" />
             </div>
             {documentToReactComponents(description.json, options)}
             <Button pagename={name} text="Bekijk de cursus" />

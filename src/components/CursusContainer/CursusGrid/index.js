@@ -11,8 +11,8 @@ const CursusGrid = () => {
                     node {
                         titel
                         fotoVanDeCursus {
-                            file {
-                                url
+                            fluid {
+                                ...GatsbyContentfulFluid
                             }
                         }
                         cursusPoints {
@@ -28,7 +28,6 @@ const CursusGrid = () => {
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
                 const { titel, cursusPoints, fotoVanDeCursus } = node;
-                console.log(cursusPoints);
                 return (
                     <CursusBlock
                         key={j}

@@ -25,7 +25,7 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Kids Academy contact formulier</Title>
+            <Title type="h2">Contact Formulier</Title>
             <form
                 method="POST"
                 name="contact"
@@ -85,11 +85,11 @@ const InschrijfFormulier = () => {
                 <hr />
 
                 <div className="interesse">
-                    <h3>Ik heb interesse in*</h3>
+                    <h3>Ik heb een vraag over*</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
-                            <>
+                            <div>
                                 <input
                                     type="checkbox"
                                     name={`${titel}`}
@@ -97,7 +97,7 @@ const InschrijfFormulier = () => {
                                 />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
-                            </>
+                            </div>
                         );
                     })}
                 </div>

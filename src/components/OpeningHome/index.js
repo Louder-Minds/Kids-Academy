@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { Container } from './style';
+import { Container, StyledImg } from './style';
 import Button from '../Button';
-import speelplaats from './speelplaats.jpeg';
 
-const OpeningHome = () => (
+const OpeningHome = ({ titel, foto }) => (
     <Container>
-        <img src={speelplaats} />
-        <h1>Met zelfvertrouwen en plezier naar school</h1>
+        <StyledImg fluid={foto.fluid} />
+        <h1>{titel}</h1>
         <Button pagename="contact" text="Kennismakingsgesprek" />
     </Container>
 );

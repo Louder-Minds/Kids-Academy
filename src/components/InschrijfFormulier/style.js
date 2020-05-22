@@ -131,7 +131,16 @@ export const Container = styled.div`
     }
 
     .interesse {
-        margin-bottom: -5%;
+        div {
+            display: flex;
+            align-items: center;
+            input {
+                align-self: flex-start;
+                margin-right: 2.5%;
+            }
+            margin: 0;
+            padding: 0;
+        }
     }
 
     .klas {

@@ -8,9 +8,11 @@ import TeamShowcase from '../components/TeamShowcase';
 import Solliciteren from '../components/Solliciteren';
 import Title from '../components/Typography/Title';
 import ErvaringenContainer from '../components/ErvaringenContainer';
+import SEO from '../components/SEO';
 
 const index = () => (
     <Layout>
+        <SEO titel="Over ons" />
         <Title type="h1">Over ons</Title>
         <OpeningAbout />
         <Divider />

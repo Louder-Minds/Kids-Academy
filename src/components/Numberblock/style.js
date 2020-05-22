@@ -47,7 +47,7 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        padding: calc(${layout.padding.height.laptop} - 5%)
+        padding: calc(${layout.padding.height.laptop} - 2.5%)
             ${layout.padding.width.laptop};
     }
 `;

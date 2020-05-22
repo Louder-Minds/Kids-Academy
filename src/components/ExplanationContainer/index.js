@@ -7,7 +7,13 @@ import path from './path.png';
 
 import Paragraph from '../Typography/Paragraph';
 
-const ExplanationContainer = ({ headline, content }) => {
+const ExplanationContainer = ({
+    headline,
+    content1,
+    content2,
+    content3,
+    content4,
+}) => {
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => (
@@ -17,12 +23,14 @@ const ExplanationContainer = ({ headline, content }) => {
         },
     };
 
-
     return (
         <Container>
+            <h1>{headline}</h1>
             <div>
-                <h1>{headline}</h1>
-                <div>{documentToReactComponents(content.json, options)}</div>
+                <div>{documentToReactComponents(content1.json, options)}</div>
+                <div>{documentToReactComponents(content2.json, options)}</div>
+                <div>{documentToReactComponents(content3.json, options)}</div>
+                <div>{documentToReactComponents(content4.json, options)}</div>
             </div>
             <img src={path} alt="leerjaren grafiek" />
         </Container>

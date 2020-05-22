@@ -14,7 +14,7 @@ const Footer = () => (
                 <a href="/over-ons">Over ons</a>
                 <a href="/blog">Blog</a>
                 <a href="/contact">Contact</a>
-                <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
+                <a href="/voorwaarden">Algemene voorwaarden</a>
             </div>
 
             <div>

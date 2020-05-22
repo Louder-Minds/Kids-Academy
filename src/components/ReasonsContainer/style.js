@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-items: center;
 
     hr {
-        background: rgb(55,55,92);
+        background: rgb(55, 55, 92);
         height: 2px;
         width: 100%;
         margin-top: 0;
@@ -27,7 +27,8 @@ export const Container = styled.div`
         font-weight: 600;
     }
 
-    h1, h5 {
+    h1,
+    h5 {
         text-align: center;
     }
 
@@ -35,29 +36,27 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-    button {
-        margin-bottom: 30px;
-        min-width: 75%;
-    }
-
-    ul {
-        margin: 0;
-        li {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
+        button {
             margin-bottom: 30px;
-            font-weight: 500;
-            color: #14B09C;
+        }
 
-            img {
-                margin-right: 15px;
-                width: 10px;
+        ul {
+            margin: 0;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                margin-bottom: 30px;
+                font-weight: 500;
+                color: #14b09c;
+
+                img {
+                    margin-right: 15px;
+                    width: 10px;
+                }
             }
         }
     }
-
-}
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
