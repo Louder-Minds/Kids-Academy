@@ -12,12 +12,14 @@ import Numberblock from '../components/Numberblock';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
 
+import { injectIntl } from 'gatsby-plugin-intl';
+
 export const query = graphql`
     query Home {
         contentfulHome {
             bannerTitel
             bannerFoto {
-                fluid {
+                fluid(quality: 100) {
                     ...GatsbyContentfulFluid
                 }
             }
@@ -87,4 +89,4 @@ const index = ({ data }) => {
     );
 };
 
-export default index;
+export default injectIntl(index);

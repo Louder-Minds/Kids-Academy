@@ -21,9 +21,16 @@ export const Container = styled.div`
 
     .imgbox {
         padding: 0 0 15px 15px;
+        height: 100%;
         width: 100%;
+        max-width: 400px;
+        max-height: 400px;
 
         div {
+            height: 100%;
+            width: 100%;
+            max-width: 400px;
+            max-height: 400px;
             min-height: 200px !important;
             box-shadow: -15px 15px 0 #14b09c;
         }

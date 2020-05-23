@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Paragraph from '../Typography/Paragraph';
 import Title from '../Typography/Title';
+import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 
 const CursusContainer = ({ headline, content }) => {
     const options = {
@@ -17,7 +18,10 @@ const CursusContainer = ({ headline, content }) => {
 
     return (
         <Container>
-            <Title type="h2">Onze cursussen</Title>
+            <Title type="h2">
+                {' '}
+                <FormattedMessage id="onze-cursussen_headline" />
+            </Title>
             <CursusGrid />
             <div className="content">
                 <h1>{headline}</h1>

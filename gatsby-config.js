@@ -34,6 +34,19 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
+        {
+            resolve: `gatsby-plugin-intl`,
+            options: {
+                // language JSON resource path
+                path: `${__dirname}/src/util/lang`,
+                // supported language
+                languages: [`nl`, `en`],
+                // language file path
+                defaultLanguage: `nl`,
+                // option to redirect to `/nl` when connecting `/`
+                redirect: true,
+            },
+        },
         // {
         //     resolve: `gatsby-source-stripe`,
         //     options: {

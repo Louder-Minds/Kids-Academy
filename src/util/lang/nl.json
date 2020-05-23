@@ -1,0 +1,23 @@
+{
+    "kennismakingsgesprek_button": "Kennismakingsgesprek",
+    "inschrijven_button": "Schrijf je direct in",
+
+    "home_nav": "Home",
+    "cursussen_nav": "Cursussen",
+    "over-ons_nav": "Over ons",
+    "blog_nav": "Blog",
+    "contact_nav": "Contact",
+    "inschrijven_nav": "Inschrijven",
+    "voorwaarden_nav": "Algemene voorwaarden",
+
+    "onze-cursussen_headline": "Onze cursussen",
+
+    "locaties_odobalk": "Locaties",
+    "ervaring_odobalk": "Ervaring",
+    "tevereden-ouders_odobalk": "Tevreden ouders",
+
+    "notfound": {
+        "header": "NOT FOUND",
+        "description": "You just hit a route that doesn't exist... the sadness."
+    }
+}

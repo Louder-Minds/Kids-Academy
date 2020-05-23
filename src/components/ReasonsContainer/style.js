@@ -17,6 +17,11 @@ export const Container = styled.div`
         background: rgb(55, 55, 92);
         height: 2px;
         width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    hr:last-child {
         margin-top: 0;
     }
 

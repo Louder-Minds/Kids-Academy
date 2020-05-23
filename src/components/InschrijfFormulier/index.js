@@ -19,7 +19,7 @@ const prijzen = [
 const InschrijfFormulier = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulCursus {
+            allContentfulCursus(filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         titel

@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const CursusGrid = () => {
     const data = useStaticQuery(graphql`
         query names {
-            allContentfulCursus(filter: { node_locale: { eq: "nl" } }) {
+            allContentfulCursus(filter: { node_locale: { eq: "$locale" } }) {
                 edges {
                     node {
                         titel
