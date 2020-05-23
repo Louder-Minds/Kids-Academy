@@ -10,7 +10,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const TeamShowcase = () => {
     const data = useStaticQuery(graphql`
         query people {
-            allContentfulMedewerker {
+            allContentfulMedewerker(filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         naam

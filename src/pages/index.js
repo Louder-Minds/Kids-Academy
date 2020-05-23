@@ -17,7 +17,7 @@ export const query = graphql`
         contentfulHome {
             bannerTitel
             bannerFoto {
-                fluid(maxWidth: 350, quality: 100) {
+                fluid {
                     ...GatsbyContentfulFluid
                 }
             }
