@@ -9,21 +9,45 @@ import Solliciteren from '../components/Solliciteren';
 import Title from '../components/Typography/Title';
 import ErvaringenContainer from '../components/ErvaringenContainer';
 import SEO from '../components/SEO';
+import { graphql } from 'gatsby';
 
-const index = () => (
-    <Layout>
-        <SEO titel="Over ons" />
-        <Title type="h1">Over ons</Title>
-        <OpeningAbout />
-        <Divider />
-        <AcademyWayExplanation />
-        <Divider />
-        <TeamShowcase />
-        <Divider />
-        <ErvaringenContainer />
-        <Divider />
-        <Solliciteren />
-    </Layout>
-);
+export const query = graphql`
+    query About {
+        contentfulOverOns {
+            kop
+            opening {
+                json
+            }
+            openingFoto {
+                fluid {
+                    ...GatsbyContentfulFluid
+                }
+            }
+            solliciteren {
+                json
+            }
+        }
+    }
+`;
+
+const index = ({ data }) => {
+    const { kop, opening, openingFoto, solliciteren } = data.contentfulOverOns;
+    console.log(kop, openingFoto, opening, solliciteren);
+    return (
+        <Layout>
+            <SEO titel="Over ons" />
+            <Title type="h1">Over ons</Title>
+            <OpeningAbout heading={kop} content={opening} foto={openingFoto} />
+            <Divider />
+            <AcademyWayExplanation />
+            <Divider />
+            <TeamShowcase />
+            <Divider />
+            <ErvaringenContainer />
+            <Divider />
+            <Solliciteren content={solliciteren} />
+        </Layout>
+    );
+};
 
 export default index;

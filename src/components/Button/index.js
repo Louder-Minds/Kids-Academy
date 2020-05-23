@@ -10,7 +10,7 @@ const PageButton = ({ pagename = '/', text = 'Bekijk de cursus', id }) => (
             bg={`${colors.turqouise}`}
             to={`/${pagename.toLowerCase().replace(/\s/g, '-')}`}
         >
-            <Button id={id}>{text}</Button>
+            {text}
         </AniLink>
     </Button>
 );

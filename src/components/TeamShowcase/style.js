@@ -18,7 +18,7 @@ export const Container = styled.div`
             flex-direction: column;
             align-items: center;
 
-            img {
+            div {
                 width: 100%;
                 margin-bottom: 10%;
                 max-width: 100%;
@@ -32,7 +32,7 @@ export const Container = styled.div`
                 margin: 0;
                 font-size: 12px;
                 margin-bottom: 5%;
-                color: #14B09C;
+                color: #14b09c;
                 font-weight: 700;
             }
 
@@ -61,6 +61,7 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

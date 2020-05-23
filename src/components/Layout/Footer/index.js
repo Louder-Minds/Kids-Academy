@@ -1,20 +1,33 @@
 import React from 'react';
 
 import { Container } from './style';
-
+import { colors } from '../../../util/styling_vars';
 import kennemer from './Kennemer-Lyceum.png';
 import kidsproof from './kidsproof1.png';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Footer = () => (
     <Container>
         <div id="content">
             <div>
-                <a href="/">Home</a>
-                <a href="/cursussen">Cursussen</a>
-                <a href="/over-ons">Over ons</a>
-                <a href="/blog">Blog</a>
-                <a href="/contact">Contact</a>
-                <a href="/voorwaarden">Algemene voorwaarden</a>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/`}>
+                    Home
+                </AniLink>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/cursussen`}>
+                    Cursussen
+                </AniLink>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/over-ons`}>
+                    Over ons
+                </AniLink>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/blog`}>
+                    Blog
+                </AniLink>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/contact`}>
+                    Contact
+                </AniLink>
+                <AniLink cover bg={`${colors.turqouise}`} to={`/voorwaarden`}>
+                    Algemene voorwaarden
+                </AniLink>
             </div>
 
             <div>

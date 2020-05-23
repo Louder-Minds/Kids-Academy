@@ -26,9 +26,7 @@ const ReasonsContainer = ({ points }) => {
             <h5>Mei - Juni - Juli - Augustus</h5>
             <hr />
             <div>{documentToReactComponents(points.json, options)}</div>
-            <div>
-                <Button pagename="contact" text="Schrijf je direct in" />
-            </div>
+            <Button pagename="contact" text="Schrijf je direct in" />
             <hr style={{ marginBottom: '0' }} />
         </Container>
     );

@@ -9,27 +9,6 @@ import Button from '../Button';
 
 import { Container } from './style';
 
-const list = [
-    {
-        naam: 'Sarah Kapper',
-        foto: 'https://source.unsplash.com/200x200',
-        review:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut ali quip ex ea commodo consequat',
-    },
-    {
-        naam: 'Bram Knuvers',
-        foto: 'https://source.unsplash.com/200x200',
-        review:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut ali quip ex ea commodo consequat',
-    },
-    {
-        naam: 'Ruben Nijhuis',
-        foto: 'https://source.unsplash.com/200x200',
-        review:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut ali quip ex ea commodo consequat',
-    },
-];
-
 const ErvaringenContainer = () => {
     const data = useStaticQuery(graphql`
         query ervaring {

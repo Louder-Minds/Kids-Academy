@@ -40,7 +40,6 @@ export const Container = styled.div`
         width: 90%;
         margin: auto;
         margin-bottom: 5%;
-        margin-top: 5%;
     }
 
     textarea {
@@ -63,6 +62,7 @@ export const Container = styled.div`
     .naamkind {
         display: flex;
         flex-direction: column;
+        padding-top: 0;
 
         div {
             padding: 0;
@@ -119,6 +119,11 @@ export const Container = styled.div`
     div {
         padding: 5%;
     }
+
+    div:last-child {
+        margin-bottom: 0;
+    }
+
     hr {
         max-width: 90%;
         margin: auto;

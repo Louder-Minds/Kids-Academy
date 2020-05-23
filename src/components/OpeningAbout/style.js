@@ -9,6 +9,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    align-items: center;
 
     .text {
         h2 {
@@ -20,11 +21,11 @@ export const Container = styled.div`
 
     .imgbox {
         padding: 0 0 15px 15px;
+        width: 100%;
 
-        .img {
-            width: 100%;
-            height: auto;
-            box-shadow: -15px 15px 0 #14B09C;
+        div {
+            min-height: 200px !important;
+            box-shadow: -15px 15px 0 #14b09c;
         }
     }
 
@@ -32,6 +33,8 @@ export const Container = styled.div`
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         grid-column-gap: 50px;
         align-items: center;
+        justify-items: center;
+        align-content: center;
         grid-template-columns: 3fr 2fr;
     }
 
@@ -40,6 +43,7 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

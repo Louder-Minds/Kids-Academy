@@ -17,7 +17,7 @@ export const query = graphql`
 const VoorwaardenPage = ({ data }) => (
     <Layout>
         <SEO title="Voorwaarden" />
-        <Title type="h1">Voorwaarden</Title>
+        <Title type="h1">Algemene voorwaarden</Title>
         <Voorwaarden content={data.contentfulAlgemeneVoorwaarden.tekst} />
     </Layout>
 );

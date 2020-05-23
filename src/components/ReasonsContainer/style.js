@@ -55,7 +55,19 @@ export const Container = styled.div`
                     width: 10px;
                 }
             }
+            li:last-child {
+                margin-bottom: 0;
+            }
         }
+
+        p {
+            display: none;
+        }
+    }
+
+    button {
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 
     @media ${device.tablet} {

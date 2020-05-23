@@ -22,11 +22,10 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: 120px;
         margin-bottom: 2.5%;
     }
-    
+
     @media ${device.desktop} {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
