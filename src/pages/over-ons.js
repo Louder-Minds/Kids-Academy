@@ -32,7 +32,7 @@ export const query = graphql`
 
 const index = ({ data }) => {
     const { kop, opening, openingFoto, solliciteren } = data.contentfulOverOns;
-    console.log(kop, openingFoto, opening, solliciteren);
+
     return (
         <Layout>
             <SEO titel="Over ons" />

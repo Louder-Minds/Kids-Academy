@@ -27,8 +27,8 @@ export const query = graphql`
                 json
             }
             fotoVanDeCursus {
-                fluid(maxWidth: 350, quality: 100) {
-                    ...GatsbyContentfulFluid
+                file {
+                    url
                 }
             }
         }
