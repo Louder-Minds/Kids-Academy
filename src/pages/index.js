@@ -17,7 +17,7 @@ export const query = graphql`
         contentfulHome {
             bannerTitel
             bannerFoto {
-                fluid {
+                fluid(maxWidth: 350, quality: 100) {
                     ...GatsbyContentfulFluid
                 }
             }
@@ -77,7 +77,7 @@ const index = ({ data }) => {
             <ExplanationContainer
                 headline={kop2}
                 content1={paragraaf21}
-                content2={paragraaf23}
+                content2={paragraaf22}
                 content3={paragraaf23}
                 content4={paragraaf24}
             />

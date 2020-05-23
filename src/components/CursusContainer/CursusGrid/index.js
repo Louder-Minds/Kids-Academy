@@ -6,12 +6,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 const CursusGrid = () => {
     const data = useStaticQuery(graphql`
         query names {
-            allContentfulCursus {
+            allContentfulCursus(filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         titel
                         fotoVanDeCursus {
-                            fluid {
+                            fluid(maxWidth: 400, quality: 100) {
                                 ...GatsbyContentfulFluid
                             }
                         }

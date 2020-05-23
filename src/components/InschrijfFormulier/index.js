@@ -31,7 +31,7 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Schrijf je in voor KidsAcademy</Title>
+            <Title type="h2">Inschrijf formulier</Title>
             <form
                 method="POST"
                 name="inschrijven"

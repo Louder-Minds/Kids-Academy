@@ -107,6 +107,13 @@ const InschrijfFormulier = () => {
                     <label>Opmerking/Vraag:</label>
                     <textarea name="message" id="message" rows="5" />
                 </div>
+
+                {/* <div>
+                    <label for="voorwaarden">
+                        Door dit aan te kruisen ga je mee aan de voorwaarden
+                    </label>
+                    <input type="checkbox" name="voorwaarden" value="✓" />
+                </div> */}
                 {/* <hr /> */}
                 <button type="submit">Verstuur</button>
                 {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" />*/}
