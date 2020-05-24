@@ -23,16 +23,20 @@ const ReasonsContainer = ({ points }) => {
 
     return (
         <Container>
-            <h1>Summerschool 2020</h1>
-            <h5>
-                {' '}
-                <FormattedMessage id="months" />
-            </h5>
-            <hr />
-            <div>{documentToReactComponents(points.json, options)}</div>
-            <Button pagename="contact">
-                <FormattedMessage id="inschrijven_button" />
-            </Button>
+            <div>
+                <h1>Summerschool 2020</h1>
+                <h5>
+                    {' '}
+                    <FormattedMessage id="months" />
+                </h5>
+                <hr />
+            </div>
+            <div>
+                {documentToReactComponents(points.json, options)}
+                <Button pagename="contact">
+                    <FormattedMessage id="inschrijven_button" />
+                </Button>
+            </div>
             <hr style={{ marginBottom: '0' }} />
         </Container>
     );

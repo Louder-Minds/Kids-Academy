@@ -12,10 +12,13 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    min-height: 800px;
+    height: 75vh;
 
     hr {
         background: rgb(55, 55, 92);
-        height: 2px;
+        height: 3px;
         width: 100%;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -44,6 +47,7 @@ export const Container = styled.div`
         button {
             margin-bottom: 30px;
         }
+        width: 100%;
 
         ul {
             margin: 0;
@@ -90,7 +94,30 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         h1 {
-            font-size: 3em;
+            font-size: 4em;
+        }
+
+        h5 {
+            margin-bottom: 5%;a
+        }
+
+        div {
+            
+            ul {
+                li {
+                    font-size: 1.6em;
+                    margin-bottom: 1.6em;
+                    font-weight: 400;
+                    img {
+                        margin-right: 15px;
+                        width: 15px;
+                    }
+                }
+                li:last-child {
+                    margin-bottom: 0;
+                }
+                margin-bottom: 1em;
+            }
         }
         padding: 5%;
         padding-bottom: 0%;
