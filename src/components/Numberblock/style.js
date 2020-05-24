@@ -27,6 +27,7 @@ export const Container = styled.div`
         color: white;
         font-size: 1.4em;
         font-weight: 300;
+        text-transform: uppercase;
     }
 
     @media ${device.tablet} {

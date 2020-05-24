@@ -20,6 +20,7 @@ const CursusGrid = ({ intl }) => {
                             json
                         }
                         node_locale
+                        alleenInHetEngels
                     }
                 }
             }
@@ -30,13 +31,19 @@ const CursusGrid = ({ intl }) => {
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
                 if (node.node_locale === intl.locale) {
-                    const { titel, cursusPoints, fotoVanDeCursus } = node;
+                    const {
+                        titel,
+                        cursusPoints,
+                        fotoVanDeCursus,
+                        alleenInHetEngels,
+                    } = node;
                     return (
                         <CursusBlock
                             key={j}
                             name={titel}
                             description={cursusPoints}
                             image={fotoVanDeCursus}
+                            english={alleenInHetEngels}
                         />
                     );
                 }

@@ -16,77 +16,85 @@ import { injectIntl } from 'gatsby-plugin-intl';
 
 export const query = graphql`
     query Home {
-        contentfulHome {
-            bannerTitel
-            bannerFoto {
-                fluid(quality: 100) {
-                    ...GatsbyContentfulFluid
-                }
-            }
-            bulletPoints {
-                json
-            }
-            kop1
-            paragraaf1 {
-                json
-            }
-            kop2
-            paragraaf21 {
-                json
-            }
-            paragraaf22 {
-                json
-            }
-            paragraaf23 {
-                json
-            }
-            paragraaf24 {
-                json
-            }
-            video {
-                file {
-                    url
+        allContentfulHome {
+            edges {
+                node {
+                    bannerTitel
+                    bannerFoto {
+                        fluid(quality: 100) {
+                            ...GatsbyContentfulFluid
+                        }
+                    }
+                    bulletPoints {
+                        json
+                    }
+                    kop1
+                    paragraaf1 {
+                        json
+                    }
+                    kop2
+                    paragraaf21 {
+                        json
+                    }
+                    paragraaf22 {
+                        json
+                    }
+                    paragraaf23 {
+                        json
+                    }
+                    paragraaf24 {
+                        json
+                    }
+                    video {
+                        file {
+                            url
+                        }
+                    }
+                    node_locale
                 }
             }
         }
     }
 `;
 
-const index = ({ data }) => {
-    const {
-        bannerTitel,
-        bannerFoto,
-        bulletPoints,
-        kop1,
-        paragraaf1,
-        kop2,
-        paragraaf21,
-        paragraaf22,
-        paragraaf23,
-        paragraaf24,
-        video,
-    } = data.contentfulHome;
-
-    return (
-        <Layout>
-            <SEO />
-            <FlexContainer>
-                <OpeningHome titel={bannerTitel} foto={bannerFoto} />
-                <ReasonsContainer points={bulletPoints} />
-            </FlexContainer>
-            <CursusContainer headline={kop1} content={paragraaf1} />
-            <Numberblock />
-            <ExplanationContainer
-                headline={kop2}
-                content1={paragraaf21}
-                content2={paragraaf22}
-                content3={paragraaf23}
-                content4={paragraaf24}
-            />
-            {/* <Divider />
-            <VideoContainer video={video} /> */}
-        </Layout>
-    );
+const index = ({ intl, data }) => {
+    return data.allContentfulHome.edges.map(({ node }, j) => {
+        if (node.node_locale === intl.locale) {
+            const {
+                bannerTitel,
+                bannerFoto,
+                bulletPoints,
+                kop1,
+                paragraaf1,
+                kop2,
+                paragraaf21,
+                paragraaf22,
+                paragraaf23,
+                paragraaf24,
+                video,
+            } = node;
+            return (
+                <Layout key={j}>
+                    <SEO />
+                    <FlexContainer>
+                        <OpeningHome titel={bannerTitel} foto={bannerFoto} />
+                        <ReasonsContainer points={bulletPoints} />
+                    </FlexContainer>
+                    <CursusContainer headline={kop1} content={paragraaf1} />
+                    <Numberblock />
+                    <ExplanationContainer
+                        headline={kop2}
+                        content1={paragraaf21}
+                        content2={paragraaf22}
+                        content3={paragraaf23}
+                        content4={paragraaf24}
+                    />
+                    {/* <Divider />
+                    <VideoContainer video={video} /> */}
+                </Layout>
+            );
+        }
+    });
 };
 
 export default injectIntl(index);

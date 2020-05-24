@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Container, StyledImg } from './style';
+import { Container, StyledImg, Flag } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../../Button';
 import uil from './uiltje.png';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 
-const CursusBlock = ({ name, description, image }) => {
+const CursusBlock = ({ name, description, image, english }) => {
     const options = {
         renderNode: {
             [BLOCKS.LIST_ITEM]: (node, children) => (
@@ -27,7 +27,7 @@ const CursusBlock = ({ name, description, image }) => {
             </div>
             <div>
                 <StyledImg fluid={image.fluid} />
-                <div className="flag" />
+                <Flag english={english} />
             </div>
             {documentToReactComponents(description.json, options)}
             <Button pagename={name}>

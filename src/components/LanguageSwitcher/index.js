@@ -13,6 +13,7 @@ const Language = () => (
                 style={{
                     backgroundColor: 'rgba(0,0,0,0.1)',
                     padding: '5px 0',
+                    width: '60px',
                 }}
             >
                 {languages.map((language) => (

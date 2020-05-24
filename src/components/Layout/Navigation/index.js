@@ -3,10 +3,10 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { colors } from '../../../util/styling_vars';
-// import Button from '../../Button';
 import lg from './logo-wit.png';
 import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
+
 import './styling.scss';
 
 const Navigation = ({ intl }) => {
@@ -28,11 +28,10 @@ const Navigation = ({ intl }) => {
                 cover
                 bg={`${colors.turqouise}`}
                 className="navbar-brand"
-                to="/"
+                to={`/${intl.locale}/`}
             >
                 <img src={lg} alt="logo" />
             </AniLink>
-            <Language />
             <button
                 className="navbar-toggler"
                 type="button"
@@ -50,12 +49,13 @@ const Navigation = ({ intl }) => {
                 id="navbarSupportedContent"
             >
                 <ul className="navbar-nav ml-auto">
+                    <Language />
                     <li className="nav-item active">
                         <AniLink
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
-                            to="/"
+                            to={`/${intl.locale}/`}
                         >
                             Home
                         </AniLink>
@@ -80,7 +80,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/cursussen"
+                                to={`/${intl.locale}/cursussen/`}
                             >
                                 Al onze cursussen
                             </AniLink>
@@ -93,9 +93,11 @@ const Navigation = ({ intl }) => {
                                                 bg={`${colors.turqouise}`}
                                                 className="dropdown-item"
                                                 key={`${node.titel}`}
-                                                to={`/${node.titel
+                                                to={`/${
+                                                    intl.locale
+                                                }/${node.titel
                                                     .toLowerCase()
-                                                    .replace(/\s/g, '-')}`}
+                                                    .replace(/\s/g, '-')}/`}
                                             >
                                                 {node.titel}
                                             </AniLink>
@@ -125,7 +127,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/over-ons"
+                                to={`/${intl.locale}/over-ons/`}
                             >
                                 <FormattedMessage id="over-ons_nav" />
                             </AniLink>
@@ -133,7 +135,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/over-ons#ervaringen"
+                                to={`/${intl.locale}/over-ons#ervaringen/`}
                             >
                                 <FormattedMessage id="ervaringen_nav" />
                             </AniLink>
@@ -141,7 +143,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/over-ons#solliciteren"
+                                to={`/${intl.locale}/over-ons#solliciteren/`}
                             >
                                 <FormattedMessage id="solliciteren_nav" />
                             </AniLink>
@@ -177,7 +179,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/contact"
+                                to={`/${intl.locale}/contact/`}
                             >
                                 <FormattedMessage id="kennismakingsgesprek_nav" />
                             </AniLink>
@@ -185,7 +187,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to="/inschrijven"
+                                to={`/${intl.locale}/inschrijven/`}
                             >
                                 <FormattedMessage id="inschrijven_nav" />
                             </AniLink>
@@ -196,7 +198,7 @@ const Navigation = ({ intl }) => {
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
-                            to="/inschrijven"
+                            to={`/${intl.locale}/inschrijven/`}
                         >
                             <FormattedMessage id="inschrijven_nav" />
                         </AniLink>
