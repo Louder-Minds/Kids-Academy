@@ -17,6 +17,10 @@ export const Container = styled.div`
             margin: 0;
             margin-bottom: 2.5%;
         }
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     .imgbox {

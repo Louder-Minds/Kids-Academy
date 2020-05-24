@@ -39,6 +39,7 @@ export const Container = styled.div`
             p {
                 max-width: 100%;
                 text-align: center;
+                margin-bottom: 0;
             }
         }
     }

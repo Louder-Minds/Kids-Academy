@@ -17,6 +17,12 @@ export const Container = styled.div`
         .text-container {
             grid-column-gap: 5%;
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 5%;
+
+            p {
+                margin-bottom: 0;
+                text-align: justify;
+            }
         }
     }
 

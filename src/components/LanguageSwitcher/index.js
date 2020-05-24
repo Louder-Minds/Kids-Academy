@@ -13,7 +13,7 @@ const Language = () => (
                 style={{
                     backgroundColor: 'rgba(0,0,0,0.1)',
                     padding: '5px 0',
-                    width: '60px',
+                    width: '78px',
                 }}
             >
                 {languages.map((language) => (
@@ -25,7 +25,7 @@ const Language = () => (
                                 currentLocale === language ? `#14b09c` : `none`,
                             margin: 10,
                             cursor: `pointer`,
-                            padding: '5px',
+                            padding: '5px 10px',
                             margin: '0',
                         }}
                     >
