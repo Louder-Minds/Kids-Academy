@@ -5,6 +5,7 @@ import { colors } from '../../../util/styling_vars';
 import kennemer from './Kennemer-Lyceum.png';
 import kidsproof from './kidsproof1.png';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const Footer = () => (
     <Container>
@@ -14,19 +15,19 @@ const Footer = () => (
                     Home
                 </AniLink>
                 <AniLink cover bg={`${colors.turqouise}`} to={`/cursussen`}>
-                    Cursussen
+                    <FormattedMessage id="cursussen_nav" />
                 </AniLink>
                 <AniLink cover bg={`${colors.turqouise}`} to={`/over-ons`}>
-                    Over ons
+                    <FormattedMessage id="over-ons_nav" />
                 </AniLink>
                 <AniLink cover bg={`${colors.turqouise}`} to={`/blog`}>
-                    Blog
+                    <FormattedMessage id="blog_nav" />
                 </AniLink>
                 <AniLink cover bg={`${colors.turqouise}`} to={`/contact`}>
-                    Contact
+                    <FormattedMessage id="contact_nav" />
                 </AniLink>
                 <AniLink cover bg={`${colors.turqouise}`} to={`/voorwaarden`}>
-                    Algemene voorwaarden
+                    <FormattedMessage id="voorwaarden_nav" />
                 </AniLink>
             </div>
 
@@ -57,10 +58,11 @@ const Footer = () => (
 
             <div>
                 <span>
-                    Hoofdkantoor: <a href="tel:0207173060">020 717 30 60</a>
+                    <FormattedMessage id="hoofdkantoor" />:{' '}
+                    <a href="tel:0207173060">020 717 30 60</a>
                 </span>
                 <span>
-                    Email:{' '}
+                    E-mail:{' '}
                     <a href="mailto:info@kidsacademy.nl">Info@kidsacademy.nl</a>
                 </span>
             </div>

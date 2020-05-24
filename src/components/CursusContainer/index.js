@@ -31,4 +31,4 @@ const CursusContainer = ({ headline, content }) => {
     );
 };
 
-export default CursusContainer;
+export default injectIntl(CursusContainer);

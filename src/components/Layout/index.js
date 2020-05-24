@@ -4,13 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { Container } from './style';
+import { injectIntl } from 'gatsby-plugin-intl';
 
-const Layout = ({ children }) => (
-    <Container>
-        <Navigation />
+const Layout = ({ children, intl }) => {
+    return (
+        <Container>
+            <Navigation />
             {children}
-        <Footer />
-    </Container>
-);
+            <Footer />
+        </Container>
+    );
+};
 
-export default Layout;
+export default injectIntl(Layout);

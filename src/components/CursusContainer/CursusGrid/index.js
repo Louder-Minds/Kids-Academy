@@ -2,11 +2,12 @@ import React from 'react';
 import { Container } from './style';
 import CursusBlock from '../CursusBlock';
 import { useStaticQuery, graphql } from 'gatsby';
+import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 
-const CursusGrid = () => {
+const CursusGrid = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query names {
-            allContentfulCursus(filter: { node_locale: { eq: "$locale" } }) {
+            allContentfulCursus {
                 edges {
                     node {
                         titel
@@ -18,6 +19,7 @@ const CursusGrid = () => {
                         cursusPoints {
                             json
                         }
+                        node_locale
                     }
                 }
             }
@@ -27,18 +29,20 @@ const CursusGrid = () => {
     return (
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
-                const { titel, cursusPoints, fotoVanDeCursus } = node;
-                return (
-                    <CursusBlock
-                        key={j}
-                        name={titel}
-                        description={cursusPoints}
-                        image={fotoVanDeCursus}
-                    />
-                );
+                if (node.node_locale === intl.locale) {
+                    const { titel, cursusPoints, fotoVanDeCursus } = node;
+                    return (
+                        <CursusBlock
+                            key={j}
+                            name={titel}
+                            description={cursusPoints}
+                            image={fotoVanDeCursus}
+                        />
+                    );
+                }
             })}
         </Container>
     );
 };
 
-export default CursusGrid;
+export default injectIntl(CursusGrid);

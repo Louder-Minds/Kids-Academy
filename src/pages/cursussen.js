@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import CursusGrid from '../components/CursusContainer/CursusGrid';
 import Title from '../components/Typography/Title';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const Container = styled.div`
     padding: 5%;
@@ -15,7 +16,10 @@ const Cursussen = ({ data }) => (
     <Layout>
         <SEO title="Cursussen" />
         <Container>
-            <Title type="h2">Al onze curssusen</Title>
+            <Title type="h2">
+                {' '}
+                <FormattedMessage id="onze-cursussen_headline" />
+            </Title>
             <CursusGrid />
         </Container>
     </Layout>

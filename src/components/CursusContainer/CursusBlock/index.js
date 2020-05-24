@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../../Button';
 import uil from './uiltje.png';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const CursusBlock = ({ name, description, image }) => {
     const options = {
@@ -29,7 +30,9 @@ const CursusBlock = ({ name, description, image }) => {
                 <div className="flag" />
             </div>
             {documentToReactComponents(description.json, options)}
-            <Button pagename={name} text="Bekijk de cursus" />
+            <Button pagename={name}>
+                <FormattedMessage id="cursus_button" />
+            </Button>
         </Container>
     );
 };

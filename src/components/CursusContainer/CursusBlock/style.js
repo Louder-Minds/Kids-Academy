@@ -27,6 +27,7 @@ export const Container = styled.div`
         h3 {
             margin-bottom: 0px;
         }
+        padding: 0 5%;
     }
 
     p {

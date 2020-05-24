@@ -1,23 +1,33 @@
 {
-    "kennismakingsgesprek_button": "Kennismakingsgesprek",
-    "inschrijven_button": "Schrijf je direct in",
+    "kennismakingsgesprek_button": "Introductory meeting",
+    "inschrijven_button": "Register now",
+    "cursus_button": "Take a look",
+
+    "months": "May - June - Juli - August",
 
     "home_nav": "Home",
-    "cursussen_nav": "Cursussen",
-    "over-ons_nav": "Over ons",
+    "cursussen_nav": "Courses",
+    "over-ons_nav": "About us",
     "blog_nav": "Blog",
     "contact_nav": "Contact",
-    "inschrijven_nav": "Inschrijven",
-    "voorwaarden_nav": "Algemene voorwaarden",
+    "ervaringen_nav": "Reviews",
+    "solliciteren_nav": "Apply",
+    "inschrijven_nav": "Register",
+    "voorwaarden_nav": "Terms and conditions",
+    "kennismakingsgesprek_nav": "Introductory meeting",
 
     "onze-cursussen_headline": "Our courses",
+    "over-ons_headline": "About us",
 
-    "locaties_odobalk": "Locaties",
-    "ervaring_odobalk": "Ervaring",
-    "tevereden-ouders_odobalk": "Tevreden ouders",
+    "locaties_odobalk": "Locations",
+    "ervaring_odobalk": "Experience",
+    "jaren": "Years",
+    "tevreden-ouders_odobalk": "Satisfied parents",
+
+    "hoofdkantoor": "Office",
 
     "notfound": {
         "header": "NOT FOUND",
-        "description": "You just hit a route that doesn't exist... the sadness."
+        "description": "This page has been replaced or removed"
     }
 }

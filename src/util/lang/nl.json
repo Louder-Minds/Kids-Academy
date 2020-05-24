@@ -1,23 +1,33 @@
 {
     "kennismakingsgesprek_button": "Kennismakingsgesprek",
     "inschrijven_button": "Schrijf je direct in",
+    "cursus_button": "Bekijk de cursus",
+
+    "months": "Mei - Juni - Juli - Augustus",
 
     "home_nav": "Home",
     "cursussen_nav": "Cursussen",
     "over-ons_nav": "Over ons",
     "blog_nav": "Blog",
     "contact_nav": "Contact",
+    "ervaringen_nav": "Ervaringen",
+    "solliciteren_nav": "Solliciteren",
     "inschrijven_nav": "Inschrijven",
     "voorwaarden_nav": "Algemene voorwaarden",
+    "kennismakingsgesprek_nav": "Kennismakingsgesprek",
 
     "onze-cursussen_headline": "Onze cursussen",
+    "over-ons_headline": "Over ons",
 
     "locaties_odobalk": "Locaties",
     "ervaring_odobalk": "Ervaring",
-    "tevereden-ouders_odobalk": "Tevreden ouders",
+    "jaren": "Years",
+    "tevreden-ouders_odobalk": "Tevreden ouders",
+
+    "hoofdkantoor": "Hoofdkantoor",
 
     "notfound": {
-        "header": "NOT FOUND",
-        "description": "You just hit a route that doesn't exist... the sadness."
+        "header": "Niet gevonden",
+        "description": "Deze pagina is verplaatst of verwijderd"
     }
 }

@@ -1,20 +1,22 @@
 import React from 'react';
 
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { colors } from '../../../util/styling_vars';
 // import Button from '../../Button';
 import lg from './logo-wit.png';
-
+import Language from '../../LanguageSwitcher';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import './styling.scss';
 
-const Navigation = () => {
+const Navigation = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulCursus(filter: { node_locale: { eq: "nl" } }) {
+            allContentfulCursus {
                 edges {
                     node {
                         titel
+                        node_locale
                     }
                 }
             }
@@ -30,6 +32,7 @@ const Navigation = () => {
             >
                 <img src={lg} alt="logo" />
             </AniLink>
+            <Language />
             <button
                 className="navbar-toggler"
                 type="button"
@@ -67,7 +70,7 @@ const Navigation = () => {
                             aria-haspopup="true"
                             aria-expanded="false"
                         >
-                            Cursussen
+                            <FormattedMessage id="cursussen_nav" />
                         </a>
                         <div
                             className="dropdown-menu dropdown-menu-left"
@@ -82,19 +85,23 @@ const Navigation = () => {
                                 Al onze cursussen
                             </AniLink>
                             {data.allContentfulCursus.edges.map(
-                                ({ node }, j) => (
-                                    <AniLink
-                                        cover
-                                        bg={`${colors.turqouise}`}
-                                        className="dropdown-item"
-                                        key={`${node.titel}`}
-                                        to={`/${node.titel
-                                            .toLowerCase()
-                                            .replace(/\s/g, '-')}`}
-                                    >
-                                        {node.titel}
-                                    </AniLink>
-                                )
+                                ({ node }, j) => {
+                                    if (node.node_locale === intl.locale) {
+                                        return (
+                                            <AniLink
+                                                cover
+                                                bg={`${colors.turqouise}`}
+                                                className="dropdown-item"
+                                                key={`${node.titel}`}
+                                                to={`/${node.titel
+                                                    .toLowerCase()
+                                                    .replace(/\s/g, '-')}`}
+                                            >
+                                                {node.titel}
+                                            </AniLink>
+                                        );
+                                    }
+                                }
                             )}
                         </div>
                     </li>
@@ -108,7 +115,7 @@ const Navigation = () => {
                             aria-haspopup="true"
                             aria-expanded="false"
                         >
-                            Over ons
+                            <FormattedMessage id="over-ons_nav" />
                         </a>
                         <div
                             className="dropdown-menu dropdown-menu-left"
@@ -120,7 +127,7 @@ const Navigation = () => {
                                 className="dropdown-item"
                                 to="/over-ons"
                             >
-                                Over ons
+                                <FormattedMessage id="over-ons_nav" />
                             </AniLink>
                             <AniLink
                                 cover
@@ -128,7 +135,7 @@ const Navigation = () => {
                                 className="dropdown-item"
                                 to="/over-ons#ervaringen"
                             >
-                                Ervaringen
+                                <FormattedMessage id="ervaringen_nav" />
                             </AniLink>
                             <AniLink
                                 cover
@@ -136,7 +143,7 @@ const Navigation = () => {
                                 className="dropdown-item"
                                 to="/over-ons#solliciteren"
                             >
-                                Solliciteren
+                                <FormattedMessage id="solliciteren_nav" />
                             </AniLink>
                         </div>
                     </li>
@@ -160,7 +167,7 @@ const Navigation = () => {
                             aria-haspopup="true"
                             aria-expanded="false"
                         >
-                            Contact
+                            <FormattedMessage id="contact_nav" />
                         </a>
                         <div
                             className="dropdown-menu dropdown-menu-right"
@@ -172,7 +179,7 @@ const Navigation = () => {
                                 className="dropdown-item"
                                 to="/contact"
                             >
-                                Kennismakingsgesprek
+                                <FormattedMessage id="kennismakingsgesprek_nav" />
                             </AniLink>
                             <AniLink
                                 cover
@@ -180,7 +187,7 @@ const Navigation = () => {
                                 className="dropdown-item"
                                 to="/inschrijven"
                             >
-                                Inschrijven
+                                <FormattedMessage id="inschrijven_nav" />
                             </AniLink>
                         </div>
                     </li>
@@ -191,7 +198,7 @@ const Navigation = () => {
                             className="nav-link"
                             to="/inschrijven"
                         >
-                            Inschrijven
+                            <FormattedMessage id="inschrijven_nav" />
                         </AniLink>
                     </li>
                 </ul>
@@ -200,4 +207,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default injectIntl(Navigation);

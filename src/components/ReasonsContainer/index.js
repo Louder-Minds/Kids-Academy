@@ -4,6 +4,7 @@ import { Container } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../Button';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 import uil from './uiltje.png';
 
@@ -23,10 +24,15 @@ const ReasonsContainer = ({ points }) => {
     return (
         <Container>
             <h1>Summerschool 2020</h1>
-            <h5>Mei - Juni - Juli - Augustus</h5>
+            <h5>
+                {' '}
+                <FormattedMessage id="months" />
+            </h5>
             <hr />
             <div>{documentToReactComponents(points.json, options)}</div>
-            <Button pagename="contact" text="Schrijf je direct in" />
+            <Button pagename="contact">
+                <FormattedMessage id="inschrijven_button" />
+            </Button>
             <hr style={{ marginBottom: '0' }} />
         </Container>
     );
