@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 const klassen = [
     'Groep 5',
     'Groep 6',
@@ -151,7 +152,9 @@ const InschrijfFormulier = () => {
                     <textarea name="message" id="message" rows="5" />
                 </div>
                 {/* <hr /> */}
-                <button type="submit">Verstuur</button>
+                <button type="submit">
+                    <FormattedMessage id="verstuur" />
+                </button>
                 {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" />*/}
             </form>
         </Container>

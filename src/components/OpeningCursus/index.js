@@ -8,6 +8,7 @@ import Button from '../Button';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import uil from './uiltje.png';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const OpeningCursus = ({ explanation, points }) => {
     const options = {
@@ -40,8 +41,13 @@ const OpeningCursus = ({ explanation, points }) => {
                 </div>
             </div>
             <div className="buttons">
-                <Button pagename="inschrijven" text="Schrijf direct in" />
-                <Button pagename="contact" text="Kennismakingsgesprek" />
+                <Button pagename="inschrijven">
+                    <FormattedMessage id="inschrijven_button" />
+                </Button>
+                <Button pagename="contact">
+                    {' '}
+                    <FormattedMessage id="kennismakingsgesprek_button" />
+                </Button>
             </div>
         </Container>
     );

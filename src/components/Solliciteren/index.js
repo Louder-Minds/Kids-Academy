@@ -5,6 +5,7 @@ import Paragraph from '../Typography/Paragraph';
 import Button from '../Button';
 import { Container } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const Solliciteren = ({ content }) => (
     <Container>
@@ -12,10 +13,9 @@ const Solliciteren = ({ content }) => (
         <div className="text-container" id="solliciteren">
             {documentToReactComponents(content.json)}
         </div>
-        <Button
-            pagename="mailto:info@kidsacademy.nl"
-            text="Stuur direct een email"
-        />
+        <Button pagename="mailto:info@kidsacademy.nl">
+            <FormattedMessage id="stuur-email" />
+        </Button>
     </Container>
 );
 

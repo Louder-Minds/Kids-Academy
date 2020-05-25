@@ -8,6 +8,7 @@ import Title from '../Typography/Title';
 import Button from '../Button';
 
 import { Container } from './style';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const ErvaringenContainer = () => {
     const data = useStaticQuery(graphql`
@@ -52,8 +53,12 @@ const ErvaringenContainer = () => {
                 ))}
             </Carousel>
             <div className="buttons">
-                <Button pagename="/inschrijven" text="Schrijf je direct in" />
-                <Button pagename="/contact" text="Kennismakingsgesprek" />
+                <Button pagename="inschrijven">
+                    <FormattedMessage id="inschrijven_button" />
+                </Button>
+                <Button pagename="contact">
+                    <FormattedMessage id="inschrijven_button" />
+                </Button>
             </div>
         </Container>
     );

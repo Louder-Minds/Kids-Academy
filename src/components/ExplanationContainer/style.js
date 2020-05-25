@@ -28,6 +28,33 @@ export const Container = styled.div`
         max-width: 100%;
     }
 
+    .imglinks {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            display: block;
+            margin-bottom: 5%;
+        }
+
+        .linkjes {
+            display: inline-block;
+            width: 100%;
+            a {
+                text-align: center;
+                width: 100%;
+                border-radius: 3px;
+                display: block;
+                background: #14b09c;
+                width: 100%;
+                margin-bottom: 5%;
+                color: white;
+                padding: 15px 0;
+            }
+        }
+    }
+
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         div {
@@ -52,10 +79,40 @@ export const Container = styled.div`
             }
         }
 
-        img {
-            max-width: 400px;
-            display: block;
+        .imglinks {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+
             margin: auto;
+
+            img {
+                display: block;
+                max-width: 500px;
+                margin-bottom: 0;
+                margin-right: 5%;
+            }
+
+            .linkjes {
+                display: inline-block;
+                width: auto;
+                a {
+                    text-align: center;
+                    width: 100%;
+                    border-radius: 3px;
+                    display: block;
+                    background: #14b09c;
+                    width: 100%;
+                    margin-bottom: 5%;
+                    color: white;
+                    padding: 15px 30px;
+                }
+                a:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

@@ -19,5 +19,6 @@ export const Button = styled.button`
     a {
         padding: 12px 30px;
         color: white;
+        display: block;
     }
 `;

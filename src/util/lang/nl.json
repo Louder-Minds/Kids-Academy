@@ -21,10 +21,13 @@
 
     "locaties_odobalk": "Locaties",
     "ervaring_odobalk": "Ervaring",
-    "jaren": "Years",
+    "jaren": "Jaren",
     "tevreden-ouders_odobalk": "Tevreden ouders",
 
     "hoofdkantoor": "Hoofdkantoor",
+    "stuur-email": "Send an email",
+
+    "verstuur": "Verstuur",
 
     "notfound": {
         "header": "Niet gevonden",
