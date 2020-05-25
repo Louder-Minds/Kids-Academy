@@ -8,20 +8,80 @@ import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 import './styling.scss';
+import { node } from 'prop-types';
 
 const Navigation = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulCursus {
+            allContentfulCursus(sort: { fields: contentful_id }) {
                 edges {
                     node {
                         titel
                         node_locale
+                        contentful_id
+                    }
+                    next {
+                        titel
+                        node_locale
+                        contentful_id
                     }
                 }
             }
         }
     `);
+
+    const courseLinks = () => {
+        if (intl.locale === 'nl') {
+            return data.allContentfulCursus.edges.map(({ node }, j) => {
+                let coursename, linkname;
+                if (node.node_locale === 'nl') {
+                    coursename = node.titel;
+                    linkname = node.titel;
+                    return (
+                        <AniLink
+                            cover
+                            bg={`${colors.turqouise}`}
+                            className="dropdown-item"
+                            key={`${coursename}`}
+                            to={`/${
+                                intl.locale
+                            }/${linkname.toLowerCase().replace(/\s/g, '-')}/`}
+                        >
+                            {coursename}
+                        </AniLink>
+                    );
+                }
+            });
+        } else {
+            return data.allContentfulCursus.edges.map(({ node, next }, j) => {
+                let name = 'a';
+                let link = 'a';
+                if (next !== null) {
+                    if (node.contentful_id === next.contentful_id) {
+                        name = next.titel;
+                        link = node.titel;
+                        return (
+                            <AniLink
+                                cover
+                                bg={`${colors.turqouise}`}
+                                className="dropdown-item"
+                                key={`${name}`}
+                                to={`/${
+                                    intl.locale
+                                }/${link.toLowerCase().replace(/\s/g, '-')}/`}
+                            >
+                                {name}
+                            </AniLink>
+                        );
+                    } else {
+                        return;
+                    }
+                }
+
+                // console.log(coursename, linkname);
+            });
+        }
+    };
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <AniLink
@@ -84,27 +144,7 @@ const Navigation = ({ intl }) => {
                             >
                                 Al onze cursussen
                             </AniLink>
-                            {data.allContentfulCursus.edges.map(
-                                ({ node }, j) => {
-                                    if (node.node_locale === intl.locale) {
-                                        return (
-                                            <AniLink
-                                                cover
-                                                bg={`${colors.turqouise}`}
-                                                className="dropdown-item"
-                                                key={`${node.titel}`}
-                                                to={`/${
-                                                    intl.locale
-                                                }/${node.titel
-                                                    .toLowerCase()
-                                                    .replace(/\s/g, '-')}/`}
-                                            >
-                                                {node.titel}
-                                            </AniLink>
-                                        );
-                                    }
-                                }
-                            )}
+                            {courseLinks()}
                         </div>
                     </li>
                     <li className="nav-item dropdown">

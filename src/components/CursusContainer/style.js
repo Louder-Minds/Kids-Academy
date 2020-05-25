@@ -12,10 +12,19 @@ export const Container = styled.div`
         h1 {
             font-size: 24px;
             font-weight: 600;
+            margin-bottom: 0;
         }
         p:last-child {
             margin-bottom: 0;
         }
+    }
+    hr {
+        width: 100%;
+        max-width: 350px;
+        height: 3px;
+        background: #37375c;
+        margin-top: 0;
+        margin-bottom: 1.6em;
     }
 
     @media ${device.tablet} {
@@ -27,6 +36,7 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

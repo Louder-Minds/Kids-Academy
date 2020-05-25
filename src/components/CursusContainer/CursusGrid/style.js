@@ -8,6 +8,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
     justify-items: center;
+    margin-bottom: 10%;
 
     @media (min-width: 550px) {
         grid-template-columns: 1fr 1fr;
@@ -21,6 +22,7 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         grid-row-gap: 120px;
+        margin-bottom: 0;
     }
 
     @media ${device.desktop} {

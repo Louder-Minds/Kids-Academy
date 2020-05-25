@@ -12,9 +12,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 800px;
-    height: 75vh;
+    // justify-content: space-between;
+    // min-height: 800px;
+    // height: 75vh;
 
     hr {
         background: rgb(55, 55, 92);
@@ -105,8 +105,8 @@ export const Container = styled.div`
             
             ul {
                 li {
-                    font-size: 1.6em;
-                    margin-bottom: 1.6em;
+                    font-size: 1.4em;
+                    margin-bottom: 1.4em;
                     font-weight: 400;
                     img {
                         margin-right: 15px;
