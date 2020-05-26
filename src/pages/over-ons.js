@@ -43,8 +43,8 @@ const index = ({ data }) => {
             <Divider />
             <TeamShowcase />
             <Divider />
-            {/* <ErvaringenContainer />
-            <Divider /> */}
+            <ErvaringenContainer />
+            <Divider />
             <Solliciteren content={solliciteren} />
         </Layout>
     );
