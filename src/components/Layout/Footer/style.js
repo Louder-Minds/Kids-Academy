@@ -97,7 +97,8 @@ export const Container = styled.footer`
     }
 
     @media ${device.laptop} {
-        padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+        padding: calc(${layout.padding.height.laptop} - 2.5%)
+            ${layout.padding.width.laptop};
     }
 
     @media ${device.desktop} {

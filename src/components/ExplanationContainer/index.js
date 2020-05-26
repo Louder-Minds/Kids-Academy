@@ -32,6 +32,7 @@ const ExplanationContainer = ({
                 <div>{documentToReactComponents(content3.json, options)}</div>
                 <div>{documentToReactComponents(content4.json, options)}</div>
             </div>
+            <h5 className="heading">Test jezelf</h5>
             <div className="imglinks">
                 <img src={path} alt="leerjaren grafiek" />
                 <div className="linkjes">

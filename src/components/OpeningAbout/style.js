@@ -17,10 +17,6 @@ export const Container = styled.div`
             margin: 0;
             margin-bottom: 2.5%;
         }
-
-        p {
-            margin-bottom: 0;
-        }
     }
 
     .imgbox {
@@ -47,6 +43,10 @@ export const Container = styled.div`
         justify-items: center;
         align-content: center;
         grid-template-columns: 3fr 2fr;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     @media ${device.laptop} {

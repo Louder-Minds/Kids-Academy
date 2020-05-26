@@ -48,8 +48,10 @@ export const Container = styled.div`
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         padding-bottom: 0%;
 
-        .heading span {
+        .heading span,
+        button {
             font-size: 3em;
+            display: none;
         }
     }
 

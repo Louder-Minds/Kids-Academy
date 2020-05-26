@@ -28,7 +28,7 @@ export const Grid = styled.div`
     justify-items: center;
 
     div {
-        padding: 10%;
+        padding: 5%;
         display: flex;
         flex-direction: column;
         align-content: flex-start;

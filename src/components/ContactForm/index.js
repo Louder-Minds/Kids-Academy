@@ -26,7 +26,7 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Contact Formulier</Title>
+            <Title type="h2">Aanvraag kennismakingsgesprek</Title>
             <form
                 method="POST"
                 name="contact"
@@ -86,7 +86,7 @@ const InschrijfFormulier = () => {
                 <hr />
 
                 <div className="interesse">
-                    <h3>Ik heb een vraag over*</h3>
+                    <h3>Ik heb een vraag/vragen over*</h3>
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
@@ -116,7 +116,7 @@ const InschrijfFormulier = () => {
                     <input type="checkbox" name="voorwaarden" value="✓" />
                 </div> */}
                 {/* <hr /> */}
-                <div className="interesse">
+                {/* <div className="interesse">
                     <div>
                         <input type="checkbox" name={`voorwaarden`} value="✓" />
                         <label for={`voorwaarden"`}>
@@ -126,7 +126,7 @@ const InschrijfFormulier = () => {
                             </a>
                         </label>
                     </div>
-                </div>
+                </div> */}
                 <button type="submit">
                     <FormattedMessage id="verstuur" />
                 </button>

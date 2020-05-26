@@ -12,6 +12,11 @@ export const Container = styled.div`
         justify-items: center;
     }
 
+    button {
+        display: block;
+        margin: auto;
+    }
+
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         .text-container {

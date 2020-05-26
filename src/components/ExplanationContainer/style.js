@@ -28,11 +28,16 @@ export const Container = styled.div`
         max-width: 100%;
     }
 
+    .heading {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 5%;
+    }
+
     .imglinks {
         display: flex;
         align-items: center;
         flex-direction: column;
-
         img {
             display: block;
             margin-bottom: 5%;
@@ -92,7 +97,7 @@ export const Container = styled.div`
                 display: block;
                 max-width: 500px;
                 margin-bottom: 0;
-                margin-right: 15%;
+                margin-right: 10%;
             }
 
             .linkjes {
