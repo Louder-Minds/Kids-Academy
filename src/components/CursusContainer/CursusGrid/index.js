@@ -12,7 +12,7 @@ const CursusGrid = ({ intl }) => {
                     node {
                         titel
                         fotoVanDeCursus {
-                            fluid(maxWidth: 400, quality: 100) {
+                            fluid(quality: 90, maxWidth: 960) {
                                 ...GatsbyContentfulFluid
                             }
                         }
