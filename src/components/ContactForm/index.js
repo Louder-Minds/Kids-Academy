@@ -108,7 +108,7 @@ const InschrijfFormulier = () => {
                     <label>Opmerking/Vraag:</label>
                     <textarea name="message" id="message" rows="5" />
                 </div>
-
+                <hr />
                 {/* <div>
                     <label for="voorwaarden">
                         Door dit aan te kruisen ga je mee aan de voorwaarden
@@ -116,6 +116,17 @@ const InschrijfFormulier = () => {
                     <input type="checkbox" name="voorwaarden" value="✓" />
                 </div> */}
                 {/* <hr /> */}
+                <div className="interesse">
+                    <div>
+                        <input type="checkbox" name={`voorwaarden`} value="✓" />
+                        <label for={`voorwaarden"`}>
+                            Ik ga akkoord met de{' '}
+                            <a href="/voorwaarden" target="_">
+                                algemene voorwaarden
+                            </a>
+                        </label>
+                    </div>
+                </div>
                 <button type="submit">
                     <FormattedMessage id="verstuur" />
                 </button>

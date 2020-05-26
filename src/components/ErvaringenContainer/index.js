@@ -60,7 +60,7 @@ const ErvaringenContainer = () => {
                     <FormattedMessage id="inschrijven_button" />
                 </Button> */}
                 <Button pagename="contact">
-                    <FormattedMessage id="kennismakings_button" />
+                    <FormattedMessage id="kennismakingsgesprek_button" />
                 </Button>
             </div>
         </Container>
