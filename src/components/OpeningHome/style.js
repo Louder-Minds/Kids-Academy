@@ -5,18 +5,38 @@ import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+    padding-top: 25%;
+    padding-bottom: 5%;
     margin: 0;
     position: relative;
     min-width: 50%;
+    min-height: 250px;
 
-    h1 {
-        text-transform: uppercase;
-        font-size: 2em;
-        font-weight: 700;
-        line-height: 1;
-        color: white;
+    .heading {
+        span {
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1;
+            color: white;
+            position: relative;
+            display: inline-block;
+            margin-right: 2.5%;
+            z-index: 5;
+            transform: translateX(0);
+        }
+        span:before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            bottom: -2.5%;
+            left: 5px;
+            width: calc(100%);
+            height: 20px;
+            background: #14b09c;
+            opacity: 75%;
+        }
         margin-bottom: 10%;
-        position: relative;
     }
 
     button {
@@ -37,7 +57,7 @@ export const Container = styled.div`
         padding: 5%;
         padding-bottom: 0%;
 
-        h1 {
+        div span {
             font-size: 3em;
         }
     }
@@ -51,6 +71,13 @@ export const StyledImg = styled(Img)`
     max-width: 100% !important;
     height: 100% !important;
     max-height: auto !important;
-    object-fit: cover !important;
+    object-fit: 50% 30% !important;
     z-index: 0 !important;
+    min-height: 300px;
+
+    @media ${device.desktop} {
+        picture img {
+            object-position: 10% 30% !important;
+        }
+    }
 `;

@@ -33,7 +33,7 @@ const ReasonsContainer = ({ points }) => {
             </div>
             <div>
                 {documentToReactComponents(points.json, options)}
-                <Button pagename="contact">
+                <Button pagename="inschrijven">
                     <FormattedMessage id="inschrijven_button" />
                 </Button>
             </div>

@@ -77,8 +77,6 @@ const Navigation = ({ intl }) => {
                         return;
                     }
                 }
-
-                // console.log(coursename, linkname);
             });
         }
     };

@@ -105,7 +105,7 @@ export const Container = styled.div`
             
             ul {
                 li {
-                    font-size: 1.4em;
+                    font-size: 1em;
                     margin-bottom: 1.4em;
                     font-weight: 400;
                     img {

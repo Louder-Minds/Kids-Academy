@@ -32,7 +32,7 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Inschrijf formulier</Title>
+            <Title type="h2">Inschrijfformulier</Title>
             <form
                 method="POST"
                 name="inschrijven"
@@ -151,7 +151,19 @@ const InschrijfFormulier = () => {
                     <label>Opmerking/Vraag:</label>
                     <textarea name="message" id="message" rows="5" />
                 </div>
-                {/* <hr /> */}
+                <hr />
+
+                <div className="interesse">
+                    <div>
+                        <input type="checkbox" name={`voorwaarden`} value="✓" />
+                        <label for={`voorwaarden"`}>
+                            Ik ga akkoord met de{' '}
+                            <a href="/voorwaarden" target="_">
+                                algemene voorwaarden
+                            </a>
+                        </label>
+                    </div>
+                </div>
                 <button type="submit">
                     <FormattedMessage id="verstuur" />
                 </button>

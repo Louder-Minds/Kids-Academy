@@ -27,6 +27,10 @@ export const Container = styled.div`
         }
     }
 
+    .points {
+        width: 100%;
+    }
+
     hr {
         height: 2px;
         background: black;
@@ -46,7 +50,7 @@ export const Container = styled.div`
             font-size: 20px;
             margin-bottom: 30px;
             font-weight: 600;
-            color: #14B09C;
+            color: #14b09c;
 
             img {
                 margin-right: 15px;
@@ -95,9 +99,13 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+        .points {
+            width: auto;
+        }
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;

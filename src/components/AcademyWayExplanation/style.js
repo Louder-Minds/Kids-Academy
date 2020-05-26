@@ -15,7 +15,8 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop}
+            ${layout.padding.width.desktop};
     }
 `;
 
@@ -35,8 +36,10 @@ export const Grid = styled.div`
 
         text-align: center;
 
-        img {
+        svg {
             margin-bottom: 10%;
+            height: 50px;
+            width: 50px;
         }
 
         p {

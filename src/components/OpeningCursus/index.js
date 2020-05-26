@@ -34,7 +34,7 @@ const OpeningCursus = ({ explanation, points }) => {
                     <Title type="h2">Voor wie is deze cursus?</Title>
                     {documentToReactComponents(explanation.json, options)}
                 </div>
-                <div>
+                <div className="points">
                     <h3>Voordelen van deze cursus</h3>
                     <hr />
                     {documentToReactComponents(points.json, options)}
@@ -44,10 +44,10 @@ const OpeningCursus = ({ explanation, points }) => {
                 <Button pagename="inschrijven">
                     <FormattedMessage id="inschrijven_button" />
                 </Button>
-                <Button pagename="contact">
+                {/* <Button pagename="contact">
                     {' '}
                     <FormattedMessage id="kennismakingsgesprek_button" />
-                </Button>
+                </Button> */}
             </div>
         </Container>
     );

@@ -39,6 +39,9 @@ const ErvaringenContainer = () => {
     //         return this;
     // }
 
+    // Ervaringen
+    //     Foto’s
+
     return (
         <Container id="ervaringen">
             <Title type="h2">Ervaringen van onze leerlingen</Title>
@@ -53,11 +56,11 @@ const ErvaringenContainer = () => {
                 ))}
             </Carousel>
             <div className="buttons">
-                <Button pagename="inschrijven">
+                {/* <Button pagename="inschrijven">
                     <FormattedMessage id="inschrijven_button" />
-                </Button>
+                </Button> */}
                 <Button pagename="contact">
-                    <FormattedMessage id="inschrijven_button" />
+                    <FormattedMessage id="kennismakings_button" />
                 </Button>
             </div>
         </Container>

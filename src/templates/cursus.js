@@ -60,7 +60,7 @@ const Cursus = ({ data }) => {
                 fotoCursus={fotoVanDeCursus}
             />
             <Numberblock />
-            <ErvaringenContainer />
+            {/* <ErvaringenContainer /> */}
         </Layout>
     );
 };

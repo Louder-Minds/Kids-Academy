@@ -92,7 +92,7 @@ export const Container = styled.div`
                 display: block;
                 max-width: 500px;
                 margin-bottom: 0;
-                margin-right: 5%;
+                margin-right: 15%;
             }
 
             .linkjes {
