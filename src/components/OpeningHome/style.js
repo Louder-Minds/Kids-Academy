@@ -48,8 +48,8 @@ export const Container = styled.div`
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         padding-bottom: 0%;
 
-        h1 {
-            font-size: 2.2em;
+        .heading span {
+            font-size: 3em;
         }
     }
 
@@ -57,7 +57,7 @@ export const Container = styled.div`
         padding: 5%;
         padding-bottom: 0%;
 
-        div span {
+        .heading span {
             font-size: 3em;
         }
     }
