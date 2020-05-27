@@ -8,7 +8,7 @@ const OpeningHome = ({ titel, foto }) => {
     return (
         <Container>
             <StyledImg fluid={foto.fluid} />
-            <div>
+            <div className="heading">
                 {t.map((item) => (
                     <span>{`${item} `}</span>
                 ))}
