@@ -43,7 +43,7 @@ const ExplanationContainer = ({
                         Ben jij klaar voor groep 7?
                     </a>
                     <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-de-eindtoets-groep-7/exam-349401">
-                        Ben jij klaar voor de Eindcito groep 7?
+                        Ben jij klaar voor de Entree-toets groep 7?
                     </a>
                     <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-8/exam-349176">
                         Ben jij klaar voor groep 8?

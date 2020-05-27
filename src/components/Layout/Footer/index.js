@@ -68,11 +68,13 @@ const Footer = () => (
             </div>
 
             <div>
-                <img src={kennemer} alt="afbeelding kennemer logo" />
-                <img src={kidsproof} alt="afbeelding kidsproof logo" />
+                <a href="https://www.kennemerlyceum.nl" target="_">
+                    <img src={kennemer} alt="afbeelding kennemer logo" />
+                </a>
+                <a href="https://www.kidsproof.nl/" target="_">
+                    <img src={kidsproof} alt="afbeelding kidsproof logo" />
+                </a>
             </div>
-            {/* <div>
-            </div> */}
         </div>
 
         <div>
@@ -87,7 +89,10 @@ const Footer = () => (
             <div id="copy">
                 <span>
                     ©Copyright 2020 | Kids Academy | All rights reserved |
-                    Design by Christel Pronk{' '}
+                    Design by{' '}
+                    <a href="https://www.lestudiobrun.nl/" target="_">
+                        Christel Pronk
+                    </a>{' '}
                 </span>
             </div>
         </div>

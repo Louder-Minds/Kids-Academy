@@ -12,6 +12,11 @@ export const Container = styled.div`
         justify-items: center;
         margin-bottom: 5%;
 
+        a {
+            color: #14b09c;
+            text-decoration: underline;
+        }
+
         h2 {
             text-align: left;
         }
