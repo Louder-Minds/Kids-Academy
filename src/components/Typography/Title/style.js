@@ -10,13 +10,9 @@ export const H1 = styled.h1`
     font-weight: 700;
     margin-top: 10%;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    word-wrap: break-word;
-  overflow-wrap: break-word;
 
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-        hyphens: auto;
+    hyphens: auto;
+    hyphens: auto;
     padding: 0 5%;
     margin-bottom: 0;
 
