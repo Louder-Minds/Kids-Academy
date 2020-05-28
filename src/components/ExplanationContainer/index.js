@@ -36,16 +36,28 @@ const ExplanationContainer = ({
             <div className="imglinks">
                 <img src={path} alt="leerjaren grafiek" />
                 <div className="linkjes">
-                    <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-6/exam-351394">
+                    <a
+                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-6/exam-351394"
+                        target="_"
+                    >
                         Ben jij klaar voor groep 6?
                     </a>
-                    <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-7/exam-349202">
+                    <a
+                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-7/exam-349202"
+                        target="_"
+                    >
                         Ben jij klaar voor groep 7?
                     </a>
-                    <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-de-eindtoets-groep-7/exam-349401">
-                        Ben jij klaar voor de Eindcito groep 7?
+                    <a
+                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-de-entreetoets/exam-353245"
+                        target="_"
+                    >
+                        Ben jij klaar voor de Entreetoets?
                     </a>
-                    <a href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-8/exam-349176">
+                    <a
+                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-8/exam-353442"
+                        target="_"
+                    >
                         Ben jij klaar voor groep 8?
                     </a>
                 </div>

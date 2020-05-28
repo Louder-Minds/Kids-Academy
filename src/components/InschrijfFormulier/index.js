@@ -158,7 +158,11 @@ const InschrijfFormulier = () => {
                         <input type="checkbox" name={`voorwaarden`} value="✓" />
                         <label for={`voorwaarden"`}>
                             Ik ga akkoord met de{' '}
-                            <a href="/voorwaarden" target="_">
+                            <a
+                                href="/voorwaarden"
+                                target="_"
+                                style={{ color: '#14b09c' }}
+                            >
                                 algemene voorwaarden
                             </a>
                         </label>
