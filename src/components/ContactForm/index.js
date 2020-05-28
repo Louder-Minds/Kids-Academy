@@ -108,7 +108,7 @@ const InschrijfFormulier = () => {
                     <label>Opmerking/Vraag:</label>
                     <textarea name="message" id="message" rows="5" />
                 </div>
-                <hr />
+                {/* <hr /> */}
                 {/* <div>
                     <label for="voorwaarden">
                         Door dit aan te kruisen ga je mee aan de voorwaarden

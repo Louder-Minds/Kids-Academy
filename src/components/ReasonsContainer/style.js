@@ -4,7 +4,8 @@ import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+    padding: calc(${layout.padding.height.mobile} - 5%)
+        ${layout.padding.width.mobile};
     background-color: white;
     color: rgb(55, 55, 92);
     position: relative;
@@ -98,11 +99,10 @@ export const Container = styled.div`
         }
 
         h5 {
-            margin-bottom: 5%;a
+            margin-bottom: 5%;
         }
 
         div {
-            
             ul {
                 li {
                     font-size: 1em;

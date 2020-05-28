@@ -25,6 +25,13 @@ export const Container = styled.div`
         }
     }
 
+    .content {
+        a {
+            color: #14b09c;
+            text-decoration: underline;
+        }
+    }
+
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         grid-column-gap: 50px;

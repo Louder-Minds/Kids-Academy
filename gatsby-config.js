@@ -15,12 +15,6 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-transition-link`,
-        // {
-        //     resolve: "gatsby-plugin-transition-link",
-        //     options: {
-        //         layout: require.resolve(`./src/components/Layout`)
-        //       }
-        //  },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
@@ -45,20 +39,5 @@ module.exports = {
                 defaultLanguage: `nl`,
             },
         },
-        // {
-        //     resolve: `gatsby-source-stripe`,
-        //     options: {
-        //         objects: [
-        //             'Balance',
-        //             'BalanceTransaction',
-        //             'Product',
-        //             'ApplicationFee',
-        //             'Sku',
-        //             'Subscription',
-        //         ],
-        //         secretKey: 'stripe_secret_key_here',
-        //         downloadFiles: true,
-        //     },
-        // },
     ],
 };

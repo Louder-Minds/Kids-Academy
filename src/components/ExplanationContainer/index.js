@@ -7,18 +7,10 @@ import path from './path.png';
 
 import Paragraph from '../Typography/Paragraph';
 
-const ExplanationContainer = ({
-    headline,
-    content1,
-    content2,
-    content3,
-    content4,
-}) => {
+const ExplanationContainer = ({ headline, content1, content2, content3, content4 }) => {
     const options = {
         renderNode: {
-            [BLOCKS.PARAGRAPH]: (node, children) => (
-                <Paragraph>{children}</Paragraph>
-            ),
+            [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
             [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
         },
     };
@@ -43,7 +35,7 @@ const ExplanationContainer = ({
                         Ben jij klaar voor groep 6?
                     </a>
                     <a
-                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-7/exam-349202"
+                        href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-7/exam-353470"
                         target="_"
                     >
                         Ben jij klaar voor groep 7?

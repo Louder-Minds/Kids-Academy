@@ -1,4 +1,3 @@
-KidsAcademy site
+## Kids Academy
 
-README Coming soon
->
+#### | Het beste voor uw kind
