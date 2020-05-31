@@ -12,9 +12,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-between;
-    // min-height: 800px;
-    // height: 75vh;
 
     hr {
         background: rgb(55, 55, 92);

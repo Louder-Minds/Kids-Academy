@@ -20,7 +20,7 @@ export const query = graphql`
             }
             openingFoto {
                 fluid {
-                    ...GatsbyContentfulFluid
+                    ...GatsbyContentfulFluid_withWebp
                 }
             }
             solliciteren {

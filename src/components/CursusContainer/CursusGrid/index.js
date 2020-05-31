@@ -12,8 +12,8 @@ const CursusGrid = ({ intl }) => {
                     node {
                         titel
                         fotoVanDeCursus {
-                            fluid(quality: 90, maxWidth: 960) {
-                                ...GatsbyContentfulFluid
+                            fluid(quality: 95, maxWidth: 300) {
+                                ...GatsbyContentfulFluid_withWebp
                             }
                         }
                         cursusPoints {
@@ -31,12 +31,7 @@ const CursusGrid = ({ intl }) => {
         <Container>
             {data.allContentfulCursus.edges.map(({ node }, j) => {
                 if (node.node_locale === intl.locale) {
-                    const {
-                        titel,
-                        cursusPoints,
-                        fotoVanDeCursus,
-                        alleenInHetEngels,
-                    } = node;
+                    const { titel, cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
                     return (
                         <CursusBlock
                             key={j}

@@ -16,7 +16,7 @@ const TeamShowcase = () => {
                         naam
                         foto {
                             fluid {
-                                ...GatsbyContentfulFluid
+                                ...GatsbyContentfulFluid_withWebp
                             }
                         }
                         functie
@@ -39,9 +39,7 @@ const TeamShowcase = () => {
                             <Img fluid={foto.fluid} />
                             <Title type="h2">{naam}</Title>
                             <span>{functie}</span>
-                            <Paragraph>
-                                {documentToReactComponents(overHetPersoon.json)}
-                            </Paragraph>
+                            <Paragraph>{documentToReactComponents(overHetPersoon.json)}</Paragraph>
                         </div>
                     );
                 })}

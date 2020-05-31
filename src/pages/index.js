@@ -21,8 +21,8 @@ export const query = graphql`
                 node {
                     bannerTitel
                     bannerFoto {
-                        fluid(quality: 90, maxWidth: 960) {
-                            ...GatsbyContentfulFluid
+                        fluid(quality: 90, maxWidth: 500) {
+                            ...GatsbyContentfulFluid_withWebp
                         }
                     }
                     bulletPoints {

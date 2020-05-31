@@ -34,7 +34,7 @@ const InschrijfFormulier = () => {
                 data-netlify="true"
                 action="/success"
             >
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="inschrijven" />
                 <div className="naamkind">
                     <div>
                         <label>Voornaam kind*</label>
