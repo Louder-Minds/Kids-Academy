@@ -4,8 +4,7 @@ import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: calc(${layout.padding.height.mobile} - 5%)
-        ${layout.padding.width.mobile};
+    padding: calc(${layout.padding.height.mobile} - 5%) ${layout.padding.width.mobile};
     background-color: white;
     color: rgb(55, 55, 92);
     position: relative;
@@ -110,7 +109,6 @@ export const Container = styled.div`
                     font-weight: 400;
                     img {
                         margin-right: 15px;
-                        width: 15px;
                     }
                 }
                 li:last-child {

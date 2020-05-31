@@ -3,13 +3,7 @@ import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
 import { FormattedMessage } from 'gatsby-plugin-intl';
-const klassen = [
-    'Groep 5',
-    'Groep 6',
-    'Groep 7',
-    'Groep 8',
-    'Voortgezet onderwijs',
-];
+const klassen = ['Groep 5', 'Groep 6', 'Groep 7', 'Groep 8', 'Voortgezet onderwijs'];
 
 const InschrijfFormulier = () => {
     const data = useStaticQuery(graphql`
@@ -32,6 +26,7 @@ const InschrijfFormulier = () => {
                 name="contact"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                action="/success"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
@@ -51,11 +46,7 @@ const InschrijfFormulier = () => {
                     <select name="klas" required>
                         {klassen.map((item) => (
                             <>
-                                <option
-                                    type="radio"
-                                    name="groep"
-                                    value={`${item}`}
-                                >
+                                <option type="radio" name="groep" value={`${item}`}>
                                     {item}
                                 </option>
                                 <br />
@@ -91,11 +82,7 @@ const InschrijfFormulier = () => {
                         const { titel } = node;
                         return (
                             <div>
-                                <input
-                                    type="checkbox"
-                                    name={`${titel}`}
-                                    value="✓"
-                                />
+                                <input type="checkbox" name={`${titel}`} value="✓" />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
                             </div>

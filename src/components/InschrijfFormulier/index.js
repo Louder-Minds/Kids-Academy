@@ -3,13 +3,7 @@ import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
 import { FormattedMessage } from 'gatsby-plugin-intl';
-const klassen = [
-    'Groep 5',
-    'Groep 6',
-    'Groep 7',
-    'Groep 8',
-    'Voortgezet onderwijs',
-];
+const klassen = ['Groep 5', 'Groep 6', 'Groep 7', 'Groep 8', 'Voortgezet onderwijs'];
 const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
 const prijzen = [
     'Eenmalige betaling 12-weekse cursus (€)',
@@ -38,6 +32,7 @@ const InschrijfFormulier = () => {
                 name="inschrijven"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                action="/success"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
@@ -77,11 +72,7 @@ const InschrijfFormulier = () => {
                     <select name="klas" required>
                         {klassen.map((item) => (
                             <>
-                                <option
-                                    type="radio"
-                                    name="groep"
-                                    value={`${item}`}
-                                >
+                                <option type="radio" name="groep" value={`${item}`}>
                                     {item}
                                 </option>
                                 <br />
@@ -97,11 +88,7 @@ const InschrijfFormulier = () => {
                         const { titel } = node;
                         return (
                             <div>
-                                <input
-                                    type="checkbox"
-                                    name={`${titel}`}
-                                    value="✓"
-                                />
+                                <input type="checkbox" name={`${titel}`} value="✓" />
                                 <label for={`${titel}`}>{titel}</label>
                                 <br />
                             </div>
@@ -115,11 +102,7 @@ const InschrijfFormulier = () => {
                     <select required name="locatie">
                         {locaties.map((item) => (
                             <>
-                                <option
-                                    type="radio"
-                                    name="locatie"
-                                    value={`${item}`}
-                                >
+                                <option type="radio" name="locatie" value={`${item}`}>
                                     {item}
                                 </option>
                                 <br />
@@ -158,11 +141,7 @@ const InschrijfFormulier = () => {
                         <input type="checkbox" name={`voorwaarden`} value="✓" />
                         <label for={`voorwaarden"`}>
                             Ik ga akkoord met de{' '}
-                            <a
-                                href="/voorwaarden"
-                                target="_"
-                                style={{ color: '#14b09c' }}
-                            >
+                            <a href="/voorwaarden" target="_" style={{ color: '#14b09c' }}>
                                 algemene voorwaarden
                             </a>
                         </label>

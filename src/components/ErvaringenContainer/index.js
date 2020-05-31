@@ -18,8 +18,8 @@ const ErvaringenContainer = () => {
                     node {
                         naamVanDePersoon
                         fotoVanDePersoon {
-                            file {
-                                url
+                            fluid(quality: 90, maxWidth: 960) {
+                                ...GatsbyContentfulFluid
                             }
                         }
                         content {

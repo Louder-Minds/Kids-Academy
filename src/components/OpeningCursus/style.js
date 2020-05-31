@@ -34,11 +34,15 @@ export const Container = styled.div`
 
     .points {
         width: 100%;
+        p {
+            display: none;
+        }
     }
 
     hr {
         height: 2px;
         background: black;
+        margin-top: 0;
     }
 
     h3 {
@@ -52,15 +56,19 @@ export const Container = styled.div`
         li {
             display: flex;
             align-items: center;
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 1emaaa;
+            margin-bottom: 5%;
             font-weight: 600;
             color: #14b09c;
 
             img {
                 margin-right: 15px;
-                width: 15px;
+                width: 10px;
             }
+        }
+
+        li:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -96,8 +104,7 @@ export const Container = styled.div`
 
         ul {
             li {
-                font-size: 14px;
-                margin-bottom: 10px;
+                // font-size: 14px;
             }
         }
     }

@@ -31,11 +31,10 @@ module.exports = {
         {
             resolve: `gatsby-plugin-intl`,
             options: {
-                // language JSON resource path
                 path: `${__dirname}/src/util/lang`,
-                // supported language
+
                 languages: [`nl`, `en`],
-                // language file path
+
                 defaultLanguage: `nl`,
             },
         },
