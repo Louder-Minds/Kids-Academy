@@ -17,6 +17,11 @@ export const Container = styled.footer`
         margin-bottom: 25%;
     }
 
+    b {
+        font-weight: 600;
+        color: ${colors.turqouise};
+    }
+
     a {
         display: block;
         color: ${colors.turqouise};
@@ -97,12 +102,10 @@ export const Container = styled.footer`
     }
 
     @media ${device.laptop} {
-        padding: calc(${layout.padding.height.laptop} - 2.5%)
-            ${layout.padding.width.laptop};
+        padding: calc(${layout.padding.height.laptop} - 2.5%) ${layout.padding.width.laptop};
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

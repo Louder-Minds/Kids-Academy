@@ -18,7 +18,7 @@ const ErvaringenContainer = () => {
                     node {
                         naamVanDePersoon
                         fotoVanDePersoon {
-                            fluid(quality: 90, maxWidth: 960) {
+                            fluid(quality: 90, maxWidth: 200) {
                                 ...GatsbyContentfulFluid
                             }
                         }

@@ -43,9 +43,7 @@ const Navigation = ({ intl }) => {
                             bg={`${colors.turqouise}`}
                             className="dropdown-item"
                             key={`${coursename}`}
-                            to={`/${
-                                intl.locale
-                            }/${linkname.toLowerCase().replace(/\s/g, '-')}/`}
+                            to={`/${intl.locale}/${linkname.toLowerCase().replace(/\s/g, '-')}/`}
                         >
                             {coursename}
                         </AniLink>
@@ -66,9 +64,7 @@ const Navigation = ({ intl }) => {
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 key={`${name}`}
-                                to={`/${
-                                    intl.locale
-                                }/${link.toLowerCase().replace(/\s/g, '-')}/`}
+                                to={`/${intl.locale}/${link.toLowerCase().replace(/\s/g, '-')}/`}
                             >
                                 {name}
                             </AniLink>
@@ -102,12 +98,9 @@ const Navigation = ({ intl }) => {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-            >
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
-                    <Language />
+                    {/* <Language /> */}
                     <li className="nav-item active">
                         <AniLink
                             cover
@@ -173,7 +166,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to={`/${intl.locale}/over-ons#ervaringen/`}
+                                to={`/${intl.locale}/over-ons#ervaringen`}
                             >
                                 <FormattedMessage id="ervaringen_nav" />
                             </AniLink>
@@ -181,7 +174,7 @@ const Navigation = ({ intl }) => {
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
-                                to={`/${intl.locale}/over-ons#solliciteren/`}
+                                to={`/${intl.locale}/over-ons#solliciteren`}
                             >
                                 <FormattedMessage id="solliciteren_nav" />
                             </AniLink>
