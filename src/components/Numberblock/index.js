@@ -13,7 +13,7 @@ const NumberBlock = () => (
             </span>
         </div>
         <div>
-            <span className="odometer">10 JAREN</span>
+            <span className="odometer">10 JAAR</span>
             <span>
                 {' '}
                 <FormattedMessage id="ervaring_odobalk" />
