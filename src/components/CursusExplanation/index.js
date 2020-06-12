@@ -6,6 +6,7 @@ import Paragraph from '../Typography/Paragraph';
 import { Container } from './style';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Img from 'gatsby-image';
 
 const CursusExplanation = ({ tagline, description, fotoCursus }) => {
     const options = {
@@ -21,12 +22,10 @@ const CursusExplanation = ({ tagline, description, fotoCursus }) => {
         <Container>
             <div className="content">
                 <Title type="h2">{tagline}</Title>
-                <div>
-                    {documentToReactComponents(description.json, options)}
-                </div>
+                <div>{documentToReactComponents(description.json, options)}</div>
             </div>
             <div className="imgbox">
-                <img src={fotoCursus.file.url} alt={'people'} />
+                <Img fluid={fotoCursus.fluid} alt={'people'} />
             </div>
         </Container>
     );

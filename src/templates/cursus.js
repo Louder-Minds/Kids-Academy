@@ -27,8 +27,8 @@ export const query = graphql`
                 json
             }
             fotoVanDeCursus {
-                file {
-                    url
+                fluid(quality: 90, maxWidth: 500) {
+                    ...GatsbyContentfulFluid_withWebp
                 }
             }
         }
@@ -49,10 +49,7 @@ const Cursus = ({ data }) => {
         <Layout>
             <SEO title={`${titel}`} />
             <Title type="h1">{titel}</Title>
-            <OpeningCursus
-                explanation={voorWieIsDezeCursus}
-                points={cursusPoints2}
-            />
+            <OpeningCursus explanation={voorWieIsDezeCursus} points={cursusPoints2} />
             <Divider />
             <CursusExplanation
                 tagline={tagline}

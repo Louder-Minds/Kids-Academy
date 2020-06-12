@@ -16,11 +16,17 @@ export const Container = styled.div`
 
     .imgbox {
         padding: 0 0 15px 15px;
-        margin-bottom: 5%;
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
 
-        img {
-            max-height: 300px;
-            max-width: 100%;
+        div {
+            height: 100%;
+            width: 100%;
+            max-width: 400px;
+            max-height: 400px;
+            min-height: 200px !important;
             box-shadow: -15px 15px 0 #14b09c;
         }
     }
@@ -58,7 +64,6 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

@@ -25,10 +25,7 @@ const ReasonsContainer = ({ points }) => {
         <Container>
             <div>
                 <h1>Summerschool 2020</h1>
-                <h5>
-                    {' '}
-                    <FormattedMessage id="months" />
-                </h5>
+                <h5>Juni - Juli - Augustus</h5>
                 <hr />
             </div>
             <div>
