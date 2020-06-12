@@ -19,7 +19,7 @@ const ErvaringenContainer = () => {
                         naamVanDePersoon
                         fotoVanDePersoon {
                             fluid(quality: 90, maxWidth: 200) {
-                                ...GatsbyContentfulFluid
+                                ...GatsbyContentfulFluid_withWebp
                             }
                         }
                         content {
