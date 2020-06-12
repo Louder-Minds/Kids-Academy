@@ -8,12 +8,12 @@ import Title from '../Typography/Title';
 import Button from '../Button';
 
 import { Container } from './style';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 const ErvaringenContainer = () => {
     const data = useStaticQuery(graphql`
         query ervaring {
-            allContentfulErvaring {
+            allContentfulErvaring(filter: { node_locale: { eq: "nl" } }) {
                 edges {
                     node {
                         naamVanDePersoon
@@ -67,4 +67,4 @@ const ErvaringenContainer = () => {
     );
 };
 
-export default ErvaringenContainer;
+export default injectIntl(ErvaringenContainer);

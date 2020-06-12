@@ -33,7 +33,7 @@ const Footer = () => (
 
             <div>
                 <span>
-                    <b>Kids Academy Amsterdam</b>
+                    <b>Amsterdam</b>
                 </span>
                 <span>Nicolaas Klooster</span>
                 <span>Prinses Irenestraat 19</span>
@@ -42,7 +42,7 @@ const Footer = () => (
 
             <div>
                 <span>
-                    <b>Kids Academy Laren</b>
+                    <b>Laren</b>
                 </span>
                 <span>Brink 33</span>
                 <span>1251 KT Laren</span>
@@ -50,7 +50,7 @@ const Footer = () => (
 
             <div>
                 <span>
-                    <b>Kids Academy Haarlem</b>
+                    <b>Haarlem</b>
                 </span>
                 <span>Kennemer Lyceum</span>
                 <span>Adriaan Stoopplein 7</span>
@@ -59,7 +59,7 @@ const Footer = () => (
 
             <div>
                 <span>
-                    <b>Kids Academy Rotterdam</b>
+                    <b>Rotterdam</b>
                 </span>
                 <span>Opening soon</span>
             </div>
