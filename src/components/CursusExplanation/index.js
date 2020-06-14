@@ -11,10 +11,7 @@ import Img from 'gatsby-image';
 const CursusExplanation = ({ tagline, description, fotoCursus }) => {
     const options = {
         renderNode: {
-            // prettier-ignore
-            [BLOCKS.PARAGRAPH]: (node, children) => (
-                <Paragraph>{children}</Paragraph>
-            )
+            [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
         },
     };
 

@@ -10,9 +10,7 @@ const PageButton = ({ intl, pagename, children }) => {
             <AniLink
                 cover
                 bg={`${colors.turqouise}`}
-                to={`/${intl.locale}/${pagename
-                    .toLowerCase()
-                    .replace(/\s/g, '-')}`}
+                to={`/${intl.locale}/${pagename.toLowerCase().replace(/\s/g, '-')}`}
             >
                 {children}
             </AniLink>

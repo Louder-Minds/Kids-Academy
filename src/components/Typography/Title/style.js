@@ -36,7 +36,9 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
     color: ${colors.black};
-    font-size: 22px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5%;
 `;
 
 export const H4 = styled.h4`

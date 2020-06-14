@@ -180,16 +180,16 @@ const Navigation = ({ intl }) => {
                             </AniLink>
                         </div>
                     </li>
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                         <AniLink
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
-                            to="/blog"
+                            to="/nl/blog"
                         >
                             Blog
                         </AniLink>
-                    </li> */}
+                    </li>
                     <li className="nav-item dropdown">
                         <a
                             className="nav-link dropdown-toggle"

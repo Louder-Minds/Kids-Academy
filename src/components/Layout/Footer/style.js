@@ -37,7 +37,6 @@ export const Container = styled.footer`
         justify-items: start;
 
         div {
-            max-width: 120px;
             margin-bottom: 10%;
             display: inline-block;
             flex-direction: column;
