@@ -7,8 +7,11 @@ module.exports = {
         title: `KidsAcademy`,
         description: `...`,
         author: `@grubennijhuis`,
+        siteUrl: `https://kidsacademy.nl`,
     },
     plugins: [
+        `gatsby-plugin-robots-txt`,
+        `gatsby-plugin-sitemap`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sass`,
