@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
@@ -32,7 +32,7 @@ export const Container = styled.div`
             max-width: 400px;
             max-height: 400px;
             min-height: 200px !important;
-            box-shadow: -15px 15px 0 #14b09c;
+            box-shadow: -15px 15px 0 ${colors.turqouise};
         }
     }
 
@@ -54,7 +54,6 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

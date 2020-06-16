@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
@@ -18,11 +18,12 @@ export const Container = styled.div`
             margin-bottom: 0;
         }
     }
+
     hr {
         width: 100%;
         max-width: 350px;
         height: 3px;
-        background: #37375c;
+        background: ${colors.blue};
         margin-top: 0;
         margin-bottom: 1.6em;
     }
@@ -36,7 +37,6 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../util/screensizes';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     max-width: 750px;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 
     input,
     select {
-        border: 2px solid #14b09c;
+        border: 2px solid ${colors.turqouise};
         border-radius: 4px;
         margin-bottom: 5%;
         height: 36px;
@@ -26,8 +27,8 @@ export const Container = styled.div`
         font-weight: 400;
         text-transform: uppercase;
         height: 50px;
-        background: #14b09c;
-        background: linear-gradient(90deg, #14b09c 0%, #14b0b4 100%);
+        background: ${colors.turqouise};
+        background: linear-gradient(90deg, ${colors.turqouise} 0%, #14b0b4 100%);
         border: none;
         color: white;
         padding: 0 5%;
@@ -38,13 +39,12 @@ export const Container = styled.div`
         text-align: center;
         display: block;
         width: 90%;
-        margin: auto;
-        margin-bottom: 5%;
+        margin: 0 auto 5% auto;
     }
 
     textarea {
         width: 100%;
-        border: 2px solid #14b09c;
+        border: 2px solid ${colors.turqouise};
         border-radius: 3px;
     }
 
@@ -71,7 +71,6 @@ export const Container = styled.div`
                 display: block;
             }
             input {
-                border: 2px solid #14b09c;
                 border-radius: 4px;
                 margin-bottom: 5%;
                 width: 100%;
@@ -92,7 +91,6 @@ export const Container = styled.div`
                 display: block;
             }
             input {
-                border: 2px solid #14b09c;
                 border-radius: 4px;
                 height: 36px;
                 margin-bottom: 5%;
@@ -131,6 +129,7 @@ export const Container = styled.div`
         background: #37375c;
         border-radius: 10px;
     }
+
     input[type='checkbox'],
     input[type='radio'] {
         margin-right: 5%;
@@ -150,10 +149,7 @@ export const Container = styled.div`
         }
     }
 
-    .klas {
-        margin-bottom: -5%;
-    }
-
+    .klas,
     .locatie {
         margin-bottom: -5%;
     }
@@ -171,14 +167,9 @@ export const Container = styled.div`
         }
     }
 
-    h1 {
-        padding: 0 5%;
-        margin-bottom: 0;
-        text-align: center;
-    }
-
     @media ${device.tablet} {
-        .naamkind {
+        .naamkind,
+        .naamverzorger {
             flex-direction: row;
             justify-content: space-between;
 
@@ -189,13 +180,11 @@ export const Container = styled.div`
         }
 
         .naamverzorger {
-            flex-direction: row;
-            justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: -5%;
+
             div {
-                min-width: 45%;
-                justify-content: space-between;
+                margin-bottom: 5%;
             }
         }
 

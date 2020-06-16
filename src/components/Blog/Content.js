@@ -7,6 +7,7 @@ import Paragraph from '../Typography/Paragraph';
 import { device } from '../../util/screensizes';
 import { layout } from '../../util/styling_vars';
 import Button from '../Button';
+
 const StyledContent = styled.div`
     padding: 5%;
 

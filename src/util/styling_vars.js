@@ -20,6 +20,7 @@ export const colors = {
     turqouise: '#14b09c',
     white: 'rgb(255,255,255)',
     black: 'rgb(0,0,0)',
+    gradient: 'linear-gradient(90deg, #14b09c 0%, #14b0b4 100%)',
 };
 
 export const fontSize = {

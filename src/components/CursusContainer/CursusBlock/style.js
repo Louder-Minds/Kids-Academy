@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../../util/screensizes';
+import { colors } from '../../../util/styling_vars';
 import Img from 'gatsby-image';
 
 export const Container = styled.div`
@@ -52,7 +53,7 @@ export const Container = styled.div`
             font-size: 16px;
             margin-bottom: 5%;
             font-weight: 500;
-            color: #14b09c;
+            color: ${colors.turqouise};
 
             img {
                 margin-right: 8px;
@@ -67,32 +68,6 @@ export const Container = styled.div`
 
     :hover {
         cursor: pointer;
-    }
-
-    @media ${device.tablet} {
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin: 0;
-            margin-top: 5%;
-            min-height: 150px;
-            li {
-                display: flex;
-                align-items: center;
-                font-size: 16px;
-                margin-bottom: 5%;
-                font-weight: 500;
-                color: #14b09c;
-
-                img {
-                    align-self: flex-start;
-                    margin-right: 8px;
-                    margin-top: 5px;
-                    width: 8px;
-                }
-            }
-        }
     }
 `;
 

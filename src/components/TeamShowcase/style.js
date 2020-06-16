@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
@@ -32,7 +32,7 @@ export const Container = styled.div`
                 margin: 0;
                 font-size: 12px;
                 margin-bottom: 5%;
-                color: #14b09c;
+                color: ${colors.turqouise};
                 font-weight: 700;
             }
 
@@ -62,7 +62,6 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;

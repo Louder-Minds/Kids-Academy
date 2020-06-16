@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
@@ -13,6 +13,8 @@ export const Container = styled.div`
     min-height: 250px;
 
     .heading {
+        margin-bottom: 10%;
+
         span {
             text-transform: uppercase;
             font-size: 2em;
@@ -22,21 +24,20 @@ export const Container = styled.div`
             position: relative;
             display: inline-block;
             margin-right: 2.5%;
-            z-index: 5;
             transform: translateX(0);
         }
+
         span:before {
             z-index: -1;
             content: '';
             position: absolute;
             bottom: -2.5%;
             left: 5px;
-            width: calc(100%);
+            width: 100%;
             height: 20px;
-            background: #14b09c;
+            background: ${colors.turqouise};
             opacity: 75%;
         }
-        margin-bottom: 10%;
     }
 
     button {
@@ -50,17 +51,7 @@ export const Container = styled.div`
 
         .heading span,
         button {
-            font-size: 3em;
             display: none;
-        }
-    }
-
-    @media ${device.laptop} {
-        padding: 5%;
-        padding-bottom: 0%;
-
-        .heading span {
-            font-size: 3em;
         }
     }
 `;
@@ -72,14 +63,5 @@ export const StyledImg = styled(Img)`
     width: 100% !important;
     max-width: 100% !important;
     height: 100% !important;
-    max-height: auto !important;
-    object-fit: 50% 30% !important;
-    z-index: 0 !important;
     min-height: 300px;
-
-    @media ${device.desktop} {
-        picture img {
-            object-position: 10% 30% !important;
-        }
-    }
 `;

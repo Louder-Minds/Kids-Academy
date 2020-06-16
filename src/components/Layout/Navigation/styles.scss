@@ -52,7 +52,7 @@
     margin-left: 10px;
 }
 
-nav > div > ul > li {
+nav>div>ul>li {
     margin: 0;
 }
 
@@ -95,6 +95,7 @@ nav > div > ul > li {
         transition: all 0.25s ease-in-out;
         color: rgba(255, 255, 255, 0.85);
     }
+
     transition: all 0.25s ease-in-out;
     transform: translateY(0px);
 }
@@ -102,15 +103,18 @@ nav > div > ul > li {
 @media (min-width: 768px) {
     #navcta:hover {
         cursor: pointer;
+
         a {
             color: rgba(255, 255, 255, 0.85) !important;
         }
+
         transform: translateY(-2px);
     }
 
     .navbar-expand-md .navbar-nav {
         align-items: center;
     }
+
     .navbar {
         padding: 0 5%;
     }
@@ -125,7 +129,7 @@ nav > div > ul > li {
         color: #14b09c !important;
     }
 
-    .navbar-nav > li > a {
+    .navbar-nav>li>a {
         /* (80px - line-height of 27px) / 2 = 26.5px */
         padding-top: 26.5px;
         padding-bottom: 26.5px;

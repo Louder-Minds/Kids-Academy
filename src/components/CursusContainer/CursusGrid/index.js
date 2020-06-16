@@ -7,7 +7,7 @@ import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
 const CursusGrid = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query names {
-            allContentfulCursus {
+            allContentfulCursus(sort: { fields: positie, order: ASC }) {
                 edges {
                     node {
                         titel

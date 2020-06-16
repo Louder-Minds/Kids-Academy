@@ -5,7 +5,7 @@ import { layout, colors } from '../../../util/styling_vars';
 
 export const Container = styled.footer`
     font-weight: 200;
-    background-color: #37375c;
+    background-color: ${colors.blue};
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     color: white;
     font-size: 0.7em;

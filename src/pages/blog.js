@@ -7,6 +7,7 @@ import Img from 'gatsby-image';
 import { device } from '../util/screensizes';
 import { layout, colors } from '../util/styling_vars';
 import Title from '../components/Typography/Title';
+import { graphql } from 'gatsby';
 
 const Block = styled.div`
     width: 100%;

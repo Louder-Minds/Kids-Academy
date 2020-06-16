@@ -3,13 +3,9 @@ import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
 import { FormattedMessage } from 'gatsby-plugin-intl';
+
 const klassen = ['Groep 5', 'Groep 6', 'Groep 7', 'Groep 8', 'Voortgezet onderwijs'];
 const locaties = ['Amsterdam', 'Haarlem', 'Laren'];
-const prijzen = [
-    'Eenmalige betaling 12-weekse cursus (€)',
-    'Betaling in drie termijnen 12-weekse cursus (€ 3x)',
-    'Eenmalige betaling Cito-training of Summerschool (€)',
-];
 
 const InschrijfFormulier = () => {
     const data = useStaticQuery(graphql`

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: calc(${layout.padding.height.mobile} - 5%) ${layout.padding.width.mobile};
-    background-color: white;
-    color: rgb(55, 55, 92);
+    color: ${colors.blue};
     position: relative;
     padding-bottom: 0%;
     display: flex;
@@ -14,7 +13,7 @@ export const Container = styled.div`
     align-items: center;
 
     hr {
-        background: rgb(55, 55, 92);
+        background: ${colors.blue};
         height: 3px;
         width: 100%;
         margin-top: 30px;
@@ -28,7 +27,7 @@ export const Container = styled.div`
     h1 {
         margin-bottom: 10px;
         font-size: 2em;
-        color: rgb(55, 55, 92);
+        color: ${colors.blue};
         font-weight: 600;
     }
 
@@ -41,26 +40,29 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+
         button {
             margin-bottom: 30px;
         }
-        width: 100%;
 
         ul {
             margin: 0;
+
             li {
                 display: flex;
                 align-items: center;
                 font-size: 16px;
                 margin-bottom: 30px;
                 font-weight: 500;
-                color: #14b09c;
+                color: ${colors.turqouise};
 
                 img {
                     margin-right: 15px;
                     width: 10px;
                 }
             }
+
             li:last-child {
                 margin-bottom: 0;
             }
@@ -80,6 +82,7 @@ export const Container = styled.div`
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
         padding-bottom: 0%;
         min-width: 50%;
+
         ul li {
             margin-bottom: 30px;
         }
@@ -90,6 +93,9 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
+        padding: 5%;
+        padding-bottom: 0%;
+
         h1 {
             font-size: 4em;
         }
@@ -100,21 +106,22 @@ export const Container = styled.div`
 
         div {
             ul {
+                margin-bottom: 1em;
+
                 li {
                     font-size: 1em;
                     margin-bottom: 1.4em;
                     font-weight: 400;
+
                     img {
                         margin-right: 15px;
                     }
                 }
+
                 li:last-child {
                     margin-bottom: 0;
                 }
-                margin-bottom: 1em;
             }
         }
-        padding: 5%;
-        padding-bottom: 0%;
     }
 `;

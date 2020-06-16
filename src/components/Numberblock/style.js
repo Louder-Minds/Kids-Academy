@@ -4,18 +4,17 @@ import { colors, layout } from '../../util/styling_vars';
 
 export const Container = styled.div`
     display: flex;
-    background-color: #37375c;
+    background-color: ${colors.blue};
     flex-direction: column;
     align-items: center;
     height: auto;
-
-    padding: calc(${layout.padding.height.mobile} - 5%)
-        ${layout.padding.width.mobile};
+    padding: calc(${layout.padding.height.mobile} - 5%) ${layout.padding.width.mobile};
 
     div {
         display: inline-block;
         margin-bottom: 10%;
         text-align: center;
+
         span:first-child {
             font-size: 5em;
             font-weight: 100;
@@ -39,6 +38,7 @@ export const Container = styled.div`
 
         div {
             margin-bottom: 0;
+
             span:first-child {
                 font-size: 5em;
             }
@@ -48,7 +48,6 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        padding: calc(${layout.padding.height.laptop} - 2.5%)
-            ${layout.padding.width.laptop};
+        padding: calc(${layout.padding.height.laptop} - 2.5%) ${layout.padding.width.laptop};
     }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
@@ -13,22 +13,12 @@ export const Container = styled.div`
         margin-bottom: 5%;
 
         a {
-            color: #14b09c;
+            color: ${colors.turqouise};
             text-decoration: underline;
         }
 
         h2 {
             text-align: left;
-        }
-
-        .imgbox {
-            padding: 0 0 30px 30px;
-
-            img {
-                max-height: 300px;
-                max-width: 100%;
-                box-shadow: -30px 30px 0 rgb(180, 0, 0);
-            }
         }
     }
 
@@ -53,13 +43,14 @@ export const Container = styled.div`
 
     ul {
         margin: 0;
+
         li {
             display: flex;
             align-items: center;
-            font-size: 1emaaa;
+            font-size: 1em;
             margin-bottom: 5%;
             font-weight: 600;
-            color: #14b09c;
+            color: ${colors.turqouise};
 
             img {
                 margin-right: 15px;
@@ -99,12 +90,6 @@ export const Container = styled.div`
             button {
                 width: auto;
                 margin-bottom: 0;
-            }
-        }
-
-        ul {
-            li {
-                // font-size: 14px;
             }
         }
     }

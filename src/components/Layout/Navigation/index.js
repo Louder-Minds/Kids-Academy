@@ -7,8 +7,7 @@ import lg from './logo-wit.png';
 import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
-import './styling.scss';
-import { node } from 'prop-types';
+import './styles.scss';
 
 const Navigation = ({ intl }) => {
     const data = useStaticQuery(graphql`
@@ -77,7 +76,7 @@ const Navigation = ({ intl }) => {
         }
     };
     return (
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
             <AniLink
                 cover
                 bg={`${colors.turqouise}`}

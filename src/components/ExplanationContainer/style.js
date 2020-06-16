@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
+import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
-    color: black;
 
     h1 {
         font-size: 24px;
@@ -46,12 +45,13 @@ export const Container = styled.div`
         .linkjes {
             display: inline-block;
             width: 100%;
+
             a {
                 text-align: center;
                 width: 100%;
                 border-radius: 3px;
                 display: block;
-                background: #14b09c;
+                background: ${colors.turqouise};
                 width: 100%;
                 margin-bottom: 5%;
                 color: white;
