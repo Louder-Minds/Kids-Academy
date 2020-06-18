@@ -12,7 +12,7 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
         query images {
             file(relativePath: { eq: "path.png" }) {
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 400) {
                         ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                 }

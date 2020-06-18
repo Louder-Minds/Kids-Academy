@@ -28,7 +28,7 @@ const Navigation = ({ intl }) => {
             }
             file(relativePath: { eq: "logo-wit.png" }) {
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 200) {
                         ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                 }

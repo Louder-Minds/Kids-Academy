@@ -21,8 +21,8 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        grid-row-gap: 120px;
-        margin-bottom: 0;
+        grid-row-gap: 100px;
+        margin-bottom: 5%;
     }
 
     @media ${device.desktop} {
