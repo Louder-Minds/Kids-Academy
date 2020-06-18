@@ -5,14 +5,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Paragraph from '../Typography/Paragraph';
 import Title from '../Typography/Title';
-import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 const CursusContainer = ({ headline, content }) => {
     const options = {
         renderNode: {
-            [BLOCKS.PARAGRAPH]: (node, children) => (
-                <Paragraph>{children}</Paragraph>
-            ),
+            [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
         },
     };
 

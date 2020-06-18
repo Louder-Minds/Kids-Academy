@@ -19,8 +19,7 @@ export const Container = styled.div`
         grid-column-gap: 5%;
         grid-row-gap: 30px;
     }
-
-    @media ${device.laptop} {
+    w @media ${device.laptop} {
         grid-row-gap: 100px;
         margin-bottom: 5%;
     }

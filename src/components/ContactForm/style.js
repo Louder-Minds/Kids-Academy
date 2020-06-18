@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../util/screensizes';
-import { layout, colors } from '../../util/styling_vars';
+import { colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     max-width: 750px;

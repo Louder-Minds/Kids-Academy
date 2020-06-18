@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './style';
 import CursusBlock from '../CursusBlock';
 import { useStaticQuery, graphql } from 'gatsby';
-import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 const CursusGrid = ({ intl }) => {
     const data = useStaticQuery(graphql`

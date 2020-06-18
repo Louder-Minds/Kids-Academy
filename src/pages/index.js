@@ -71,7 +71,7 @@ const index = ({ intl, data }) => {
                 paragraaf22,
                 paragraaf23,
                 paragraaf24,
-                video,
+                // video,
             } = node;
             return (
                 <Layout key={j}>

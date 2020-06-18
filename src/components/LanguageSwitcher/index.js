@@ -20,9 +20,9 @@ const Language = () => (
                     <a
                         key={language}
                         onClick={() => changeLocale(language)}
+                        href={'#'}
                         style={{
-                            backgroundColor:
-                                currentLocale === language ? `#14b09c` : `none`,
+                            backgroundColor: currentLocale === language ? `#14b09c` : `none`,
                             margin: 10,
                             cursor: `pointer`,
                             padding: '5px 10px',

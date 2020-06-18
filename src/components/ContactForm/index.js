@@ -31,12 +31,12 @@ const InschrijfFormulier = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="naamkind">
                     <div>
-                        <label>Voornaam kind*</label>
-                        <input type="text" name="first_name_child" required />
+                        <label htmlFor="first_name_child">Voornaam kind*</label>
+                        <input type="text" name="first_name_child" id="first_name_child" required />
                     </div>
                     <div>
-                        <label>Achternaam kind*</label>
-                        <input type="text\" name="last_name_child" required />
+                        <label htmlFor="last_name_child">Achternaam kind*</label>
+                        <input type="text" name="last_name_child" id="last_name_child" required />
                     </div>
                 </div>
                 <hr />
@@ -58,20 +58,25 @@ const InschrijfFormulier = () => {
 
                 <div className="naamverzorger">
                     <div>
-                        <label>Voornaam ouder/verzorger*</label>
-                        <input type="text" name="first_name_parent" required />
+                        <label htmlFor="first_name_parent">Voornaam ouder/verzorger*</label>
+                        <input
+                            type="text"
+                            name="first_name_parent"
+                            id="first_name_parent"
+                            required
+                        />
                     </div>
                     <div>
-                        <label>Achternaam ouder/verzorger*</label>
-                        <input type="text" name="last_name_parent" required />
+                        <label htmlFor="last_name_parent">Achternaam ouder/verzorger*</label>
+                        <input type="text" name="last_name_parent" id="last_name_parent" required />
                     </div>
                     <div>
-                        <label>Telefoon*</label>
-                        <input type="tel" name="telephone number" required />
+                        <label htmlFor="telephone_number">Telefoon*</label>
+                        <input type="tel" name="telephone_number" id="telephone_number" required />
                     </div>
                     <div>
-                        <label>E-mail adres*</label>
-                        <input type="email" name="email" required />
+                        <label htmlFor="email">E-mail adres*</label>
+                        <input type="email" name="email" id="email" required />
                     </div>
                 </div>
                 <hr />
@@ -83,7 +88,7 @@ const InschrijfFormulier = () => {
                         return (
                             <div>
                                 <input type="checkbox" name={`${titel}`} value="✓" />
-                                <label for={`${titel}`}>{titel}</label>
+                                <label>{titel}</label>
                                 <br />
                             </div>
                         );
@@ -92,8 +97,8 @@ const InschrijfFormulier = () => {
                 <hr />
 
                 <div className="textmessage">
-                    <label>Opmerking/Vraag:</label>
-                    <textarea name="message" id="message" rows="5" />
+                    <label htmlFor="message">Opmerking/Vraag:</label>
+                    <textarea name="message" rows="5" id="message" />
                 </div>
                 {/* <hr /> */}
                 {/* <div>

@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Title from '../Typography/Title';
-import { ReactSVG } from 'react-svg';
 import { Container, Grid } from './style';
-import kindCentraal from './icons/Kind-Staat-Centraal-Groen.svg';
 
 const AcademyWayExplanation = () => (
     <Container>

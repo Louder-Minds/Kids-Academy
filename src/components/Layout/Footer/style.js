@@ -12,9 +12,11 @@ export const Container = styled.footer`
     position: relative;
 
     img {
-        max-width: 50%;
+        width: 50%;
+        margin: auto;
+        max-width: 150px;
         display: block;
-        margin-bottom: 25%;
+        margin-bottom: 10%;
     }
 
     b {

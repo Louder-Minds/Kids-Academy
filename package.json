@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kids-academy",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Website for the company Kids Academy",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -48,7 +48,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby clean && gatsby develop",
+    "dev": "gatsby clean && gatsby develop --https",
+    "develop": "npm run dev",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

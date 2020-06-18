@@ -5,7 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Paragraph from '../Typography/Paragraph';
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
 import Button from '../Button';
 
 const StyledContent = styled.div`

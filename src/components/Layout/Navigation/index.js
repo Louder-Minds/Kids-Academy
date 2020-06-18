@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { colors } from '../../../util/styling_vars';
 import Img from 'gatsby-image';
-import Language from '../../LanguageSwitcher';
+// import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 import './styles.scss';

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { device } from '../../util/screensizes';
-import { layout } from '../../util/styling_vars';
 
 const StyledImg = styled(Img)`
     max-width: 100%;
