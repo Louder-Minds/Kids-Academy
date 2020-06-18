@@ -23,7 +23,7 @@ export const Container = styled.div`
         margin-bottom: 0.6em;
     }
 
-    img {
+    div {
         max-width: 100%;
     }
 
@@ -37,9 +37,11 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         flex-direction: column;
-        img {
-            display: block;
+
+        .img {
+            width: 100%;
             margin-bottom: 5%;
+            max-width: 350px;
         }
 
         .linkjes {
@@ -72,6 +74,7 @@ export const Container = styled.div`
             div {
                 width: 45%;
                 margin-bottom: 0;
+
                 h5 {
                     font-size: 18px;
                     font-weight: 500;
@@ -90,12 +93,9 @@ export const Container = styled.div`
             flex-direction: row;
             justify-content: center;
             justify-items: center;
-
             margin: auto;
 
-            img {
-                display: block;
-                max-width: 500px;
+            .img {
                 margin-bottom: 0;
                 margin-right: 5%;
             }
@@ -112,7 +112,7 @@ export const Container = styled.div`
                     width: 100%;
                     margin-bottom: 5%;
                     color: white;
-                    padding: 15px 30px;
+                    padding: 15px;
                 }
                 a:last-child {
                     margin-bottom: 0;
@@ -123,6 +123,10 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+
+        .img {
+            max-width: 450px !important;
+        }
     }
 
     @media ${device.desktop} {

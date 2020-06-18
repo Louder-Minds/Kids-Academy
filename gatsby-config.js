@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: `KidsAcademy`,
-        description: `...`,
+        title: `Kids Academy`,
+        description: `Bijles rekenen en taal`,
         author: `@grubennijhuis`,
         siteUrl: `https://kidsacademy.nl`,
     },
@@ -29,6 +29,12 @@ module.exports = {
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/images`,
             },
         },
         {

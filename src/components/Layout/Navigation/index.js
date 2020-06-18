@@ -3,7 +3,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { colors } from '../../../util/styling_vars';
-import lg from './logo-wit.png';
+import Img from 'gatsby-image';
 import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
@@ -12,7 +12,7 @@ import './styles.scss';
 const Navigation = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulCursus(sort: { fields: contentful_id }) {
+            allContentfulCursus(sort: { fields: positie, order: ASC }) {
                 edges {
                     node {
                         titel
@@ -23,6 +23,13 @@ const Navigation = ({ intl }) => {
                         titel
                         node_locale
                         contentful_id
+                    }
+                }
+            }
+            file(relativePath: { eq: "logo-wit.png" }) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                 }
             }
@@ -83,7 +90,7 @@ const Navigation = ({ intl }) => {
                 className="navbar-brand"
                 to={`/${intl.locale}/`}
             >
-                <img src={lg} alt="logo" />
+                <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
             </AniLink>
             <button
                 className="navbar-toggler"

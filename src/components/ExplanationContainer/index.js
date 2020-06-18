@@ -3,11 +3,23 @@ import React from 'react';
 import { Container } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
-import path from './path.png';
-
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Paragraph from '../Typography/Paragraph';
 
 const ExplanationContainer = ({ headline, content1, content2, content3, content4 }) => {
+    const data = useStaticQuery(graphql`
+        query images {
+            file(relativePath: { eq: "path.png" }) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                }
+            }
+        }
+    `);
+
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
@@ -26,7 +38,11 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
             </div>
             <h5 className="heading">Test jezelf</h5>
             <div className="imglinks">
-                <img src={path} alt="leerjaren grafiek" />
+                <Img
+                    className="img"
+                    fluid={data.file.childImageSharp.fluid}
+                    alt="leerjaren grafiek"
+                />
                 <div className="linkjes">
                     <a
                         href="https://www.onlineexambuilder.com/nl/ben-jij-klaar-voor-groep-6/exam-351394"
