@@ -12,14 +12,15 @@ export const Container = styled.div`
 
     @media (min-width: 550px) {
         grid-template-columns: 1fr 1fr;
+        grid-row-gap: 60px;
     }
 
     @media ${device.tablet} {
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 5%;
-        grid-row-gap: 30px;
+        grid-row-gap: 60px;
     }
-    w @media ${device.laptop} {
+    @media ${device.laptop} {
         grid-row-gap: 100px;
         margin-bottom: 5%;
     }

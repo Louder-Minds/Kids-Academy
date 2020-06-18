@@ -9,8 +9,8 @@ const OpeningHome = ({ titel, foto }) => {
         <Container>
             <StyledImg fluid={foto.fluid} />
             <div className="heading">
-                {t.map((item) => (
-                    <span>{`${item} `}</span>
+                {t.map((item, j) => (
+                    <span key={j}>{`${item} `}</span>
                 ))}
             </div>
             <Button pagename="contact">

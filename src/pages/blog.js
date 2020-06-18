@@ -106,7 +106,7 @@ const Blog = ({ data }) => (
                     const { naamVanDePost, achtergrondFoto, korteIntro } = node;
                     const titel = naamVanDePost.toLowerCase().replace(/\s/g, '-');
                     return (
-                        <AniLink cover bg={`${colors.turqouise}`} to={`/nl/blog/${titel}`}>
+                        <AniLink key={j} cover bg={`${colors.turqouise}`} to={`/nl/blog/${titel}`}>
                             <Block>
                                 <Img fluid={achtergrondFoto.fluid} />
                                 <h2>{naamVanDePost}</h2>

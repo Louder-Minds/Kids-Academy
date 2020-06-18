@@ -17,7 +17,6 @@ const Cursussen = ({ data }) => (
         <SEO title="Cursussen" />
         <Container>
             <Title type="h2">
-                {' '}
                 <FormattedMessage id="onze-cursussen_headline" />
             </Title>
             <CursusGrid />

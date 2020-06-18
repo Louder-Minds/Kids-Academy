@@ -10,7 +10,7 @@ const OpeningAbout = ({ heading, content, foto }) => (
     <Container>
         <div className="text">
             <Title type="h2">{heading}</Title>
-            <Paragraph>{documentToReactComponents(content.json)}</Paragraph>
+            <div>{documentToReactComponents(content.json)}</div>
         </div>
         <div className="imgbox">
             <Img fluid={foto.fluid} />

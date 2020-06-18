@@ -71,13 +71,10 @@ const InschrijfFormulier = () => {
                 <div className="klas">
                     <h3>Mijn kind zit in*</h3>
                     <select name="klas" required>
-                        {klassen.map((item) => (
-                            <>
-                                <option type="radio" name="groep" value={`${item}`}>
-                                    {item}
-                                </option>
-                                <br />
-                            </>
+                        {klassen.map((item, j) => (
+                            <option type="radio" name="groep" value={`${item}`} key={j}>
+                                {item}
+                            </option>
                         ))}
                     </select>
                 </div>
@@ -88,10 +85,9 @@ const InschrijfFormulier = () => {
                     {data.allContentfulCursus.edges.map(({ node }, j) => {
                         const { titel } = node;
                         return (
-                            <div>
+                            <div key={j}>
                                 <input type="checkbox" name={`${titel}`} value="✓" />
-                                <label for={`${titel}`}>{titel}</label>
-                                <br />
+                                <label htmlFor={`${titel}`}>{titel}</label>
                             </div>
                         );
                     })}
@@ -101,13 +97,10 @@ const InschrijfFormulier = () => {
                 <div className="locatie">
                     <h3>Gewenste locatie*</h3>
                     <select required name="locatie">
-                        {locaties.map((item) => (
-                            <>
-                                <option type="radio" name="locatie" value={`${item}`}>
-                                    {item}
-                                </option>
-                                <br />
-                            </>
+                        {locaties.map((item, j) => (
+                            <option type="radio" name="locatie" value={`${item}`} key={j}>
+                                {item}
+                            </option>
                         ))}
                     </select>
                 </div>

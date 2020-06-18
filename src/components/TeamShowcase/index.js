@@ -6,6 +6,7 @@ import Paragraph from '../Typography/Paragraph';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 const TeamShowcase = () => {
     const data = useStaticQuery(graphql`
@@ -28,18 +29,25 @@ const TeamShowcase = () => {
             }
         }
     `);
+
+    const options = {
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
+        },
+    };
+
     return (
         <Container>
             <Title type="h2">Het Team</Title>
             <div>
-                {data.allContentfulMedewerker.edges.map(({ node }) => {
+                {data.allContentfulMedewerker.edges.map(({ node }, j) => {
                     const { naam, foto, functie, overHetPersoon } = node;
                     return (
-                        <div>
+                        <div key={j}>
                             <Img fluid={foto.fluid} />
                             <Title type="h2">{naam}</Title>
                             <span>{functie}</span>
-                            <Paragraph>{documentToReactComponents(overHetPersoon.json)}</Paragraph>
+                            {documentToReactComponents(overHetPersoon.json, options)}
                         </div>
                     );
                 })}
