@@ -8,6 +8,7 @@ import Image from '../components/Blog/Image';
 import Title from '../components/Blog/Title';
 import Author from '../components/Blog/Author';
 import Content from '../components/Blog/Content';
+import SEO from '../components/SEO';
 
 export const query = graphql`
     query($slug: String!) {
@@ -40,6 +41,7 @@ const Post = ({ data }) => {
     const { naamVanDePost, auteur, achtergrondFoto, content, upload } = data.contentfulBlogPost;
     return (
         <Layout>
+            <SEO siteTitle={naamVanDePost} />
             <Container>
                 <Image foto={achtergrondFoto} />
                 <div style={{ background: 'rgba(0,0,0,0.05)', padding: '5%' }}>

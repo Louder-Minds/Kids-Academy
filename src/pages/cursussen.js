@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const Cursussen = ({ data }) => (
     <Layout>
-        <SEO title="Cursussen" />
+        <SEO siteTitle="Cursussen" />
         <Container>
             <Title type="h2">
                 <FormattedMessage id="onze-cursussen_headline" />

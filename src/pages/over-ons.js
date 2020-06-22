@@ -35,7 +35,7 @@ const index = ({ data }) => {
 
     return (
         <Layout>
-            <SEO titel="Over ons" />
+            <SEO siteTitle="Over ons" />
             <Title type="h1">Over ons</Title>
             <OpeningAbout heading={kop} content={opening} foto={openingFoto} />
             <Divider />

@@ -98,7 +98,7 @@ export const query = graphql`
 
 const Blog = ({ data }) => (
     <Layout>
-        <SEO title="Blog" />
+        <SEO siteTitle="Blog" />
         <Container>
             <Title type="h3">Onze blog posts</Title>
             <Grid>

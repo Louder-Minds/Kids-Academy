@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 
 const NotFoundPage = () => (
     <Layout>
-        <SEO title="Pagina niet gevonden" />
+        <SEO siteTitle="Pagina niet gevonden" />
         <h1>404: Pagina niet gevonden</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>

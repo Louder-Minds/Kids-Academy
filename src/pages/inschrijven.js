@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 
 const Inschijven = () => (
     <Layout>
-        <SEO titel="Inschrijven" />
+        <SEO siteTitle="Inschrijven" />
         <InschrijfFormulier />
     </Layout>
 );

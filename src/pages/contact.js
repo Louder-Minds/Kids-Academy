@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
 const Contact = () => (
     <Layout>
-        <SEO title="Contact" />
+        <SEO siteTitle="Contact" />
         <ContactForm />
     </Layout>
 );

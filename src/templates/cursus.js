@@ -47,7 +47,7 @@ const Cursus = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title={`${titel}`} />
+            <SEO siteTitle={titel} />
             <Title type="h1">{titel}</Title>
             <OpeningCursus explanation={voorWieIsDezeCursus} points={cursusPoints2} />
             <Divider />

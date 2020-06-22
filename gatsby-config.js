@@ -8,6 +8,7 @@ module.exports = {
         description: `Bijles rekenen en taal`,
         author: `@grubennijhuis`,
         siteUrl: `https://kidsacademy.nl`,
+        keywords: 'Bijles, Rekenen, Amsterdam, Haarlem, Laren, Summerschool, Taal, Kind, Goedkoop',
     },
     plugins: [
         `gatsby-plugin-robots-txt`,
@@ -45,6 +46,17 @@ module.exports = {
                 languages: [`nl`, `en`],
 
                 defaultLanguage: `nl`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Kids Academy`,
+                short_name: `Kids Academy`,
+                start_url: `/`,
+                background_color: `#ffffff`,
+                theme_color: '#14b09c',
+                display: `standalone`,
             },
         },
     ],
