@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import uiltje from './favicon.ico';
 
 const SEO = ({ siteTitle, lang = 'nl' }) => {
     const data = useStaticQuery(graphql`
@@ -19,10 +20,7 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
     `);
 
     const { title, description, author, siteUrl, keywords } = data.site.siteMetadata;
-
-    let text = siteTitle === undefined ? `${title}` : `${siteTitle} | ${title}`;
-
-    console.log(text);
+    const text = siteTitle === undefined ? `${title}` : `${siteTitle} | ${title}`;
 
     return (
         <Helmet
@@ -40,11 +38,12 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
                 { name: 'author', content: author },
 
                 // Open Graph data
-                { name: 'og:title', content: text },
-                { name: 'og:url', content: siteUrl },
-                { name: 'og:type', content: 'company' },
-                { name: 'og:description', content: description },
-                { name: 'og:locale', content: 'nl' },
+                { property: 'og:image', content: 'static/favicon.ico' },
+                { property: 'og:title', content: text },
+                { property: 'og:url', content: siteUrl },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:description', content: description },
+                { property: 'og:locale', content: 'nl' },
 
                 // Twitter card data
                 { name: 'twitter:card', content: description },
@@ -52,6 +51,8 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
                 { name: 'twitter:description', content: description },
                 { name: 'twitter:url', content: siteUrl },
                 { name: 'twitter:creator', content: author },
+                { name: 'twitter:image', content: 'static/favicon.ico' },
+                { name: 'twitter:site', content: siteUrl },
             ]}
         >
             {/* <script type="application/ld+json">
