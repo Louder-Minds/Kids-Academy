@@ -27,7 +27,7 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
             title={text}
             link={[
                 { rel: 'canonical', href: siteUrl },
-                { rel: 'icon', type: 'image/png', href: 'static/favicon.ico' },
+                { rel: 'icon', href: 'static/favicon.ico' },
             ]}
             meta={[
                 // General head tags

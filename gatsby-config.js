@@ -48,17 +48,17 @@ module.exports = {
                 defaultLanguage: `nl`,
             },
         },
-        {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-                name: `Kids Academy`,
-                short_name: `Kids Academy`,
-                start_url: `/`,
-                background_color: `#ffffff`,
-                theme_color: '#14b09c',
-                display: `standalone`,
-                icon: `static/favicon.ico`,
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-manifest`,
+        //     options: {
+        //         name: `Kids Academy`,
+        //         short_name: `Kids Academy`,
+        //         start_url: `/`,
+        //         background_color: `#ffffff`,
+        //         theme_color: '#14b09c',
+        //         display: `standalone`,
+        //         icon: `static/favicon.ico`,
+        //     },
+        // },
     ],
 };
