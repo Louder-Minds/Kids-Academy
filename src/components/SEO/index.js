@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import favicon from './favicon.ico';
 import Helmet from 'react-helmet';
-import uiltje from './favicon.ico';
 
 const SEO = ({ siteTitle, lang = 'nl' }) => {
     const data = useStaticQuery(graphql`
@@ -27,18 +27,18 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
             title={text}
             link={[
                 { rel: 'canonical', href: siteUrl },
-                { rel: 'icon', href: 'static/favicon.ico' },
+                { rel: 'icon', href: favicon },
             ]}
             meta={[
                 // General head tags
-                { name: 'image', content: 'static/favicon.ico' },
+                { name: 'image', content: favicon },
                 { name: 'description', content: description },
                 { name: 'keywords', content: keywords },
                 { name: 'generator', content: 'GatsbyJS' },
                 { name: 'author', content: author },
 
                 // Open Graph data
-                { property: 'og:image', content: 'static/favicon.ico' },
+                { property: 'og:image', content: favicon },
                 { property: 'og:title', content: text },
                 { property: 'og:url', content: siteUrl },
                 { property: 'og:type', content: 'website' },
@@ -51,7 +51,7 @@ const SEO = ({ siteTitle, lang = 'nl' }) => {
                 { name: 'twitter:description', content: description },
                 { name: 'twitter:url', content: siteUrl },
                 { name: 'twitter:creator', content: author },
-                { name: 'twitter:image', content: 'static/favicon.ico' },
+                { name: 'twitter:image', content: favicon },
                 { name: 'twitter:site', content: siteUrl },
             ]}
         >
