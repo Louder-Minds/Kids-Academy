@@ -4,7 +4,7 @@
     "cursus_button": "Bekijk de cursus",
 
     "months": "Juni - Juli - Augustus",
-
+    "test-jezelf": "Test Jezelf",
     "home_nav": "Home",
     "cursussen_nav": "Cursussen",
     "over-ons_nav": "Over ons",
@@ -19,17 +19,24 @@
     "onze-cursussen_headline": "Onze cursussen",
     "over-ons_headline": "Over ons",
     "leerling-ervaring_headline": "Ervaringen van onze leerlingen",
-    "voordelen-cursus_headline": "Benefits of this course",
+    "voordelen-cursus_headline": "Voordelen van deze cursus",
+    "alle-cursussen": "Alle cursussen",
+
+    "voor-wie-is-deze-cursus": "Voor wie is deze cursus?",
 
     "locaties_odobalk": "Locaties",
     "ervaring_odobalk": "Ervaring",
     "jaren": "Jaar",
     "tevreden-ouders_odobalk": "Tevreden ouders",
 
+    "over-ons": "About us",
+
     "hoofdkantoor": "Hoofdkantoor",
     "stuur-email": "Stuur een e-mail",
-
+    "het-team": "Het team",
     "verstuur": "Verstuur",
+
+    "wil-je-solliciteren": "Wil je solliciteren?",
 
     "notfound": {
         "header": "Niet gevonden",

@@ -13,9 +13,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 const OpeningCursus = ({ explanation, points }) => {
     const options = {
         renderNode: {
-            [BLOCKS.PARAGRAPH]: (node, children) => (
-                <Paragraph>{children}</Paragraph>
-            ),
+            [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
 
             [BLOCKS.LIST_ITEM]: (node, children) => (
                 <li>
@@ -31,11 +29,15 @@ const OpeningCursus = ({ explanation, points }) => {
         <Container>
             <div className="content">
                 <div>
-                    <Title type="h2">Voor wie is deze cursus?</Title>
+                    <Title type="h2">
+                        <FormattedMessage id="voor-wie-is-deze-cursus" />
+                    </Title>
                     {documentToReactComponents(explanation.json, options)}
                 </div>
                 <div className="points">
-                    <h3>Voordelen van deze cursus</h3>
+                    <h3>
+                        <FormattedMessage id="voordelen-cursus_headline" />
+                    </h3>
                     <hr />
                     {documentToReactComponents(points.json, options)}
                 </div>

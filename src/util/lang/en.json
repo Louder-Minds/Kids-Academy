@@ -3,8 +3,8 @@
     "inschrijven_button": "Register now",
     "cursus_button": "View the course",
 
-    "months": "May - June - Juli - August",
-
+    "months": "June - July - August",
+    "test-jezelf": "Test Jezelf",
     "home_nav": "Home",
     "cursussen_nav": "Courses",
     "over-ons_nav": "About us",
@@ -20,16 +20,23 @@
     "over-ons_headline": "About us",
     "leerling-ervaring_headline": "Reviews of our students",
     "voordelen-cursus_headline": "Benefits of this course",
+    "alle-cursussen": "All courses",
+
+    "voor-wie-is-deze-cursus": "For who is this course?",
 
     "locaties_odobalk": "Locations",
     "ervaring_odobalk": "Experience",
     "jaren": "Years",
     "tevreden-ouders_odobalk": "Satisfied parents",
 
-    "hoofdkantoor": "Office",
-    "stuur-email": "Send an email",
+    "over-ons": "About us",
 
+    "hoofdkantoor": "Office number",
+    "stuur-email": "Send an email",
+    "het-team": "The team",
     "verstuur": "Submit",
+
+    "wil-je-solliciteren": "Do you want to apply?",
 
     "notfound": {
         "header": "NOT FOUND",

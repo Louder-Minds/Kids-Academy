@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
                         edges {
                             node {
                                 titel
+                                contentful_id
                             }
                         }
                     }
@@ -31,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
                         path: titel,
                         component: path.resolve('src/templates/cursus.js'),
                         context: {
-                            slug: node.titel,
+                            slug: node.contentful_id,
                         },
                     });
                 });

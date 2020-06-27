@@ -10,44 +10,56 @@ import Title from '../components/Typography/Title';
 import ErvaringenContainer from '../components/ErvaringenContainer';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 export const query = graphql`
     query About {
-        contentfulOverOns {
-            kop
-            opening {
-                json
-            }
-            openingFoto {
-                fluid {
-                    ...GatsbyContentfulFluid_withWebp
+        allContentfulOverOns {
+            edges {
+                node {
+                    kop
+                    opening {
+                        json
+                    }
+                    openingFoto {
+                        fluid {
+                            ...GatsbyContentfulFluid_withWebp
+                        }
+                    }
+                    solliciteren {
+                        json
+                    }
+                    node_locale
                 }
-            }
-            solliciteren {
-                json
             }
         }
     }
 `;
 
-const index = ({ data }) => {
-    const { kop, opening, openingFoto, solliciteren } = data.contentfulOverOns;
+const index = ({ data, intl }) => {
+    return data.allContentfulOverOns.edges.map(({ node }, j) => {
+        if (node.node_locale === intl.locale) {
+            const { kop, opening, openingFoto, solliciteren } = node;
 
-    return (
-        <Layout>
-            <SEO siteTitle="Over ons" />
-            <Title type="h1">Over ons</Title>
-            <OpeningAbout heading={kop} content={opening} foto={openingFoto} />
-            <Divider />
-            <AcademyWayExplanation />
-            <Divider />
-            <TeamShowcase />
-            <Divider />
-            <ErvaringenContainer />
-            <Divider />
-            <Solliciteren content={solliciteren} />
-        </Layout>
-    );
+            return (
+                <Layout>
+                    <SEO siteTitle="Over ons" />
+                    <Title type="h1">
+                        <FormattedMessage id="over-ons" />
+                    </Title>
+                    <OpeningAbout heading={kop} content={opening} foto={openingFoto} />
+                    <Divider />
+                    <AcademyWayExplanation />
+                    <Divider />
+                    <TeamShowcase />
+                    <Divider />
+                    <ErvaringenContainer />
+                    <Divider />
+                    <Solliciteren content={solliciteren} />
+                </Layout>
+            );
+        }
+    });
 };
 
-export default index;
+export default injectIntl(index);

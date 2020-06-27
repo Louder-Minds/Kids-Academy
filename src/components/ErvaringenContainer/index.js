@@ -44,7 +44,9 @@ const ErvaringenContainer = () => {
 
     return (
         <Container id="ervaringen">
-            <Title type="h2">Ervaringen van onze leerlingen</Title>
+            <Title type="h2">
+                <FormattedMessage id="leerling-ervaring_headline" />
+            </Title>
             <Carousel infiniteLoop showThumbs={false}>
                 {data.allContentfulErvaring.edges.map(({ node }, i) => (
                     <Ervaring
@@ -56,9 +58,6 @@ const ErvaringenContainer = () => {
                 ))}
             </Carousel>
             <div className="buttons">
-                {/* <Button pagename="inschrijven">
-                    <FormattedMessage id="inschrijven_button" />
-                </Button> */}
                 <Button pagename="contact">
                     <FormattedMessage id="kennismakingsgesprek_button" />
                 </Button>

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { colors } from '../../../util/styling_vars';
 import Img from 'gatsby-image';
-// import Language from '../../LanguageSwitcher';
+import Language from '../../LanguageSwitcher';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 import './styles.scss';
@@ -106,7 +106,7 @@ const Navigation = ({ intl }) => {
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
-                    {/* <Language /> */}
+                    <Language />
                     <li className="nav-item active">
                         <AniLink
                             cover
@@ -139,7 +139,7 @@ const Navigation = ({ intl }) => {
                                 className="dropdown-item"
                                 to={`/${intl.locale}/cursussen/`}
                             >
-                                Al onze cursussen
+                                <FormattedMessage id="alle-cursussen" />
                             </AniLink>
                             {courseLinks()}
                         </div>

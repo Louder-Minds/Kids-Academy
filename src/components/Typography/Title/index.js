@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { H1, H2, H3, H4, H5, H6 } from './style';
+import { P, H1, H2, H3, H4, H5, H6 } from './style';
 
 const Title = ({ type, children }) => {
     switch (type) {
         case 'h1':
-            return <H1>{children}</H1>;
+            return <P>{children}</P>;
         case 'h2':
             return <H2>{children}</H2>;
         case 'h3':

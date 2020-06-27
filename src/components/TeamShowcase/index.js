@@ -7,11 +7,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
+import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl';
 
-const TeamShowcase = () => {
+const TeamShowcase = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query people {
-            allContentfulMedewerker(filter: { node_locale: { eq: "nl" } }) {
+            allContentfulMedewerker {
                 edges {
                     node {
                         naam
@@ -24,6 +25,7 @@ const TeamShowcase = () => {
                         overHetPersoon {
                             json
                         }
+                        node_locale
                     }
                 }
             }
@@ -38,22 +40,26 @@ const TeamShowcase = () => {
 
     return (
         <Container>
-            <Title type="h2">Het Team</Title>
+            <Title type="h2">
+                <FormattedMessage id="het-team" />
+            </Title>
             <div>
                 {data.allContentfulMedewerker.edges.map(({ node }, j) => {
-                    const { naam, foto, functie, overHetPersoon } = node;
-                    return (
-                        <div key={j}>
-                            <Img fluid={foto.fluid} />
-                            <Title type="h2">{naam}</Title>
-                            <span>{functie}</span>
-                            {documentToReactComponents(overHetPersoon.json, options)}
-                        </div>
-                    );
+                    if (node.node_locale === intl.locale) {
+                        const { naam, foto, functie, overHetPersoon } = node;
+                        return (
+                            <div key={j}>
+                                <Img fluid={foto.fluid} />
+                                <Title type="h2">{naam}</Title>
+                                <span>{functie}</span>
+                                {documentToReactComponents(overHetPersoon.json, options)}
+                            </div>
+                        );
+                    }
                 })}
             </div>
         </Container>
     );
 };
 
-export default TeamShowcase;
+export default injectIntl(TeamShowcase);

@@ -12,54 +12,70 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Numberblock from '../components/Numberblock';
 
+import { injectIntl } from 'gatsby-plugin-intl';
+
 export const query = graphql`
     query($slug: String!) {
-        contentfulCursus(titel: { eq: $slug }) {
-            titel
-            cursusPoints2 {
-                json
-            }
-            voorWieIsDezeCursus {
-                json
-            }
-            tagline
-            cursusUitleg {
-                json
-            }
-            fotoVanDeCursus {
-                fluid(quality: 90, maxWidth: 500) {
-                    ...GatsbyContentfulFluid_withWebp
+        allContentfulCursus(
+            filter: { contentful_id: { eq: $slug } }
+            sort: { fields: node_locale, order: DESC }
+        ) {
+            edges {
+                node {
+                    titel
+                    cursusPoints2 {
+                        json
+                    }
+                    voorWieIsDezeCursus {
+                        json
+                    }
+                    tagline
+                    cursusUitleg {
+                        json
+                    }
+                    fotoVanDeCursus {
+                        fluid(quality: 90, maxWidth: 500) {
+                            ...GatsbyContentfulFluid_withWebp
+                        }
+                    }
+                    node_locale
                 }
             }
         }
     }
 `;
 
-const Cursus = ({ data }) => {
-    const {
-        titel,
-        voorWieIsDezeCursus,
-        tagline,
-        cursusUitleg,
-        fotoVanDeCursus,
-        cursusPoints2,
-    } = data.contentfulCursus;
+const Cursus = ({ data, intl }) => {
+    return data.allContentfulCursus.edges.map(({ node }, j) => {
+        if (node.node_locale === intl.locale) {
+            const {
+                titel,
+                voorWieIsDezeCursus,
+                tagline,
+                cursusUitleg,
+                fotoVanDeCursus,
+                cursusPoints2,
+            } = node;
 
-    return (
-        <Layout>
-            <SEO siteTitle={titel} />
-            <Title type="h1">{titel}</Title>
-            <OpeningCursus explanation={voorWieIsDezeCursus} points={cursusPoints2} />
-            <Divider />
-            <CursusExplanation
-                tagline={tagline}
-                description={cursusUitleg}
-                fotoCursus={fotoVanDeCursus}
-            />
-            <Numberblock />
-            <ErvaringenContainer />
-        </Layout>
-    );
+            console.log(titel);
+
+            return (
+                <Layout>
+                    <SEO siteTitle={titel} />
+                    <Title type="h1">{titel}</Title>
+                    <OpeningCursus explanation={voorWieIsDezeCursus} points={cursusPoints2} />
+                    <Divider />
+                    <CursusExplanation
+                        tagline={tagline}
+                        description={cursusUitleg}
+                        fotoCursus={fotoVanDeCursus}
+                    />
+                    <Numberblock />
+                    <ErvaringenContainer />{' '}
+                </Layout>
+            );
+        }
+    });
 };
 
-export default Cursus;
+export default injectIntl(Cursus);

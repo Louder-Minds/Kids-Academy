@@ -9,9 +9,8 @@ export const P = styled.p`
     font-size: 1em;
     line-height: 1.9;
 
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
-    
     @media ${device.tablet} {
         margin-bottom: 5%;
 
