@@ -19,7 +19,6 @@ export const Container = styled.div`
                 border-radius: 3px;
                 display: block;
                 background: ${colors.turqouise};
-                width: 100%;
                 margin-bottom: 5%;
                 color: white;
                 padding: 15px 0;
@@ -41,7 +40,35 @@ export const Container = styled.div`
             max-width: 600px;
             max-height: 400px;
             min-height: 200px !important;
-            box-shadow: -15px 15px ${colors.turqouise};
+            box-shadow: 30px 30px ${colors.turqouise};
+        }
+    }
+    @media ${device.laptop} {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+            font-size: 3em;
+            margin-top: 0;
+            margin-bottom: 80px;
+            font-weight:bold;
+
+        }
+        div {
+            max-width: 45%;
+        }
+        .buttons {
+            
+            a{&:hover {
+                text-decoration: none;
+            }}
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            min-width: 100%;
+            button {
+                max-width: 40%;
+                min-width: 40%;
+            }
         }
     }
 `;

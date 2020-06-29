@@ -49,7 +49,7 @@ const index = ({ title }) => {
                     <a href="mailto:info@kidsacademy.nl">Bel ons voor meer informatie</a>
                 </button>
                 <button>
-                    <a href="mailto:info@kidsacademy.nl">Of stuur een emil</a>
+                    <a href="mailto:info@kidsacademy.nl">Of stuur een e-mail</a>
                 </button>
             </div>
         </Container>

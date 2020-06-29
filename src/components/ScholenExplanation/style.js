@@ -5,6 +5,8 @@ import { device } from '../../util/screensizes';
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
+    max-width: 1000px;
+    margin: auto;
     p {
         text-align: center;
     }
@@ -60,4 +62,28 @@ export const Container = styled.div`
             }
         }
     }
-`;
+    @media ${device.laptop} {
+        
+        .buttons {
+            
+            
+            
+            a{
+               
+                
+                &:hover {
+                
+                text-decoration: none;
+            }}
+            
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            min-width: 100%;
+            button {
+                margin-bottom: 0;
+                max-width: 40%;
+                min-width: 40%;
+            }
+
+    }}`;
