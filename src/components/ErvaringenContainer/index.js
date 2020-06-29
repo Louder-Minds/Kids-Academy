@@ -31,16 +31,16 @@ const ErvaringenContainer = () => {
         }
     `);
 
-    // const shuffle = () => {
-    //         for (let i = this.length - 1; i > 0; i--) {
-    //             const j = Math.floor(Math.random() * (i + 1));
-    //             [this[i], this[j]] = [this[j], this[i]];
-    //         }
-    //         return this;
-    // }
+    const shuffle = (a) => {
+        let newArray = a;
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    };
 
-    // Ervaringen
-    //     Foto’s
+    const shuffled = shuffle(data.allContentfulErvaring.edges);
 
     return (
         <Container id="ervaringen">
@@ -48,9 +48,9 @@ const ErvaringenContainer = () => {
                 <FormattedMessage id="leerling-ervaring_headline" />
             </Title>
             <Carousel infiniteLoop showThumbs={false}>
-                {data.allContentfulErvaring.edges.map(({ node }, i) => (
+                {shuffled.map(({ node }, j) => (
                     <Ervaring
-                        key={node.naamVanDePersoon}
+                        key={j}
                         naam={node.naamVanDePersoon}
                         foto={node.fotoVanDePersoon}
                         content={node.content}

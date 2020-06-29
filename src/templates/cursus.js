@@ -57,8 +57,6 @@ const Cursus = ({ data, intl }) => {
                 cursusPoints2,
             } = node;
 
-            console.log(titel);
-
             return (
                 <Layout>
                     <SEO siteTitle={titel} />

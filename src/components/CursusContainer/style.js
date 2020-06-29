@@ -13,19 +13,27 @@ export const Container = styled.div`
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 0;
+            position: relative;
+            width: fit-content;
+            margin-bottom: 2.5%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: ${colors.blue};
+                bottom: 0;
+            }
         }
         p:last-child {
             margin-bottom: 0;
         }
-    }
 
-    hr {
-        width: 100%;
-        max-width: 350px;
-        height: 3px;
-        background: ${colors.blue};
-        margin-top: 0;
-        margin-bottom: 1.6em;
+        a {
+            color: ${colors.turqouise};
+            text-decoration: underline;
+        }
     }
 
     @media ${device.tablet} {

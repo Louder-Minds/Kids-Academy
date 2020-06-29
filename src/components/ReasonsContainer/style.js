@@ -106,8 +106,6 @@ export const Container = styled.div`
 
         div {
             ul {
-                margin-bottom: 1em;
-
                 li {
                     font-size: 1em;
                     margin-bottom: 1.4em;

@@ -144,6 +144,7 @@ const Navigation = ({ intl }) => {
                             {courseLinks()}
                         </div>
                     </li>
+
                     <li className="nav-item dropdown">
                         <a
                             className="nav-link dropdown-toggle"
@@ -191,7 +192,17 @@ const Navigation = ({ intl }) => {
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
-                            to="/nl/blog"
+                            to={`/${intl.locale}/scholen`}
+                        >
+                            Voor scholen
+                        </AniLink>
+                    </li>
+                    <li className="nav-item">
+                        <AniLink
+                            cover
+                            bg={`${colors.turqouise}`}
+                            className="nav-link"
+                            to={`/${intl.locale}/blog`}
                         >
                             Blog
                         </AniLink>

@@ -19,6 +19,7 @@ export const Button = styled.button`
     padding: 0;
 
     a {
+        text-decoration: none;
         padding: 12px 30px;
         color: ${colors.white};
         display: block;

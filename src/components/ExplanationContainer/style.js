@@ -4,7 +4,10 @@ import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
-
+    a {
+        color: ${colors.turqouise};
+        text-decoration: underline;
+    }
     h1 {
         font-size: 24px;
         margin-bottom: 1em;
