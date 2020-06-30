@@ -98,6 +98,9 @@ const Navigation = ({ intl }) => {
         }
     };
 
+    if (typeof window === 'undefined' || !window.document) {
+        return 0;
+    }
     let button = document.getElementById('dropdownbutton-mobile');
     let dropdownEl = document.getElementById('dropdown');
     let showDropDown = false;
@@ -119,7 +122,6 @@ const Navigation = ({ intl }) => {
             console.log(num);
         }
     };
-
     if (button) {
         button.addEventListener('click', () => {
             showDropDown = !showDropDown;
