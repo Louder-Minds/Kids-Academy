@@ -36,15 +36,30 @@ export const Container = styled.div`
         }
     }
 
+    h2 {
+        font-weight: 700;
+        font-size: 3em;
+        margin-bottom: ${layout.padding.height.mobile};
+    }
+
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+        h2 {
+            margin-bottom: ${layout.padding.height.tablet};
+        }
     }
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
+        h2 {
+            margin-bottom: ${layout.padding.height.laptop};
+        }
     }
 
     @media ${device.desktop} {
         padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
+        h2 {
+            margin-bottom: ${layout.padding.height.desktop};
+        }
     }
 `;

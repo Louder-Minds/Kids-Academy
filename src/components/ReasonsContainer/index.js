@@ -24,7 +24,7 @@ const ReasonsContainer = ({ points }) => {
     return (
         <Container>
             <div>
-                <h1>Summerschool 2020</h1>
+                <h1>Summer School 2020</h1>
                 <h5>
                     <FormattedMessage id="months" />
                 </h5>
