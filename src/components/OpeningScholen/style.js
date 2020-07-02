@@ -4,6 +4,9 @@ import { device } from '../../util/screensizes';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 
     .buttons {
         margin-bottom: 5%;
@@ -27,40 +30,46 @@ export const Container = styled.div`
     }
 
     .imgbox {
-        padding: 0 0 15px 15px;
+        padding: 0 15px 15px 0;
         height: 100%;
         width: 100%;
-        max-width: 600px;
+        max-width: 400px;
         max-height: 400px;
-        margin: auto;
 
         img {
             height: 100%;
             width: 100%;
-            max-width: 600px;
+            max-width: 400px;
             max-height: 400px;
             min-height: 200px !important;
-            box-shadow: 30px 30px ${colors.turqouise};
+            box-shadow: 15px 15px ${colors.turqouise};
         }
     }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
     @media ${device.laptop} {
-        display: flex;
-        justify-content: space-between;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+        grid-column-gap: 50px;
+        align-items: center;
+        grid-template-columns: 3fr 2fr;
+
         h1 {
             font-size: 3em;
-            margin-top: 0;
-            margin-bottom: 80px;
-            font-weight:bold;
+            font-weight: bold;
+            text-align: left;
+            padding: 0;
+        }
 
-        }
-        div {
-            max-width: 45%;
-        }
         .buttons {
-            
-            a{&:hover {
-                text-decoration: none;
-            }}
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
             display: flex;
             justify-content: space-between;
             width: 100%;

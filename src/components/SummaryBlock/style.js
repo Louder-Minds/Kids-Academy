@@ -67,4 +67,12 @@ export const Container = styled.div`
             z-index: -1;
         }
     }
+
+    @media ${device.laptop} {
+        margin-top: 0;
+
+        .samengevat {
+            max-width: 45%;
+        }
+    }
 `;

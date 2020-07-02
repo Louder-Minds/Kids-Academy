@@ -38,7 +38,7 @@ const index = () => {
                     </li>
                 </ul>
             </div>
-            <NumberBlock />
+            <NumberBlock className="test" />
         </Container>
     );
 };
