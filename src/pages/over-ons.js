@@ -37,13 +37,16 @@ export const query = graphql`
 `;
 
 const index = ({ data, intl }) => {
+    let text;
+    intl.locale === 'en' ? (text = 'About us') : (text = 'Over ons');
+
     return data.allContentfulOverOns.edges.map(({ node }, j) => {
         if (node.node_locale === intl.locale) {
             const { kop, opening, openingFoto, solliciteren } = node;
 
             return (
                 <Layout>
-                    <SEO siteTitle="Over ons" />
+                    <SEO siteTitle={text} />
                     <Title type="h1">
                         <FormattedMessage id="over-ons" />
                     </Title>
