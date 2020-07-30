@@ -1,7 +1,7 @@
 {
     "kennismakingsgesprek_button": "Introductory meeting",
-    "inschrijven_button": "Register now",
-    "cursus_button": "View the course",
+    "inschrijven_button": "Sign up here",
+    "cursus_button": "More information",
 
     "months": "June - July - August",
     "test-jezelf": "Test Jezelf",
@@ -19,7 +19,7 @@
     "onze-cursussen_headline": "Our courses",
     "over-ons_headline": "About us",
     "leerling-ervaring_headline": "Reviews of our students",
-    "voordelen-cursus_headline": "Benefits of this course",
+    "voordelen-cursus_headline": "In Summary",
     "alle-cursussen": "All courses",
 
     "voor-wie-is-deze-cursus": "For who is this course?",
@@ -31,12 +31,25 @@
 
     "over-ons": "About us",
 
+    "inschrijf-formulier": "Registration Form",
+    "aanvraag-kennismakingsgesprek": "Contact Kids Academy",
+
     "hoofdkantoor": "Office number",
     "stuur-email": "Send an email",
     "het-team": "The team",
     "verstuur": "Submit",
 
     "wil-je-solliciteren": "Do you want to apply?",
+
+    "waarom-kids-academy-way": "Why should you choose Kids Academy?",
+    "kind-centraal": "Improved and sustained confidence",
+    "meer-dan-10-jaar": "More than 10 years of experience",
+    "betere-resultaten": "Immediate improved results",
+    "haal-er-uit": "become te best version of yourself",
+    "aandacht-voor": "Focus on school and Cito testing",
+    "kleine-klassen": "Small groups",
+    "contact-met": "Communication with school",
+    "academisch-geschoold": "Experienced and dedicated teachers",
 
     "notfound": {
         "header": "NOT FOUND",

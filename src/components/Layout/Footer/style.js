@@ -92,7 +92,6 @@ export const Container = styled.footer`
         #content {
             div {
                 font-size: 14px;
-                margin: auto;
                 margin-top: 0;
             }
         }

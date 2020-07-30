@@ -22,7 +22,9 @@ const InschrijfFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Inschrijfformulier</Title>
+            <Title type="h2">
+                <FormattedMessage id="inschrijf-formulier"></FormattedMessage>
+            </Title>
             <form
                 method="POST"
                 name="inschrijven"

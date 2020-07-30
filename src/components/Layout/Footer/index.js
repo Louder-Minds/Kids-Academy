@@ -42,6 +42,14 @@ const Footer = () => (
 
             <div>
                 <span>
+                    <b>Amsterdam</b>
+                </span>
+                <span>Palmstraat 11</span>
+                <span>1015 HP Amsterdam</span>
+            </div>
+
+            <div>
+                <span>
                     <b>Laren</b>
                 </span>
                 <span>Brink 33</span>

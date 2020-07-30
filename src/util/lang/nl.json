@@ -1,7 +1,7 @@
 {
     "kennismakingsgesprek_button": "Kennismakingsgesprek",
     "inschrijven_button": "Schrijf je direct in",
-    "cursus_button": "Bekijk de cursus",
+    "cursus_button": "Meer informatie",
 
     "months": "Juni - Juli - Augustus",
     "test-jezelf": "Test Jezelf",
@@ -19,7 +19,7 @@
     "onze-cursussen_headline": "Onze cursussen",
     "over-ons_headline": "Over ons",
     "leerling-ervaring_headline": "Ervaringen van onze leerlingen",
-    "voordelen-cursus_headline": "Voordelen van deze cursus",
+    "voordelen-cursus_headline": "Kort samengevat",
     "alle-cursussen": "Alle cursussen",
 
     "voor-wie-is-deze-cursus": "Voor wie is deze cursus?",
@@ -31,12 +31,25 @@
 
     "over-ons": "Over ons",
 
+    "inschrijf-formulier": "Inschrijfformulier",
+    "aanvraag-kennismakingsgesprek": "Aanvraag Kennismakingsgesprek",
+
     "hoofdkantoor": "Hoofdkantoor",
     "stuur-email": "Stuur een e-mail",
     "het-team": "Het team",
     "verstuur": "Verstuur",
 
-    "wil-je-solliciteren": "Wil je solliciteren?",
+    "wil-je-solliciteren": "Solliciteren?",
+
+    "waarom-kids-academy-way": "Why should you choose Kids Academy",
+    "kind-centraal": "Het kind staat centraal en niet de methode",
+    "meer-dan-10-jaar": "Meer dan 10 jaar ervaring",
+    "betere-resultaten": "Direct betere resultaten",
+    "haal-er-uit": "Haal er uit wat er in zit",
+    "aandacht-voor": "Aandacht voor School- en Cito- toetsen",
+    "kleine-klassen": "Kleine klassen (max 5 leerlingen)",
+    "contact-met": "Contact met scholen",
+    "academisch-geschoold": "Academisch geschoolde docenten",
 
     "notfound": {
         "header": "Niet gevonden",

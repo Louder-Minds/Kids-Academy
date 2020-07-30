@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './style';
 import { useStaticQuery, graphql } from 'gatsby';
 import Title from '../Typography/Title';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl';
 const klassen = ['Groep 5', 'Groep 6', 'Groep 7', 'Groep 8', 'Voortgezet onderwijs'];
 
 const KennismakingsFormulier = () => {
@@ -20,7 +20,9 @@ const KennismakingsFormulier = () => {
 
     return (
         <Container>
-            <Title type="h2">Aanvraag kennismakingsgesprek</Title>
+            <Title type="h2">
+                <FormattedMessage id="aanvraag-kennismakingsgesprek"></FormattedMessage>
+            </Title>
             <form
                 method="POST"
                 name="contact"
@@ -107,4 +109,4 @@ const KennismakingsFormulier = () => {
     );
 };
 
-export default KennismakingsFormulier;
+export default injectIntl(KennismakingsFormulier);
