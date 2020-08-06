@@ -30,7 +30,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        flex-direction: row;
+        flex-direction: ${(props) => (props.side ? 'row' : 'column')};
         justify-content: space-between;
         align-content: center;
         justify-items: center;
@@ -48,6 +48,7 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        padding: calc(${layout.padding.height.laptop} - 2.5%) ${layout.padding.width.laptop};
+        padding: calc(${layout.padding.height.laptop} - 2.5%)
+            calc(${layout.padding.width.laptop} - ${(props) => (props.side ? '2.5%' : '5%')});
     }
 `;

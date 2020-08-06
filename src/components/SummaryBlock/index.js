@@ -3,42 +3,29 @@ import Title from '../Typography/Title';
 import Paragraph from '../Typography/Paragraph';
 import NumberBlock from '../Numberblock';
 import { Container } from './style';
-
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 import uil from './uiltje.png';
 
-const index = () => {
+const index = ({ content }) => {
+    const options = {
+        renderNode: {
+            [BLOCKS.LIST_ITEM]: (node, children) => (
+                <li>
+                    <img src={uil} alt="lg" />
+                    {children[0].props.children[0]}
+                </li>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+        },
+    };
     return (
         <Container>
             <div className="samengevat">
                 <span>Samengevat:</span>
-                <ul>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Steunlessen tijdens en na schooltijd mogelijk
-                    </li>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Steunlessen op school of op één van onze vestigingen.
-                    </li>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Opfrissen van kennis en wegwerken van alle achterstanden
-                    </li>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Blijvend betere resultaten en een vrolijker kind
-                    </li>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Rustigere klassen en meer tijd van de docent voor alle leerlingen
-                    </li>
-                    <li>
-                        <img src={uil} alt="lg" />
-                        Tevreden ouders en ontspannen docenten
-                    </li>
-                </ul>
+                {documentToReactComponents(content.json, options)}
             </div>
-            <NumberBlock className="test" />
+            <NumberBlock className="test" side={false} />
         </Container>
     );
 };

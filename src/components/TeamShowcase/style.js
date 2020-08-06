@@ -6,21 +6,22 @@ import { layout, colors } from '../../util/styling_vars';
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
-    div {
+    .grid {
         display: grid;
         grid-column-gap: 5%;
         grid-template-columns: 1fr;
         grid-row-gap: 30px;
         justify-items: center;
 
-        div {
+        .member {
             display: flex;
             flex-direction: column;
             align-items: center;
+            max-height: fit-content;
 
             div {
                 width: 100%;
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 max-width: 100%;
             }
 
@@ -46,18 +47,22 @@ export const Container = styled.div`
 
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-        div {
+        .grid {
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 5%;
-            grid-row-gap: 30px;
+            grid-row-gap: 50px;
         }
     }
 
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
-        div {
+        .grid {
             grid-template-columns: 1fr 1fr 1fr;
-            grid-row-gap: 30px;
+            grid-row-gap: 60px;
+
+            /* .member {
+                min-height: 850px;
+            } */
         }
     }
 

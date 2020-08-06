@@ -4,9 +4,6 @@ import { device } from '../../util/screensizes';
 
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
 
     .buttons {
         margin-bottom: 5%;
@@ -31,19 +28,19 @@ export const Container = styled.div`
     }
 
     .imgbox {
-        padding: 0 15px 15px 0;
+        padding: 0 0 15px 15px;
         height: 100%;
         width: 100%;
         max-width: 400px;
         max-height: 400px;
 
-        img {
+        div {
             height: 100%;
             width: 100%;
             max-width: 400px;
             max-height: 400px;
             min-height: 200px !important;
-            box-shadow: 15px 15px ${colors.turqouise};
+            box-shadow: -15px 15px 0 ${colors.turqouise};
         }
     }
 
@@ -52,8 +49,20 @@ export const Container = styled.div`
         margin-bottom: 1em;
     }
 
+    @media ${device.tablet} {
+        padding: 5%;
+
+        .imgbox {
+            margin: auto;
+        }
+    }
+
     @media ${device.laptop} {
-        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+        display: grid;
+
+        justify-items: center;
+        padding: 5%;
+        margin-bottom: 5%;
         grid-column-gap: 50px;
         align-items: center;
         grid-template-columns: 3fr 2fr;
@@ -76,8 +85,8 @@ export const Container = styled.div`
             width: 100%;
             min-width: 100%;
             button {
-                max-width: 40%;
-                min-width: 40%;
+                max-width: 45%;
+                min-width: 45%;
             }
         }
     }

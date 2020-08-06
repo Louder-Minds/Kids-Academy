@@ -5,11 +5,14 @@ import { device } from '../../util/screensizes';
 export const Container = styled.div`
     padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
 
-    p {
-        text-align: center;
+    h2 {
+        word-break: break-word;
     }
 
     .buttons {
+        max-width: 800px;
+        margin: auto;
+
         button {
             display: inline-block;
             width: 100%;
@@ -35,7 +38,11 @@ export const Container = styled.div`
     }
 
     .content {
+        margin: auto;
+
+        max-width: 900px;
         margin-bottom: 5%;
+
         ul {
             margin: 0;
 
@@ -57,6 +64,25 @@ export const Container = styled.div`
 
             li:last-child {
                 margin-bottom: 0;
+            }
+        }
+    }
+
+    @media ${device.tablet} {
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+
+        h2 {
+            margin-bottom: 2.5%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: 40%;
+                max-width: 300px;
+                margin: 0;
             }
         }
     }

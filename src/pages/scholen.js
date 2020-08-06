@@ -16,6 +16,13 @@ export const query = graphql`
                     paragraaf1 {
                         json
                     }
+
+                    foto1 {
+                        fluid(quality: 75, maxWidth: 650) {
+                            ...GatsbyContentfulFluid_withWebp
+                        }
+                    }
+
                     samengevat {
                         json
                     }
@@ -23,7 +30,6 @@ export const query = graphql`
                     paragraaf2 {
                         json
                     }
-
                     node_locale
                 }
             }
@@ -34,11 +40,12 @@ export const query = graphql`
 const Scholen = ({ data, intl }) => {
     return data.allContentfulScholen.edges.map(({ node }, j) => {
         if (node.node_locale === intl.locale) {
-            const { kop1, paragraaf1, samengevat, kop2, paragraaf2 } = node;
+            const { kop1, paragraaf1, foto1, samengevat, kop2, paragraaf2 } = node;
+            console.log(node);
             return (
                 <Layout>
                     <SEO siteTitle="Voor scholen" />
-                    <OpeningScholen title={kop1} content={paragraaf1} />
+                    <OpeningScholen title={kop1} content={paragraaf1} foto={foto1} />
                     <SummaryBlock content={samengevat} />
                     <ScholenExplanation title={kop2} content={paragraaf2} />
                 </Layout>

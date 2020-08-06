@@ -68,11 +68,37 @@ export const Container = styled.div`
         }
     }
 
+    @media ${device.tablet} {
+        margin-top: 2.5%;
+    }
+
     @media ${device.laptop} {
+        display: flex;
+        justify-content: space-evenly;
         margin-top: 0;
 
         .samengevat {
             max-width: 45%;
+            top: -65px;
+            margin: 2.5%;
+            &:before {
+                top: -25px;
+            }
+        }
+    }
+
+    @media ${device.desktop} {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0;
+
+        .samengevat {
+            max-width: 45%;
+            top: -100px;
+            margin: 2.5%;
+            &:before {
+                top: -25px;
+            }
         }
     }
 `;

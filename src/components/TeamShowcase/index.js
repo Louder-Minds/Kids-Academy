@@ -32,6 +32,10 @@ const TeamShowcase = ({ intl }) => {
         }
     `);
 
+    // Juli augustus contentful toevoegen
+    // inschrijf - aanmelden
+    // home page fixen
+
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
@@ -43,12 +47,12 @@ const TeamShowcase = ({ intl }) => {
             <Title type="h2">
                 <FormattedMessage id="het-team" />
             </Title>
-            <div>
+            <div className="grid">
                 {data.allContentfulMedewerker.edges.map(({ node }, j) => {
                     if (node.node_locale === intl.locale) {
                         const { naam, foto, functie, overHetPersoon } = node;
                         return (
-                            <div key={j}>
+                            <div key={j} className="member">
                                 <Img fluid={foto.fluid} />
                                 <Title type="h2">{naam}</Title>
                                 <span>{functie}</span>
