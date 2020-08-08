@@ -44,6 +44,10 @@ export const Container = styled.div`
         position: relative;
     }
 
+    #twentytwenty {
+        display: none;
+    }
+
     @media ${device.tablet} {
         max-width: 50%;
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
@@ -52,6 +56,52 @@ export const Container = styled.div`
         .heading span,
         button {
             display: none;
+        }
+
+        display: relative;
+
+        #twentytwenty {
+            display: block;
+            line-height: 2.6em;
+            display: block;
+            position: absolute;
+            right: 10%;
+            bottom: -10%;
+            z-index: 10;
+
+            span {
+                color: ${colors.turqouise};
+                font-weight: 700;
+                font-size: 6em;
+            }
+
+            span:last-child {
+                display: block;
+                transform: translateX(25%);
+            }
+        }
+    }
+
+    @media ${device.laptop} {
+        #twentytwenty {
+            display: block;
+            line-height: 2.6em;
+            display: block;
+            position: absolute;
+            right: 10%;
+            bottom: 0%;
+            z-index: 10;
+
+            span {
+                color: ${colors.blue};
+                font-weight: 700;
+                font-size: 6em;
+            }
+
+            span:last-child {
+                display: block;
+                transform: translateX(25%);
+            }
         }
     }
 `;
@@ -64,4 +114,32 @@ export const StyledImg = styled(Img)`
     max-width: 100% !important;
     height: 100% !important;
     min-height: 300px;
+
+    @media ${device.tablet} {
+        transform: translateX(5%) translateY(5%);
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 350px !important;
+        max-width: 350px !important;
+        height: 350px !important;
+        min-height: 350px;
+        max-height: 350px;
+
+        border-radius: 3px;
+    }
+
+    @media ${device.laptop} {
+        transform: translateX(30%) translateY(0%);
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 400px !important;
+        max-width: 400px !important;
+        height: 400px !important;
+        min-height: 400px;
+        max-height: 400px;
+
+        border-radius: 3px;
+    }
 `;

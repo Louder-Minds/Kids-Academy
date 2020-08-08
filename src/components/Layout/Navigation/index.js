@@ -187,7 +187,7 @@ const Navigation = ({ intl }) => {
                             </AniLink>
                         </div>
                     </li>
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                         <AniLink
                             cover
                             bg={`${colors.turqouise}`}
@@ -196,7 +196,7 @@ const Navigation = ({ intl }) => {
                         >
                             Voor scholen
                         </AniLink>
-                    </li> */}
+                    </li>
                     <li className="nav-item">
                         <AniLink
                             cover

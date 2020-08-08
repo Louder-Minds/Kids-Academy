@@ -41,7 +41,6 @@ const Scholen = ({ data, intl }) => {
     return data.allContentfulScholen.edges.map(({ node }, j) => {
         if (node.node_locale === intl.locale) {
             const { kop1, paragraaf1, foto1, samengevat, kop2, paragraaf2 } = node;
-            console.log(node);
             return (
                 <Layout>
                     <SEO siteTitle="Voor scholen" />

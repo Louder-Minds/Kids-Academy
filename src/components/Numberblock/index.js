@@ -3,7 +3,7 @@ import { Container } from './style';
 // import 'odometer-theme-car.css'
 import { FormattedMessage } from 'gatsby-plugin-intl';
 
-const NumberBlock = ({ side }) => (
+const NumberBlock = ({ side = true }) => (
     <Container side={side}>
         <div>
             <span className="odometer">3</span>

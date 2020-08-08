@@ -42,7 +42,7 @@ export const Container = styled.div`
     ul {
         margin: 0;
         margin-top: 5%;
-        min-height: 150px;
+        min-height: 175px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -69,6 +69,15 @@ export const Container = styled.div`
     :hover {
         cursor: pointer;
     }
+
+    @media ${device.tablet} {
+        ul {
+            min-height: 150px;
+            li {
+                font-size: 14px;
+            }
+        }
+    }
 `;
 
 export const StyledImg = styled(Img)`
@@ -90,9 +99,9 @@ export const StyledImg = styled(Img)`
         div,
         picture img,
         img {
-            min-height: 300px important;
-            height: 300px important;
-            max-height: 300px important;
+            min-height: 200px !important;
+            height: 200px !important;
+            max-height: 200px !important;
         }
     }
 `;

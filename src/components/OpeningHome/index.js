@@ -13,6 +13,11 @@ const OpeningHome = ({ titel, foto }) => {
                     <span key={j}>{`${item} `}</span>
                 ))}
             </div>
+            <div id="twentytwenty">
+                <span>20</span>
+                <br />
+                <span>20</span>
+            </div>
             <Button pagename="contact">
                 <FormattedMessage id="kennismakingsgesprek_button" />
             </Button>
