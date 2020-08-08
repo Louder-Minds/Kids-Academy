@@ -83,7 +83,7 @@ export const Container = styled.div`
         background: white;
         border-radius: 3px;
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
-        padding-bottom: 0%;
+        padding-bottom: 2.5%;
         padding-top: 2.5%;
         height: fit-content;
 
@@ -119,12 +119,13 @@ export const Container = styled.div`
     }
 
     @media ${device.laptop} {
-        hr {
-            display: block;
-        }
+        transform: translateY(20%) translateX(-10%);
 
-        box-shadow: none;
-        transform: translateY(10%) translateX(-5%);
+        div {
+            button {
+                margin-bottom: 0;
+            }
+        }
 
         h1 {
             font-size: 2.6em;
@@ -135,26 +136,9 @@ export const Container = styled.div`
             font-weight: 300;
             margin-bottom: 1em;
         }
-        /* h5 {
-            margin-bottom: 5%;
-        } */
+    }
 
-        /* div {
-            ul {
-                li {
-                    font-size: 1em;
-                    margin-bottom: 1.4em;
-                    font-weight: 400;
-
-                    img {
-                        margin-right: 15px;
-                    }
-                }
-
-                li:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        } */
+    @media ${device.laptop_large} {
+        transform: translateY(25%) translateX(-10%);
     }
 `;

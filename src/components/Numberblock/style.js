@@ -49,6 +49,6 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         padding: calc(${layout.padding.height.laptop} - 2.5%)
-            calc(${layout.padding.width.laptop} - ${(props) => (props.side ? '2.5%' : '5%')});
+            calc(${layout.padding.width.laptop} - ${(props) => (props.side ? '0%' : '5%')});
     }
 `;

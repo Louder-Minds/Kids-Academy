@@ -17,6 +17,10 @@ export const Container = styled.div`
 
     @media ${device.laptop} {
         max-width: 1200px;
+        margin-bottom: 7.5%;
+    }
+
+    @media ${device.laptop_large} {
         margin-bottom: 5%;
     }
 `;

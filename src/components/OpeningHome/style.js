@@ -130,16 +130,20 @@ export const StyledImg = styled(Img)`
     }
 
     @media ${device.laptop} {
-        transform: translateX(30%) translateY(0%);
-        position: relative !important;
-        left: 0 !important;
-        top: 0 !important;
+        transform: translateX(20%) translateY(0%);
         width: 400px !important;
         max-width: 400px !important;
         height: 400px !important;
         min-height: 400px;
         max-height: 400px;
+    }
 
-        border-radius: 3px;
+    @media ${device.laptop_large} {
+        transform: translateX(15%) translateY(0%);
+        width: 500px !important;
+        max-width: 500px !important;
+        height: 500px !important;
+        min-height: 450px;
+        max-height: 450px;
     }
 `;
