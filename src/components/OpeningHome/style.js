@@ -130,10 +130,10 @@ export const StyledImg = styled(Img)`
     }
 
     @media ${device.laptop} {
-        transform: translateX(20%) translateY(0%);
-        width: 400px !important;
-        max-width: 400px !important;
-        height: 400px !important;
+        transform: translateX(25%) translateY(0%);
+        width: 450px !important;
+        max-width: 450px !important;
+        height: 450px !important;
         min-height: 400px;
         max-height: 400px;
     }
@@ -144,6 +144,6 @@ export const StyledImg = styled(Img)`
         max-width: 500px !important;
         height: 500px !important;
         min-height: 450px;
-        max-height: 450px;
+        max-height: 400px;
     }
 `;
