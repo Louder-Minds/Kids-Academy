@@ -6,6 +6,10 @@ export const Container = styled.div`
     background: ${colors.blue};
     margin-top: 20%;
 
+    p {
+        display: none;
+    }
+
     .samengevat {
         box-sizing: border-box;
         background: white;
@@ -63,13 +67,34 @@ export const Container = styled.div`
             left: -3.75%;
             top: -12.5px;
             position: absolute;
-            height: 115%;
+            height: 20%;
             z-index: -1;
         }
     }
 
     @media ${device.tablet} {
         margin-top: 2.5%;
+
+        .samengevat {
+            top: -25px !important;
+            margin: 0 !important;
+            padding: 2.5%;
+            height: fit-content;
+
+            max-heihgt &:before {
+                height: 25%;
+            }
+
+            ul {
+                li {
+                    margin-bottom: 14px;
+                }
+
+                li:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
     @media ${device.laptop} {
@@ -78,7 +103,7 @@ export const Container = styled.div`
         margin-top: 0;
 
         .samengevat {
-            max-width: 45%;
+            max-width: 500px;
             top: -65px;
             margin: 2.5%;
             &:before {

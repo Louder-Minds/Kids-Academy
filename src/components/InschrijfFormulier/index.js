@@ -33,14 +33,18 @@ const InschrijfFormulier = () => {
                 action="/success"
             >
                 <input type="hidden" name="form-name" value="inschrijven" />
-                <div className="naamkind">
+                <div className="naamverzorger">
                     <div>
                         <label htmlFor="first_name_child">Voornaam kind*</label>
                         <input type="text" name="first_name_child" id="first_name_child" required />
                     </div>
                     <div>
                         <label htmlFor="last_name_child">Achternaam kind*</label>
-                        <input type="text\" name="last_name_child" id="last_name_child" required />
+                        <input type="text" name="last_name_child" id="last_name_child" required />
+                    </div>
+                    <div>
+                        <label htmlFor="age_child">Leeftijd kind*</label>
+                        <input type="text" name="age_child" id="age_child" required />
                     </div>
                 </div>
                 <hr />

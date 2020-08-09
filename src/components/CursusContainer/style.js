@@ -52,7 +52,7 @@ export const Container = styled.div`
     @media ${device.laptop} {
         padding: ${layout.padding.height.laptop} ${layout.padding.width.laptop};
         h2 {
-            margin-bottom: ${layout.padding.height.laptop};
+            margin-bottom: 2.5%;
         }
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../Typography/Title';
 import Paragraph from '../Typography/Paragraph';
-import NumberBlock from '../Numberblock';
+import NumberBlock from './Numberblock';
 import { Container } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
