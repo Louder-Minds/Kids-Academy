@@ -6,7 +6,7 @@ export const Container = styled.div`
     display: grid;
     grid-column-gap: 10px;
     grid-template-columns: 1fr;
-    grid-row-gap: 30px;
+    grid-row-gap: 75px;
     justify-items: center;
     margin-bottom: 10%;
 
@@ -18,7 +18,6 @@ export const Container = styled.div`
     @media ${device.tablet} {
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 5%;
-        grid-row-gap: 60px;
     }
     @media ${device.laptop} {
         grid-row-gap: 100px;

@@ -42,7 +42,7 @@ export const Container = styled.div`
     ul {
         margin: 0;
         margin-top: 5%;
-        min-height: 175px;
+        /* min-height: 175px; */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -73,6 +73,7 @@ export const Container = styled.div`
     @media ${device.tablet} {
         ul {
             min-height: 150px;
+            min-height: 175px;
             li {
                 font-size: 14px;
             }

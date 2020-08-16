@@ -50,7 +50,7 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        padding: 5%;
+        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
 
         .imgbox {
             margin: auto;

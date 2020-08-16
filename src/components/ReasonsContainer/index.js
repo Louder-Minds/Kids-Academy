@@ -8,7 +8,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 
 import uil from './uiltje.png';
 
-const ReasonsContainer = ({ points }) => {
+const ReasonsContainer = ({ main, sub, points }) => {
     const options = {
         renderNode: {
             [BLOCKS.LIST_ITEM]: (node, children) => (
@@ -24,10 +24,8 @@ const ReasonsContainer = ({ points }) => {
     return (
         <Container>
             <div>
-                <h1>Summer School 2020</h1>
-                <h5>
-                    <FormattedMessage id="months" />
-                </h5>
+                <h1>{main}</h1>
+                <h5>{sub}</h5>
                 <hr />
             </div>
             <div>

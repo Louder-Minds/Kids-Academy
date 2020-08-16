@@ -7,7 +7,9 @@ const OpeningHome = ({ titel, foto }) => {
     let t = titel.split(' ');
     return (
         <Container>
-            <StyledImg fluid={foto.fluid} />
+            <div>
+                <StyledImg fluid={foto.fluid} />
+            </div>
             <div className="heading">
                 {t.map((item, j) => (
                     <span key={j}>{`${item} `}</span>

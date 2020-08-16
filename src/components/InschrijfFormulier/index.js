@@ -71,6 +71,10 @@ const InschrijfFormulier = () => {
                         <label htmlFor="email">E-mail adres*</label>
                         <input type="email" name="email" id="email" required />
                     </div>
+                    <div>
+                        <label htmlFor="email">Woon adres*</label>
+                        <input type="text" name="adres" id="adres" required />
+                    </div>
                 </div>
                 <hr />
 

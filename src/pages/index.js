@@ -19,6 +19,8 @@ export const query = graphql`
         allContentfulHome {
             edges {
                 node {
+                    mainTitel
+                    subMainTitel
                     bannerTitel
                     bannerFoto {
                         fluid(quality: 75, maxWidth: 650) {
@@ -61,6 +63,8 @@ const index = ({ intl, data }) => {
     return data.allContentfulHome.edges.map(({ node }, j) => {
         if (node.node_locale === intl.locale) {
             const {
+                mainTitel,
+                subMainTitel,
                 bannerTitel,
                 bannerFoto,
                 bulletPoints,
@@ -78,7 +82,11 @@ const index = ({ intl, data }) => {
                     <SEO />
                     <FlexContainer>
                         <OpeningHome titel={bannerTitel} foto={bannerFoto} />
-                        <ReasonsContainer points={bulletPoints} />
+                        <ReasonsContainer
+                            main={mainTitel}
+                            sub={subMainTitel}
+                            points={bulletPoints}
+                        />
                     </FlexContainer>
                     <CursusContainer headline={kop1} content={paragraaf1} />
                     <Numberblock />

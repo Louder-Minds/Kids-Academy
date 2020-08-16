@@ -31,7 +31,7 @@ const index = ({ title, content }) => {
                     <a href="tel:0207173060">Bel ons voor meer informatie</a>
                 </button>
                 <button>
-                    <a href="mailto:info@kidsacademy.nl">Of stuur een email</a>
+                    <a href="mailto:info@kidsacademy.nl">Of stuur een e-mail</a>
                 </button>
             </div>
         </Container>

@@ -4,7 +4,7 @@ import { device } from '../../util/screensizes';
 import { layout, colors } from '../../util/styling_vars';
 
 export const Container = styled.div`
-    padding: calc(${layout.padding.height.mobile} - 5%) ${layout.padding.width.mobile};
+    padding: ${layout.padding.height.mobile} ${layout.padding.width.mobile};
     color: ${colors.blue};
     position: relative;
     padding-bottom: 0%;
