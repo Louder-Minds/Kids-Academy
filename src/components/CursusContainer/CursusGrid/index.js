@@ -20,14 +20,13 @@ const AnimatedBox = ({ keyThing, children, count }) => {
         visible: () => ({
             opacity: 1,
             y: 0,
-            scale: 1,
             transition: {
                 type: 'spring',
                 stiffness: 30,
-                delay: count * 0.1,
+                delay: count * 0.075,
             },
         }),
-        hidden: { opacity: 0, y: '75px', scale: 0.985 },
+        hidden: { opacity: 0, y: '65px' },
     };
 
     return (
