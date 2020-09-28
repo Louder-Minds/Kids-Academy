@@ -1,63 +1,56 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import moment from 'moment';
+// import React, { Component } from 'react';
+// import { Calendar, momentLocalizer } from 'react-big-calendar';
+// import moment from 'moment';
 
-=======
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import moment from 'moment';
-import React, { Component } from 'react'
->>>>>>> 1b0c68a8986e255294e2d28ae7c7ce177eb8bed9
-import 'react-big-calendar/lib/css/react-big-calendar.css';
+// import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-const localizer = momentLocalizer(moment);
+// const localizer = momentLocalizer(moment);
 
-<<<<<<< HEAD
-const JSONDATA = {
-    events: [
-        {
-            start: '25-08-2020',
-            end: '30-08-2020',
-            event: 'Cito training',
-            eventColor: '#1e1e1e',
-            location: 'Amsterdam',
-            locationColor: '#1e1e1e',
-        },
-    ],
-};
+// const JSONDATA = {
+//     events: [
+//         {
+//             start: '25-08-2020',
+//             end: '30-08-2020',
+//             event: 'Cito training',
+//             eventColor: '#1e1e1e',
+//             location: 'Amsterdam',
+//             locationColor: '#1e1e1e',
+//         },
+//     ],
+// };
 
-// moment("25-08-2020", "MM-DD-YYYY")
+// // moment("25-08-2020", "MM-DD-YYYY")
 
-class index extends Component {
-    state = {
-        events: [
-            {
-                start: moment().toDate(),
-                end: moment().add(1, 'days').toDate(),
-                title: 'Cito training',
-            },
-        ],
-    };
+// class index extends Component {
+//     state = {
+//         events: [
+//             {
+//                 start: moment().toDate(),
+//                 end: moment().add(1, 'days').toDate(),
+//                 title: 'Cito training',
+//             },
+//         ],
+//     };
 
-    render() {
-        return (
-            <Calendar
-                localizer={localizer}
-                defaultDate={new Date()}
-                defaultView="month"
-                events={this.state.events}
-                style={{
-                    height: '50vh',
-                    width: '50vw',
-                    margin: 'auto',
-                    marginTop: '25vh',
-                }}
-            />
-        );
-    }
-}
+//     render() {
+//         return (
+//             <Calendar
+//                 localizer={localizer}
+//                 defaultDate={new Date()}
+//                 defaultView="month"
+//                 events={this.state.events}
+//                 style={{
+//                     height: '50vh',
+//                     width: '50vw',
+//                     margin: 'auto',
+//                     marginTop: '25vh',
+//                 }}
+//             />
+//         );
+//     }
+// }
 
-export default index;
+// export default index;
 
 /*
 import React, { Component } from 'react';
@@ -116,58 +109,11 @@ class index extends Component {
     getEventColors(event) {
         const style = { backgroundColor: event.color };
         return { style };
-=======
-class MyCalendar extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            activeLocation: 'Amsterdam',
-            events: [{
-                title: 'Cito',
-                start: moment('24-08-2020T12:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                end: moment('24-08-2020T16:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                location: 'Amsterdam',
-            },
-            {
-                title: 'Rekenen',
-                start: moment('25-08-2020T12:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                end: moment('25-08-2020T16:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                location: 'Haarlem',
-            },
-            {
-                title: 'Taal',
-                start: moment('26-08-2020T12:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                end: moment('26-08-2020T16:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                location: 'Maastricht',
-            },
-            {
-                title: 'Biologie',
-                start: moment('27-08-2020T12:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                end: moment('27-08-2020T16:00:00', 'DD MM YYYY hh:mm:ss')._d,
-                location: 'Amsterdam',
-            }],
-            locations: ['Amsterdam', 'Haarlem', 'Maastricht'],
-        };
-
-        this.getEvents = this.getEvents.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-
-    getEvents() {
-        const events = this.state.events.filter(event => event.location === this.state.activeLocation);
-        return events;
-    }
-
-    handleChange(event) {
-        this.setState({activeLocation: event.target.value});
->>>>>>> 1b0c68a8986e255294e2d28ae7c7ce177eb8bed9
     }
 
     render() {
         return (
             <div>
-<<<<<<< HEAD
                 <select onChange={(e) => this.setState({ selectedLocation: e.target.value })}>
                     {this.state.options.map((item, i) => (
                         <option key={i}>{item}</option>
@@ -188,28 +134,11 @@ class MyCalendar extends React.Component {
                         marginTop: '25vh',
                     }}
                     // eventPropGetter={this.getEventColors}
-=======
-                <select onChange={this.handleChange} value={this.state.activeLocation}>
-                    {this.state.locations.map((l) => (
-                        <option key={l} value={l}>{l}</option>
-                    ))}
-                </select>
-                <Calendar
-                    localizer={localizer}
-                    events={this.getEvents()}
-                    startAccessor="start"
-                    endAccessor="end"
-                    style={{ height: '75vh', width: '90vw', margin: 'auto', marginTop: '12.5vh' }}
->>>>>>> 1b0c68a8986e255294e2d28ae7c7ce177eb8bed9
                 />
             </div>
         );
     }
 }
 
-<<<<<<< HEAD
 export default index;
 */
-=======
-export default MyCalendar;
->>>>>>> 1b0c68a8986e255294e2d28ae7c7ce177eb8bed9
