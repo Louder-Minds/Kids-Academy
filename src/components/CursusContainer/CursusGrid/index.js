@@ -6,14 +6,17 @@ import { injectIntl } from 'gatsby-plugin-intl';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const AnimatedBox = ({ keyThing, children, count }) => {
+/*
+    Animated box is used to add a fade-up animation
+    to the grid. Using framer and adding a parent to 
+    the original componenent. Making it a wrapper.
+*/
+const AnimatedBox = ({ children, count }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
     useEffect(() => {
-        if (inView) {
-            controls.start('visible');
-        }
+        if (inView) controls.start('visible');
     }, [controls, inView]);
 
     const variants = {
@@ -22,7 +25,7 @@ const AnimatedBox = ({ keyThing, children, count }) => {
             y: 0,
             transition: {
                 type: 'spring',
-                stiffness: 30,
+                stiffness: 40,
                 delay: count * 0.075,
             },
         }),
@@ -46,6 +49,11 @@ const AnimatedBox = ({ keyThing, children, count }) => {
     );
 };
 
+/*
+    Queries all the courses and filters based 
+    on language. Because of linking bugs both
+    courses use the same link.
+*/
 const CursusGrid = ({ intl }) => {
     const data = useStaticQuery(graphql`
         query names {
@@ -75,9 +83,14 @@ const CursusGrid = ({ intl }) => {
         }
     `);
 
+    /*
+        The reason we have these big if/else is because
+        creating 'one' return function which checks for 
+        language makes it even more messy.
+    */
     const returnBlocks = () => {
         if (intl.locale === 'nl') {
-            return data.allContentfulCursus.edges.map(({ node }, j) => {
+            return data.allContentfulCursus.edges.map(({ node }, i) => {
                 let coursename, linkname;
                 if (node.node_locale === 'nl') {
                     coursename = node.titel;
@@ -85,9 +98,9 @@ const CursusGrid = ({ intl }) => {
                     const { titel, cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
 
                     return (
-                        <AnimatedBox count={j / 2}>
+                        <AnimatedBox count={i / 2}>
                             <CursusBlock
-                                key={j}
+                                key={i}
                                 name={titel}
                                 description={cursusPoints}
                                 image={fotoVanDeCursus}
@@ -99,23 +112,23 @@ const CursusGrid = ({ intl }) => {
                 }
             });
         } else {
-            return data.allContentfulCursus.edges.map(({ node, next }, j) => {
-                let name = 'a';
-                let link = 'a';
+            return data.allContentfulCursus.edges.map(({ node, next }, i) => {
+                let name = '';
+                let link = '';
                 if (next !== null) {
                     if (node.contentful_id === next.contentful_id) {
                         name = next.titel;
                         link = node.titel;
-                        const { titel, cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
+                        const { cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
                         return (
-                            <AnimatedBox count={j / 2}>
+                            <AnimatedBox count={i / 2}>
                                 <CursusBlock
-                                    key={j}
+                                    key={i}
                                     name={name}
-                                    to={link}
                                     description={cursusPoints}
                                     image={fotoVanDeCursus}
                                     english={alleenInHetEngels}
+                                    to={link}
                                 />
                             </AnimatedBox>
                         );

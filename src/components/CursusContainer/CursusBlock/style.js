@@ -25,10 +25,11 @@ export const Container = styled.div`
         justify-items: center;
         min-height: 80px;
         background-color: rgb(0, 0, 0, 0.05);
+        padding: 0 5%;
+
         h3 {
             margin-bottom: 0px;
         }
-        padding: 0 5%;
     }
 
     p {
@@ -42,7 +43,6 @@ export const Container = styled.div`
     ul {
         margin: 0;
         margin-top: 5%;
-        /* min-height: 175px; */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -64,10 +64,6 @@ export const Container = styled.div`
 
     button {
         width: 100%;
-    }
-
-    :hover {
-        cursor: pointer;
     }
 
     @media ${device.tablet} {
