@@ -31,7 +31,7 @@ const KennismakingsFormulier = () => {
                 action="/success"
             >
                 <input type="hidden" name="form-name" value="contact" />
-                <div className="naamkind">
+                <div className="naamverzorger">
                     <div>
                         <label htmlFor="first_name_child">Voornaam kind*</label>
                         <input type="text" name="first_name_child" id="first_name_child" required />
@@ -40,11 +40,19 @@ const KennismakingsFormulier = () => {
                         <label htmlFor="last_name_child">Achternaam kind*</label>
                         <input type="text" name="last_name_child" id="last_name_child" required />
                     </div>
+                    <div>
+                        <label htmlFor="last_name_child">Adres*</label>
+                        <input type="text" name="last_name_child" id="last_name_child" required />
+                    </div>
                 </div>
                 <hr />
 
                 <div className="klas">
-                    <h3>Mijn kind zit in*</h3>
+                    <div>
+                        <label htmlFor="school">School*</label>
+                        <input type="text" name="school" id="school" required />
+                    </div>
+                    <span>Mijn kind zit in*</span>
                     <select name="klas" required>
                         {klassen.map((item, j) => (
                             <option type="radio" name="groep" value={`${item}`} key={j}>

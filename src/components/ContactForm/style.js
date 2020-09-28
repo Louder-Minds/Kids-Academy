@@ -15,6 +15,10 @@ export const Container = styled.div`
         height: 36px;
     }
 
+    input:focus {
+        border: 2px solid ${colors.turqouise};
+    }
+
     select {
         width: 100%;
     }
@@ -152,6 +156,28 @@ export const Container = styled.div`
     .klas,
     .locatie {
         margin-bottom: -5%;
+    }
+
+    .klas {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+
+        div {
+            padding: 0;
+
+            label {
+                display: block;
+            }
+            input {
+                border-radius: 4px;
+                margin-bottom: 5%;
+                width: 100%;
+                white-space: normal;
+            }
+            margin-bottom: 5%;
+        }
     }
 
     .betaling {
