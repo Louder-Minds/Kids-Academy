@@ -96,8 +96,8 @@ const Footer = () => (
             <div id="copy1">
                 <span>
                     Developed by:{' '}
-                    <a href="https://rubennijhuis.com" target="_">
-                        Ruben Nijhuis
+                    <a href="https://louderminds.studio" target="_">
+                        LouderMinds
                     </a>
                 </span>
             </div>
