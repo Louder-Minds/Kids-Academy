@@ -1,3 +1,36 @@
+.cls-1,
+.cls-2,
+.cls-5 {
+    fill: #fff;
+}
+
+.cls-2 {
+    font-size: 32.73px;
+    font-family: Seravek-Bold, Seravek Bold;
+    font-weight: 700;
+}
+
+.cls-3 {
+    letter-spacing: -0.02em;
+}
+
+.cls-4 {
+    letter-spacing: 0em;
+}
+
+.cls-5 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+}
+
+svg {
+    display: inline-block;
+    width: 100%;
+    max-height: 100%;
+    transform: scale(4.5);
+}
+
 @keyframes show {
     from {
         opacity: 0;
@@ -52,7 +85,7 @@
     margin-left: 10px;
 }
 
-nav > div > ul > li {
+nav>div>ul>li {
     margin: 0;
 }
 
@@ -64,6 +97,7 @@ nav > div > ul > li {
     line-height: 80px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     div {
         width: 100%;
@@ -134,7 +168,7 @@ nav > div > ul > li {
         color: #14b09c !important;
     }
 
-    .navbar-nav > li > a {
+    .navbar-nav>li>a {
         /* (80px - line-height of 27px) / 2 = 26.5px */
         padding-top: 26.5px;
         padding-bottom: 26.5px;
