@@ -15,8 +15,7 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        padding: ${layout.padding.height.desktop}
-            ${layout.padding.width.desktop};
+        padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;
 
@@ -33,7 +32,6 @@ export const Grid = styled.div`
         flex-direction: column;
         align-content: flex-start;
         align-items: center;
-
         text-align: center;
 
         svg {

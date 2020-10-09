@@ -73,13 +73,15 @@ export const Container = styled.div`
     }
 
     @media ${device.tablet} {
-        margin-top: 2.5%;
+        margin-top: 10%;
 
         .samengevat {
             top: -25px !important;
             margin: 0 !important;
             padding: 2.5%;
             height: fit-content;
+            max-width: 80%;
+            left: 10%;
 
             max-heihgt &:before {
                 height: 25%;
@@ -106,6 +108,8 @@ export const Container = styled.div`
             max-width: 500px;
             top: -65px;
             margin: 2.5%;
+            left: 0%;
+
             &:before {
                 top: -25px;
             }

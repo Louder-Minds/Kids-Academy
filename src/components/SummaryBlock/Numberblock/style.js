@@ -40,11 +40,12 @@ export const Container = styled.div`
             margin-bottom: 0;
 
             span:first-child {
-                font-size: 5em;
+                font-size: 4.6em;
+                margin-bottom: -20px;
             }
         }
 
-        padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
+        padding: calc(${layout.padding.height.tablet} - 5%) ${layout.padding.width.tablet};
     }
 
     @media ${device.laptop} {
