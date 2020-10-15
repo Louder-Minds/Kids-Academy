@@ -47,10 +47,8 @@ export const query = graphql`
                     paragraaf24 {
                         json
                     }
-                    video {
-                        file {
-                            url
-                        }
+                    videotext {
+                        json
                     }
                     node_locale
                 }
@@ -75,7 +73,7 @@ const index = ({ intl, data }) => {
                 paragraaf22,
                 paragraaf23,
                 paragraaf24,
-                // video,
+                videotext,
             } = node;
             return (
                 <Layout key={j}>
@@ -96,6 +94,7 @@ const index = ({ intl, data }) => {
                         content2={paragraaf22}
                         content3={paragraaf23}
                         content4={paragraaf24}
+                        text={videotext}
                     />
                     {/* <Divider />
                     <VideoContainer video={video} /> */}

@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Paragraph from '../Typography/Paragraph';
 
-const ExplanationContainer = ({ headline, content1, content2, content3, content4 }) => {
+const ExplanationContainer = ({ headline, content1, content2, content3, content4, text }) => {
     const data = useStaticQuery(graphql`
         query images {
             file(relativePath: { eq: "path.png" }) {
@@ -47,17 +47,7 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
             }}>
                 <div style={{ marginBottom: '5%', flexGrow: 1, marginRight: '5%'}}>
 
-                <h3 style={{marginBottom: '5%'}}>In het nieuws</h3>
-                <p>
-                    Veel kinderen gaan in de herfstvakantie naar Herfst School en in Amsterdam,
-                    Haarlem en Laren kun je dan naar Kids Academy.
-                </p>
-                <p >
-                    Het jeugdjournaal wilde wel eens zien hoe dat er bij ons uit ziet en heeft er
-                    een heel leuk item van gemaakt.
-                </p>
-
-                <p >Supertrots op al onze leerlingen die vandaag op het Jeugjournaal waren!!!</p>
+                    {documentToReactComponents(text.json, options)}
 
                 </div>
                 <iframe
