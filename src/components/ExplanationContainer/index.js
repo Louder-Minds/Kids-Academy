@@ -36,7 +36,42 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
                 <div>{documentToReactComponents(content3.json, options)}</div>
                 <div>{documentToReactComponents(content4.json, options)}</div>
             </div>
-            <h5 className="heading">Test jezelf</h5>
+            <div style={{
+                marginTop: '5%',
+                background: 'rgba(0,0,0,0.1)',
+                padding: '3%',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                alignContent: 'center'
+            }}>
+                <div style={{ marginBottom: '5%', flexGrow: 1, marginRight: '5%'}}>
+
+                <h3 style={{marginBottom: '5%'}}>In het nieuws</h3>
+                <p>
+                    Veel kinderen gaan in de herfstvakantie naar Herfst School en in Amsterdam,
+                    Haarlem en Laren kun je dan naar Kids Academy.
+                </p>
+                <p >
+                    Het jeugdjournaal wilde wel eens zien hoe dat er bij ons uit ziet en heeft er
+                    een heel leuk item van gemaakt.
+                </p>
+
+                <p >Supertrots op al onze leerlingen die vandaag op het Jeugjournaal waren!!!</p>
+
+                </div>
+                <iframe
+                    style={{margin: 'auto', display: 'inline-block'}}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/5lsqqVGD6wY"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
+            {/* <h5 className="heading">Test jezelf</h5>
             <div className="imglinks">
                 <Img
                     className="img"
@@ -68,8 +103,8 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
                     >
                         Ben jij klaar voor groep 8?
                     </a>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
         </Container>
     );
 };
