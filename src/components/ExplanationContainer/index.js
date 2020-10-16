@@ -24,6 +24,7 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
             [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
+            [BLOCKS.HEADING_3]: (node, children) => <h3 style={{ display: 'block' }}>{children}</h3>,
         },
     };
 
@@ -45,13 +46,13 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
                 justifyContent: 'space-between',
                 alignContent: 'center'
             }}>
-                <div style={{ marginBottom: '5%', flexGrow: 1, marginRight: '5%'}}>
+                <div style={{ marginBottom: '5%', flexGrow: 1, marginRight: '5%', display: 'flex', flexDirection: 'column' }}>
 
                     {documentToReactComponents(text.json, options)}
 
                 </div>
                 <iframe
-                    style={{margin: 'auto', display: 'inline-block'}}
+                    style={{ margin: 'auto', display: 'inline-block' }}
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/5lsqqVGD6wY"

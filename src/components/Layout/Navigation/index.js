@@ -26,9 +26,9 @@ const Navigation = ({ intl }) => {
                     }
                 }
             }
-            file(relativePath: { eq: "logo-wit-2.png" }) {
+            file(relativePath: { eq: "logo-wit-4.png" }) {
                 childImageSharp {
-                    fluid(maxWidth: 200) {
+                    fluid(maxWidth: 900) {
                         ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                 }
@@ -90,8 +90,7 @@ const Navigation = ({ intl }) => {
                 className="navbar-brand"
                 to={`/${intl.locale}/`}
             >
-                                <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
-
+                <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
             </AniLink>
             <button
                 className="navbar-toggler"

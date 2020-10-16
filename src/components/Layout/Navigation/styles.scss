@@ -105,14 +105,21 @@ nav>div>ul>li {
     line-height: 80px;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
 
     div {
-        width: 100%;
+        // width: 100%;
+        width: 160px;
         height: 80px;
-        max-height: 50px;
+        max-height: 80px;
         margin-bottom: 0;
         padding: 0;
+        
+            img {
+                transform: translateY(3px);
+                height: 80px;
+                min-height: 80px;
+            }
     }
 
     a {
@@ -168,7 +175,7 @@ nav>div>ul>li {
 
     .navbar-brand {
         div {
-            height: 50px;
+            // height: 50px;
         }
     }
 
@@ -220,9 +227,9 @@ nav>div>ul>li {
 
 @media (min-width: 1440px) {
     .navbar-brand {
-        div {
-            height: 50px;
-        }
+        // div {
+        //     height: 50px;
+        // }
     }
 
     .nav-link {
