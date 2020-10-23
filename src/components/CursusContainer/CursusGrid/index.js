@@ -3,51 +3,51 @@ import { Container } from './style';
 import CursusBlock from '../CursusBlock';
 import { useStaticQuery, graphql } from 'gatsby';
 import { injectIntl } from 'gatsby-plugin-intl';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+// import { motion, useAnimation } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
 
-/*
-    Animated box is used to add a fade-up animation
-    to the grid. Using framer and adding a parent to 
-    the original componenent. Making it a wrapper.
-*/
-const AnimatedBox = ({ children, count }) => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView();
+// /*
+//     Animated box is used to add a fade-up animation
+//     to the grid. Using framer and adding a parent to 
+//     the original componenent. Making it a wrapper.
+// */
+// const AnimatedBox = ({ children, count }) => {
+//     const controls = useAnimation();
+//     const [ref, inView] = useInView();
 
-    useEffect(() => {
-        if (inView) controls.start('visible');
-    }, [controls, inView]);
+//     useEffect(() => {
+//         if (inView) controls.start('visible');
+//     }, [controls, inView]);
 
-    const variants = {
-        visible: () => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: 'spring',
-                stiffness: 40,
-                delay: count * 0.075,
-            },
-        }),
-        hidden: { opacity: 0, y: '65px' },
-    };
+//     const variants = {
+//         visible: () => ({
+//             opacity: 1,
+//             y: 0,
+//             transition: {
+//                 type: 'spring',
+//                 stiffness: 40,
+//                 delay: count * 0.075,
+//             },
+//         }),
+//         hidden: { opacity: 0, y: '65px' },
+//     };
 
-    return (
-        <motion.div
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={variants}
-            style={{
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-        >
-            {children}
-        </motion.div>
-    );
-};
+//     return (
+//         <motion.div
+//             ref={ref}
+//             animate={controls}
+//             initial="hidden"
+//             variants={variants}
+//             style={{
+//                 width: '100%',
+//                 display: 'flex',
+//                 justifyContent: 'center',
+//             }}
+//         >
+//             {children}
+//         </motion.div>
+//     );
+// };
 
 /*
     Queries all the courses and filters based 
@@ -98,7 +98,7 @@ const CursusGrid = ({ intl }) => {
                     const { titel, cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
 
                     return (
-                        <AnimatedBox count={i / 2}>
+                        // <AnimatedBox count={i / 2}>
                             <CursusBlock
                                 key={i}
                                 name={titel}
@@ -107,7 +107,7 @@ const CursusGrid = ({ intl }) => {
                                 english={alleenInHetEngels}
                                 to={titel}
                             />
-                        </AnimatedBox>
+                        // </AnimatedBox>
                     );
                 }
             });
@@ -121,7 +121,7 @@ const CursusGrid = ({ intl }) => {
                         link = node.titel;
                         const { cursusPoints, fotoVanDeCursus, alleenInHetEngels } = node;
                         return (
-                            <AnimatedBox count={i / 2}>
+                            // <AnimatedBox count={i / 2}>
                                 <CursusBlock
                                     key={i}
                                     name={name}
@@ -130,7 +130,7 @@ const CursusGrid = ({ intl }) => {
                                     english={alleenInHetEngels}
                                     to={link}
                                 />
-                            </AnimatedBox>
+                            // </AnimatedBox>
                         );
                     } else {
                         return;
