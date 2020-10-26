@@ -2,20 +2,172 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import firebase from '../util/firebase';
 import React, { useState, useEffect } from 'react';
-import '../util/calendar.css';
+import '../util/calander.css';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import 'moment/locale/nl';
 
 const localizer = momentLocalizer(moment);
 
-const MyCalendar = () => {
+const Event = ({ event }) => {
+    const { titel, start, kleur, locatie, descriptie } = event;
+    moment.locale('nl');
+    const timeStart = moment(moment.unix(start.seconds)).format('DD/MM/YYYY');
+
+    return (
+        <>
+
+            <li
+                style={{
+                    padding: 8,
+                    paddingBottom: 0,
+                    display: 'flex',
+                    alignContent: 'center',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 300,
+                }}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        width: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            width: '100%',
+                        }}
+                    >
+                        <div
+                            style={{
+                                maxWidth: '65%',
+                                height: '100%',
+                                display: 'flex',
+                                alignContent: 'start',
+                                margin: 0,
+                                alignItems: 'center',
+                            }}
+                        >
+                            <span
+                                style={{
+                                    width: 12,
+                                    height: 12,
+                                    minWidth: 12,
+                                    minHeight: 12,
+                                    background: `${kleur}`,
+                                    display: 'inline-block',
+                                    borderRadius: 100,
+                                    marginRight: 6,
+                                }}
+                            ></span>
+                            <span style={{ textAlign: 'left', fontSize: '18px' }}>{titel}</span>
+                        </div>
+                        <div
+                            style={{
+                                height: '100%',
+                                display: 'inline-block',
+                                textAlign: 'right',
+                            }}
+                        >
+                            <span style={{ display: 'block', fontWeight: 600 }}>{timeStart}</span>
+                            <span style={{ display: 'block' }}>{locatie}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <div style={{padding: 8}}>
+
+                {descriptie}
+            </div>
+            <div
+                style={{
+                    margin: 'auto',
+                    marginTop: '16px',
+                    height: 3,
+                    border: 'none',
+                    background: '#37375c',
+                    width: '95%',
+                    opacity: 0.05,
+                }}
+            />
+        </>
+    );
+};
+
+function EventsList({location}) {
     const [events, setEvents] = useState([]);
-    const [locations, setLocations] = useState([]);
-    const [activeLocation, setActiveLocation] = useState('');
+
+    const getEvents = () => {
+        let returnEvents = [];
+        if (location === undefined) {
+            returnEvents = events.filter((e) => e.locatie === 'Amsterdam');
+        } else {
+            
+            returnEvents = events.filter((e) => e.locatie === location);
+        }
+
+        return returnEvents.map((event, i) => <Event key={i} event={event} />)
+    };
 
     useEffect(() => {
         const fetchData = async () => {
+            firebase
+                .firestore()
+                .collection('events')
+                .orderBy('start', 'asc')
+                .onSnapshot((data) => {
+                    setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+                });
+        };
+        fetchData();
+    }, []);
+
+    getEvents();
+    return (
+        <div
+            style={{
+                background: 'white',
+                padding: 16,
+                borderRadius: '7px',
+                boxShadow: '0px 5px 15px rgba(0,0,0,0.1)',
+            }}
+        >
+            <ul
+                style={{
+                    listStyleType: 'none',
+                    padding: '0',
+                    overflow: 'hidden',
+                    overflowY: 'scroll',
+                    background: 'white',
+                    height: '100%',
+                    maxHeight: '100%',
+                    boxSizing: 'border-box',
+                }}
+            >
+                {getEvents()}
+            </ul>
+        </div>
+    );
+}
+
+const MyCalendar = () => {
+    const [events, setEvents] = useState([]);
+    const [locations, setLocations] = useState([]);
+    const [activeLocation, setActiveLocation] = useState('Amsterdam');
+
+    useEffect(() => {
+        const fetchData = async () => {
+            firebase
+                .firestore()
+                .collection('locaties')
+                .onSnapshot((data) => {
+                    setLocations(data.docs.map((doc) => doc.data().naam));
+                    setActiveLocation(locations[0]);
+                });
+
             firebase
                 .firestore()
                 .collection('events')
@@ -36,19 +188,6 @@ const MyCalendar = () => {
                 });
         };
         fetchData();
-    }, []);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            firebase
-                .firestore()
-                .collection('locaties')
-                .onSnapshot((data) => {
-                    setLocations(data.docs.map((doc) => doc.data().naam));
-                    setActiveLocation(locations[0]);
-                });
-        };
-        fetchData();
         // eslint-disable-next-line
     }, []);
 
@@ -57,8 +196,14 @@ const MyCalendar = () => {
     });
 
     const getEvents = () => {
-        const returnEvents = events.filter((e) => e.locatie === activeLocation);
-        return returnEvents;
+        if (activeLocation === undefined) {
+            const returnEvents = events.filter((e) => e.locatie === 'Amsterdam');
+            return returnEvents;
+        } else {
+            const returnEvents = events.filter((e) => e.locatie === activeLocation);
+
+            return returnEvents;
+        }
     };
 
     return (
@@ -106,30 +251,38 @@ const MyCalendar = () => {
                         </option>
                     ))}
                 </select>
-                <Calendar
-                    localizer={localizer}
-                    events={getEvents()}
-                    startAccessor="start"
-                    endAccessor="eind"
-                    titleAccessor="titel"
-                    eventPropGetter={eventStyleGetter}
-                    style={{
-                        height: '65vh',
-                        maxWidth: 1000,
-                        margin: 'auto',
-                        maxHeight: '500px',
-                        boxSizing: 'border-box',
-                    }}
-                    messages={{
-                        next: 'Volgende',
-                        previous: 'Vorige',
-                        today: 'Vandaag',
-                        month: 'Maand',
-                        week: 'Week',
-                        day: 'Dag',
-                    }}
-                    onSelectEvent={(e) => console.log(e)}
-                />
+                <div className="calander-big">
+                    <Calendar
+                        localizer={localizer}
+                        events={getEvents()}
+                        startAccessor="start"
+                        endAccessor="eind"
+                        titleAccessor="titel"
+                        eventPropGetter={eventStyleGetter}
+                        style={{
+                            height: '65vh',
+                            maxWidth: 1000,
+                            margin: 'auto',
+                            maxHeight: '500px',
+                            boxSizing: 'border-box',
+                        }}
+                        messages={{
+                            next: 'Volgende',
+                            previous: 'Vorige',
+                            today: 'Vandaag',
+                            month: 'Maand',
+                            week: 'Week',
+                            day: 'Dag',
+                        }}
+                        // onSelectEvent={(e) => set}
+                    />
+                </div>
+                {/* <div>
+                    {}
+                </div> */}
+                <div className="calander-small">
+                    <EventsList location={activeLocation}/>
+                </div>
             </div>
         </Layout>
     );
