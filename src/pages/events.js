@@ -274,7 +274,6 @@ const MyCalendar = () => {
                             week: 'Week',
                             day: 'Dag',
                         }}
-                        // onSelectEvent={(e) => set}
                     />
                 </div>
                 {/* <div>
