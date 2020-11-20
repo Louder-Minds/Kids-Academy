@@ -7,6 +7,37 @@ import kidsproof from './kidsproof1.png';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
+import styled from 'styled-components';
+
+import { device } from '../../../util/screensizes';
+
+const FormContainer = styled.div`
+margin: auto;
+    margin-bottom: 46px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    height: fit-content;
+    max-width: 550px;
+
+`;
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    input {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    @media ${device.tablet} {
+    }
+`;
 
 const MailChimp = () => {
     const [email, setEmail] = useState('');
@@ -16,24 +47,37 @@ const MailChimp = () => {
     };
 
     return (
-        <div style={{ maxWidth: 500, margin: 'auto', marginBottom: '5%', background: 'rgba(0,0,0,0.05)', padding: 16}}>
-        <form onSubmit={handleSubmit}>
-            <h4 style={{marginBottom: 16}}>Meld je aan voor onze nieuws brief!</h4>
-                <input
-                    style={{
-                        padding: 6,
-                        border: 'none',
-                        borderRadius: 3,
-                        border: `${colors.turqouise} 2px solid`
-                    }}
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-            />
-                <button style={{ marginLeft: '5%', padding: '8px', border: 'none', borderRadius: 3, background: colors.turqouise, color: 'white' }} type="submit">Meld je aan!</button>
-        </form>
-        </div>
+        <FormContainer>
+            <Form onSubmit={handleSubmit}>
+                <h4 style={{ marginBottom: 16 }}>Meld je aan voor onze nieuws brief!</h4>
+                    <input
+                        style={{
+                            padding: 6,
+                            border: 'none',
+                            borderRadius: 3,
+                            border: `${colors.turqouise} 2px solid`,
+                            display: 'block',
+                        }}
+                        placeholder="E-mail"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <button
+                        style={{
+                            padding: '8px',
+                            border: 'none',
+                            borderRadius: 3,
+                            background: colors.turqouise,
+                            color: 'white',
+                        }}
+                        type="submit"
+                    >
+                        Meld je aan!
+                    </button>
+            </Form>
+        </FormContainer>
     );
 };
 
