@@ -1,32 +1,25 @@
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import firebase from "../../util/firebase";
-import React, { useState, useEffect } from "react";
-import "./calandar.css";
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
+import firebase from '../../util/firebase';
+import React, { useState, useEffect } from 'react';
+import './calandar.css';
 
 const localizer = momentLocalizer(moment);
 
 const MyCalendar = () => {
     const [events, setEvents] = useState([]);
     const [locations, setLocations] = useState([]);
-    const [activeLocation, setActiveLocation] = useState("Amsterdam");
+    const [activeLocation, setActiveLocation] = useState('Amsterdam');
 
     useEffect(() => {
         const fetchData = async () => {
             firebase
                 .firestore()
-                .collection("events")
-                .orderBy("start", "asc")
+                .collection('events')
+                .orderBy('start', 'asc')
                 .onSnapshot((data) => {
                     const eventsFormatted = data.docs.map((doc) => {
-                        const {
-                            titel,
-                            descriptie,
-                            start,
-                            eind,
-                            kleur,
-                            locatie,
-                        } = doc.data();
+                        const { titel, descriptie, start, eind, kleur, locatie } = doc.data();
                         return {
                             titel,
                             descriptie,
@@ -46,10 +39,10 @@ const MyCalendar = () => {
         const fetchData = async () => {
             firebase
                 .firestore()
-                .collection("locaties")
+                .collection('locaties')
                 .onSnapshot((data) => {
                     setLocations(data.docs.map((doc) => doc.data().naam));
-                    setActiveLocation(locations[0])
+                    setActiveLocation(locations[0]);
                 });
         };
         fetchData();
@@ -70,20 +63,20 @@ const MyCalendar = () => {
             <div>
                 <span
                     style={{
-                        height: "80px",
-                        transform: "translateY(5px)",
-                        width: "4px",
-                        borderRadius: "100px",
-                        background: "black",
-                        display: "inline-block",
-                        marginRight: "16px",
+                        height: '80px',
+                        transform: 'translateY(5px)',
+                        width: '4px',
+                        borderRadius: '100px',
+                        background: 'black',
+                        display: 'inline-block',
+                        marginRight: '16px',
                     }}
                 ></span>
                 <h1
                     style={{
-                        marginBottom: "1em",
-                        fontSize: "2.4em",
-                        display: "inline-block",
+                        marginBottom: '1em',
+                        fontSize: '2.4em',
+                        display: 'inline-block',
                     }}
                 >
                     Overzicht <br />
@@ -93,18 +86,19 @@ const MyCalendar = () => {
             <div
                 style={{
                     padding: 16,
-                    background: "white",
-                    borderRadius: "7px",
-                    boxShadow: "0px 5px 15px rgba(0,0,0,0.1)",
+                    background: 'white',
+                    borderRadius: '7px',
+                    marginBottom: 32,
                 }}
+                className="wbababba"
             >
                 <span
                     style={{
-                        display: "block",
-                        margin: "auto",
+                        display: 'block',
+                        margin: 'auto',
                         marginBottom: 8,
-                        width: "fit-content",
-                        fontSize: "1.2em",
+                        width: 'fit-content',
+                        fontSize: '1.2em',
                         fontWeight: 900,
                     }}
                 >
@@ -112,13 +106,13 @@ const MyCalendar = () => {
                 </span>
                 <select
                     style={{
-                        display: "block",
+                        display: 'block',
                         height: 30,
-                        margin: "auto",
+                        margin: 'auto',
                         marginBottom: 16,
-                        border: " 2px solid rgb(20, 176, 156)",
-                        borderRadius: "3px",
-                        padding: "3px",
+                        border: ' 2px solid rgb(20, 176, 156)',
+                        borderRadius: '3px',
+                        padding: '3px',
                     }}
                     onChange={(e) => {
                         setActiveLocation(e.target.value);
@@ -139,11 +133,11 @@ const MyCalendar = () => {
                     titleAccessor="titel"
                     eventPropGetter={eventStyleGetter}
                     style={{
-                        height: "65vh",
-                        width: "60vw",
-                        margin: "auto",
-                        maxHeight: "500px",
-                        boxSizing: "border-box",
+                        height: '65vh',
+                        width: '60vw',
+                        margin: 'auto',
+                        maxHeight: '500px',
+                        boxSizing: 'border-box',
                     }}
                 />
             </div>

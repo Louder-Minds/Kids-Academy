@@ -16,7 +16,6 @@ const Event = ({ event }) => {
 
     return (
         <>
-
             <li
                 style={{
                     padding: 8,
@@ -51,7 +50,7 @@ const Event = ({ event }) => {
                                 alignItems: 'center',
                             }}
                         >
-                            <span
+                            {/* <span
                                 style={{
                                     width: 12,
                                     height: 12,
@@ -62,8 +61,10 @@ const Event = ({ event }) => {
                                     borderRadius: 100,
                                     marginRight: 6,
                                 }}
-                            ></span>
-                            <span style={{ textAlign: 'left', fontSize: '18px' }}>{titel}</span>
+                            ></span> */}
+                            <span style={{ textAlign: 'left', fontSize: '18px', fontWeight: 500 }}>
+                                {titel}
+                            </span>
                         </div>
                         <div
                             style={{
@@ -78,14 +79,12 @@ const Event = ({ event }) => {
                     </div>
                 </div>
             </li>
-            <div style={{padding: 8}}>
-
-                {descriptie}
-            </div>
+            <div style={{ padding: 8 }}>{descriptie}</div>
             <div
                 style={{
                     margin: 'auto',
-                    marginTop: '16px',
+                    marginTop: '8px',
+                    marginBottom: '8px',
                     height: 3,
                     border: 'none',
                     background: '#37375c',
@@ -97,7 +96,7 @@ const Event = ({ event }) => {
     );
 };
 
-function EventsList({location}) {
+function EventsList({ location }) {
     const [events, setEvents] = useState([]);
 
     const getEvents = () => {
@@ -105,11 +104,10 @@ function EventsList({location}) {
         if (location === undefined) {
             returnEvents = events.filter((e) => e.locatie === 'Amsterdam');
         } else {
-            
             returnEvents = events.filter((e) => e.locatie === location);
         }
 
-        return returnEvents.map((event, i) => <Event key={i} event={event} />)
+        return returnEvents.map((event, i) => <Event key={i} event={event} />);
     };
 
     useEffect(() => {
@@ -119,7 +117,10 @@ function EventsList({location}) {
                 .collection('events')
                 .orderBy('start', 'asc')
                 .onSnapshot((data) => {
-                    setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+                    const reversedData = data.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }))
+                        .reverse();
+                    setEvents(reversedData);
                 });
         };
         fetchData();
@@ -179,7 +180,7 @@ const MyCalendar = () => {
                             titel,
                             descriptie,
                             start: moment(moment.unix(start.seconds))._d,
-                            eind: moment(moment.unix(eind.seconds))._d,
+                            eind: moment(moment.unix(eind.seconds)).add(1, 'days')._d,
                             kleur,
                             locatie,
                         };
@@ -213,6 +214,7 @@ const MyCalendar = () => {
             <div
                 style={{
                     padding: 16,
+                    marginBottom: 32,
                     background: 'white',
                     borderRadius: '7px',
                     boxShadow: '0px 5px 15px rgba(0,0,0,0.1)',
@@ -266,13 +268,11 @@ const MyCalendar = () => {
                             maxHeight: '500px',
                             boxSizing: 'border-box',
                         }}
+                        views={['month']}
                         messages={{
-                            next: 'Volgende',
-                            previous: 'Vorige',
+                            next: 'Volgende maand',
+                            previous: 'Vorige maand',
                             today: 'Vandaag',
-                            month: 'Maand',
-                            week: 'Week',
-                            day: 'Dag',
                         }}
                     />
                 </div>
@@ -280,7 +280,7 @@ const MyCalendar = () => {
                     {}
                 </div> */}
                 <div className="calander-small">
-                    <EventsList location={activeLocation}/>
+                    <EventsList location={activeLocation} />
                 </div>
             </div>
         </Layout>

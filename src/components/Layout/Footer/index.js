@@ -4,7 +4,7 @@ import { Container } from './style';
 import { colors } from '../../../util/styling_vars';
 import kennemer from './Kennemer-Lyceum.png';
 import kidsproof from './kidsproof1.png';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import styled from 'styled-components';
@@ -12,13 +12,12 @@ import styled from 'styled-components';
 import { device } from '../../../util/screensizes';
 
 const FormContainer = styled.div`
-margin: auto;
+    margin: auto;
     margin-bottom: 46px;
     background: rgba(0, 0, 0, 0.05);
     padding: 16px;
     height: fit-content;
     max-width: 550px;
-
 `;
 
 const Form = styled.form`
@@ -41,41 +40,58 @@ const Form = styled.form`
 
 const MailChimp = () => {
     const [email, setEmail] = useState('');
+    const [showSuccesMessage, setShowSuccesMessage] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
         addToMailchimp(email);
+        setShowSuccesMessage(true);
     };
 
     return (
         <FormContainer>
             <Form onSubmit={handleSubmit}>
-                <h4 style={{ marginBottom: 16 }}>Meld je aan voor onze nieuws brief!</h4>
-                    <input
+                <h4 style={{ marginBottom: 16 }}>Meld je aan voor onze nieuwsbrief!</h4>
+                <input
+                    style={{
+                        padding: 6,
+                        border: 'none',
+                        borderRadius: 3,
+                        border: `${colors.turqouise} 2px solid`,
+                        display: 'block',
+                    }}
+                    placeholder="E-mail"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <button
+                    style={{
+                        padding: '8px',
+                        border: 'none',
+                        borderRadius: 3,
+                        background: colors.turqouise,
+                        color: 'white',
+                    }}
+                    type="submit"
+                >
+                    Meld je aan!
+                </button>
+                {showSuccesMessage ? (
+                    <div
                         style={{
-                            padding: 6,
-                            border: 'none',
-                            borderRadius: 3,
-                            border: `${colors.turqouise} 2px solid`,
-                            display: 'block',
+                            height: 56,
+                            backgroundColor: '#61d889',
+                            width: '100%',
+                            marginTop: 16,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}
-                        placeholder="E-mail"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <button
-                        style={{
-                            padding: '8px',
-                            border: 'none',
-                            borderRadius: 3,
-                            background: colors.turqouise,
-                            color: 'white',
-                        }}
-                        type="submit"
                     >
-                        Meld je aan!
-                    </button>
+                        <span style={{ height: 'fit-content' }}>Succesvol ingeschreven ✓</span>
+                    </div>
+                ) : null}
             </Form>
         </FormContainer>
     );
@@ -87,24 +103,24 @@ const Footer = () => (
         <Container>
             <div id="content">
                 <div>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/`}>
+                    <Link cover bg={`${colors.turqouise}`} to={`/`}>
                         Home
-                    </AniLink>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/cursussen`}>
+                    </Link>
+                    <Link cover bg={`${colors.turqouise}`} to={`/cursussen`}>
                         <FormattedMessage id="cursussen_nav" />
-                    </AniLink>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/over-ons`}>
+                    </Link>
+                    <Link cover bg={`${colors.turqouise}`} to={`/over-ons`}>
                         <FormattedMessage id="over-ons_nav" />
-                    </AniLink>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/blog`}>
+                    </Link>
+                    <Link cover bg={`${colors.turqouise}`} to={`/blog`}>
                         <FormattedMessage id="blog_nav" />
-                    </AniLink>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/contact`}>
+                    </Link>
+                    <Link cover bg={`${colors.turqouise}`} to={`/contact`}>
                         <FormattedMessage id="contact_nav" />
-                    </AniLink>
-                    <AniLink cover bg={`${colors.turqouise}`} to={`/voorwaarden`}>
+                    </Link>
+                    <Link cover bg={`${colors.turqouise}`} to={`/voorwaarden`}>
                         <FormattedMessage id="voorwaarden_nav" />
-                    </AniLink>
+                    </Link>
                 </div>
 
                 <div>

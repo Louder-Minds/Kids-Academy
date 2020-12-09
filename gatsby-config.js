@@ -18,11 +18,11 @@ module.exports = {
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
         `gatsby-transformer-sharp`,
-        `gatsby-plugin-transition-link`,
         {
             resolve: 'gatsby-plugin-mailchimp',
             options: {
-                endpoint: "https://kidsacademy.us2.list-manage.com/subscribe/post?u=6d9737865e3bf9bf2143943a2&amp;id=c9f157f4b5",
+                endpoint:
+                    'https://kidsacademy.us2.list-manage.com/subscribe/post?u=40c0f26b532bd0bb48c39595c&amp;id=dc854531af',
                 timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
             },
         },

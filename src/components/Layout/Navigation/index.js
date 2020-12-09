@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 import { colors } from '../../../util/styling_vars';
 import Img from 'gatsby-image';
 import Language from '../../LanguageSwitcher';
@@ -44,15 +44,15 @@ const Navigation = ({ intl }) => {
                     coursename = node.titel;
                     linkname = node.titel;
                     return (
-                        <AniLink
-                            cover
-                            bg={`${colors.turqouise}`}
+                        <Link
+                            // cover
+                            // bg={`${colors.turqouise}`}
                             className="dropdown-item"
                             key={`${coursename}`}
                             to={`/${intl.locale}/${linkname.toLowerCase().replace(/\s/g, '-')}/`}
                         >
                             {coursename}
-                        </AniLink>
+                        </Link>
                     );
                 }
             });
@@ -65,15 +65,15 @@ const Navigation = ({ intl }) => {
                         name = next.titel;
                         link = node.titel;
                         return (
-                            <AniLink
-                                cover
-                                bg={`${colors.turqouise}`}
+                            <Link
+                                // cover
+                                // bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 key={`${name}`}
                                 to={`/${intl.locale}/${link.toLowerCase().replace(/\s/g, '-')}/`}
                             >
                                 {name}
-                            </AniLink>
+                            </Link>
                         );
                     } else {
                         return;
@@ -84,14 +84,9 @@ const Navigation = ({ intl }) => {
     };
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
-            <AniLink
-                cover
-                bg={`${colors.turqouise}`}
-                className="navbar-brand"
-                to={`/${intl.locale}/`}
-            >
+            <Link className="navbar-brand" to={`/${intl.locale}/`}>
                 <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
-            </AniLink>
+            </Link>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -108,14 +103,14 @@ const Navigation = ({ intl }) => {
                 <ul className="navbar-nav ml-auto">
                     <Language />
                     <li className="nav-item active">
-                        <AniLink
+                        <Link
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
                             to={`/${intl.locale}/`}
                         >
                             Home
-                        </AniLink>
+                        </Link>
                     </li>
                     <li className="nav-item dropdown">
                         <a
@@ -133,26 +128,26 @@ const Navigation = ({ intl }) => {
                             className="dropdown-menu dropdown-menu-left"
                             aria-labelledby="navbarDropdown"
                         >
-                            <AniLink
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/cursussen/`}
                             >
                                 <FormattedMessage id="alle-cursussen" />
-                            </AniLink>
+                            </Link>
                             {courseLinks()}
                         </div>
                     </li>
                     <li className="nav-item">
-                        <AniLink
+                        <Link
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
                             to={`/${intl.locale}/events/`}
                         >
                             Events
-                        </AniLink>
+                        </Link>
                     </li>
                     <li className="nav-item dropdown">
                         <a
@@ -170,51 +165,51 @@ const Navigation = ({ intl }) => {
                             className="dropdown-menu dropdown-menu-left"
                             aria-labelledby="navbarDropdown"
                         >
-                            <AniLink
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/over-ons/`}
                             >
                                 <FormattedMessage id="over-ons_nav" />
-                            </AniLink>
-                            <AniLink
+                            </Link>
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/over-ons#ervaringen`}
                             >
                                 <FormattedMessage id="ervaringen_nav" />
-                            </AniLink>
-                            <AniLink
+                            </Link>
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/over-ons#solliciteren`}
                             >
                                 <FormattedMessage id="solliciteren_nav" />
-                            </AniLink>
+                            </Link>
                         </div>
                     </li>
                     {/* <li className="nav-item">
-                        <AniLink
+                        <Link
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
                             to={`/${intl.locale}/scholen`}
                         >
                             Voor scholen
-                        </AniLink>
+                        </Link>
                     </li> */}
                     <li className="nav-item">
-                        <AniLink
+                        <Link
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
                             to={`/${intl.locale}/blog`}
                         >
                             Blog
-                        </AniLink>
+                        </Link>
                     </li>
                     <li className="nav-item dropdown">
                         <a
@@ -232,33 +227,33 @@ const Navigation = ({ intl }) => {
                             className="dropdown-menu dropdown-menu-right"
                             aria-labelledby="navbarDropdown"
                         >
-                            <AniLink
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/contact/`}
                             >
                                 <FormattedMessage id="kennismakingsgesprek_nav" />
-                            </AniLink>
-                            <AniLink
+                            </Link>
+                            <Link
                                 cover
                                 bg={`${colors.turqouise}`}
                                 className="dropdown-item"
                                 to={`/${intl.locale}/inschrijven/`}
                             >
                                 <FormattedMessage id="inschrijven_nav" />
-                            </AniLink>
+                            </Link>
                         </div>
                     </li>
                     <li className="nav-item" id="navcta">
-                        <AniLink
+                        <Link
                             cover
                             bg={`${colors.turqouise}`}
                             className="nav-link"
                             to={`/${intl.locale}/inschrijven/`}
                         >
                             <FormattedMessage id="inschrijven_nav" />
-                        </AniLink>
+                        </Link>
                     </li>
                 </ul>
             </div>

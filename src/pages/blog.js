@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 import { device } from '../util/screensizes';
 import { layout, colors } from '../util/styling_vars';
 import Title from '../components/Typography/Title';
@@ -106,13 +106,13 @@ const Blog = ({ data }) => (
                     const { naamVanDePost, achtergrondFoto, korteIntro } = node;
                     const titel = naamVanDePost.toLowerCase().replace(/\s/g, '-');
                     return (
-                        <AniLink key={j} cover bg={`${colors.turqouise}`} to={`/nl/blog/${titel}`}>
+                        <Link key={j} to={`/nl/blog/${titel}`}>
                             <Block>
                                 <Img fluid={achtergrondFoto.fluid} />
                                 <h2>{naamVanDePost}</h2>
                                 <p>{korteIntro}</p>
                             </Block>
-                        </AniLink>
+                        </Link>
                     );
                 })}
             </Grid>
