@@ -38,7 +38,8 @@ export const Container = styled.footer`
         grid-row-gap: 10px;
         justify-items: start;
 
-        div {
+        div,
+        address {
             margin-bottom: 10%;
             display: inline-block;
             flex-direction: column;
@@ -83,7 +84,8 @@ export const Container = styled.footer`
     @media ${device.tablet} {
         padding: ${layout.padding.height.tablet} ${layout.padding.width.tablet};
 
-        div {
+        div,
+        address {
             width: auto;
             margin-right: 5%;
             margin-bottom: 5%;

@@ -197,27 +197,26 @@ const MyCalendar = () => {
     });
 
     const getEvents = () => {
-        if (activeLocation === undefined) {
-            const returnEvents = events.filter((e) => e.locatie === 'Amsterdam');
-            return returnEvents;
-        } else {
-            const returnEvents = events.filter((e) => e.locatie === activeLocation);
+        // if (activeLocation === undefined) {
+        //     const returnEvents = events.filter((e) => e.locatie === 'Amsterdam');
+        //     return returnEvents;
+        // } else {
+        //     const returnEvents = events.filter((e) => e.locatie === activeLocation);
 
-            return returnEvents;
-        }
+        //     return returnEvents;
+        // }
+        return events;
     };
 
     return (
-        <Layout>
+        <Layout showNewsLetter={false}>
             <SEO siteTitle="Events" />
 
             <div
                 style={{
-                    padding: 16,
-                    marginBottom: 32,
+                    padding: '2.5%',
                     background: 'white',
                     borderRadius: '7px',
-                    boxShadow: '0px 5px 15px rgba(0,0,0,0.1)',
                 }}
             >
                 <span

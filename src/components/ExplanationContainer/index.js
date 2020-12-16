@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from './style';
+import { Container, VideoContainer } from './style';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -24,7 +24,9 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
             [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
-            [BLOCKS.HEADING_3]: (node, children) => <h3 style={{ display: 'block' }}>{children}</h3>,
+            [BLOCKS.HEADING_3]: (node, children) => (
+                <h3 style={{ display: 'block' }}>{children}</h3>
+            ),
         },
     };
 
@@ -37,19 +39,27 @@ const ExplanationContainer = ({ headline, content1, content2, content3, content4
                 <div>{documentToReactComponents(content3.json, options)}</div>
                 <div>{documentToReactComponents(content4.json, options)}</div>
             </div>
-            <div style={{
-                marginTop: '5%',
-                background: 'rgba(0,0,0,0.1)',
-                padding: '3%',
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                alignContent: 'center'
-            }}>
-                <div style={{ marginBottom: '5%', flexGrow: 1, marginRight: '5%', display: 'flex', flexDirection: 'column' }}>
-
+            <div
+                style={{
+                    marginTop: '5%',
+                    marginBottom: 0,
+                    background: 'rgba(0,0,0,0.1)',
+                    padding: '36px',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                    alignContent: 'center',
+                }}
+            >
+                <div
+                    style={{
+                        flexGrow: 1,
+                        marginRight: '5%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
                     {documentToReactComponents(text.json, options)}
-
                 </div>
                 <iframe
                     style={{ margin: 'auto', display: 'inline-block' }}

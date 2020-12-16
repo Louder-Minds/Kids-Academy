@@ -40,7 +40,7 @@ const Container = styled.div`
 const Post = ({ data }) => {
     const { naamVanDePost, auteur, achtergrondFoto, content, upload } = data.contentfulBlogPost;
     return (
-        <Layout>
+        <Layout showNewsLetter={false}>
             <SEO siteTitle={naamVanDePost} />
             <Container>
                 <Image foto={achtergrondFoto} />

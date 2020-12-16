@@ -136,3 +136,5 @@ export const Container = styled.div`
         padding: ${layout.padding.height.desktop} ${layout.padding.width.desktop};
     }
 `;
+
+export const VideoContainer = styled.div``;

@@ -13,7 +13,7 @@ import { device } from '../../../util/screensizes';
 
 const FormContainer = styled.div`
     margin: auto;
-    margin-bottom: 46px;
+    margin-bottom: 5%;
     background: rgba(0, 0, 0, 0.05);
     padding: 16px;
     height: fit-content;
@@ -97,9 +97,9 @@ const MailChimp = () => {
     );
 };
 
-const Footer = () => (
+const Footer = ({ showNewsLetter = true }) => (
     <>
-        <MailChimp />
+        {showNewsLetter ? <MailChimp /> : null}
         <Container>
             <div id="content">
                 <div>
@@ -123,46 +123,46 @@ const Footer = () => (
                     </Link>
                 </div>
 
-                <div>
+                <address>
                     <span>
                         <b>Amsterdam</b>
                     </span>
                     <span>Nicolaas Klooster</span>
                     <span>Prinses Irenestraat 19</span>
                     <span>1077 WT Amsterdam</span>
-                </div>
+                </address>
 
-                <div>
+                <address>
                     <span>
-                        <b>Amsterdam</b>
+                        <b>Delft</b>
                     </span>
-                    <span>Palmstraat 11</span>
-                    <span>1015 HP Amsterdam</span>
-                </div>
+                    <span>Doelenplein 10</span>
+                    <span>2611 BP Delft</span>
+                </address>
 
-                <div>
+                <address>
                     <span>
                         <b>Laren</b>
                     </span>
                     <span>Brink 33</span>
                     <span>1251 KT Laren</span>
-                </div>
+                </address>
 
-                <div>
+                <address>
                     <span>
                         <b>Haarlem</b>
                     </span>
                     <span>Kennemer Lyceum</span>
                     <span>Adriaan Stoopplein 7</span>
                     <span>2051 KA Overveen</span>
-                </div>
+                </address>
 
-                <div>
+                {/* <address>
                     <span>
                         <b>Rotterdam</b>
                     </span>
                     <span>Opening soon</span>
-                </div>
+                </address> */}
 
                 <div>
                     <span>

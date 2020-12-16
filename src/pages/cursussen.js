@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Cursussen = ({ data }) => (
-    <Layout>
+    <Layout showNewsLetter={false}>
         <SEO siteTitle="Cursussen" />
         <Container>
             <Title type="h2">

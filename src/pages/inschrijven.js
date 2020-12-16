@@ -5,7 +5,7 @@ import InschrijfFormulier from '../components/InschrijfFormulier';
 import SEO from '../components/SEO';
 
 const Inschijven = () => (
-    <Layout>
+    <Layout showNewsLetter={false}>
         <SEO siteTitle="Inschrijven" />
         <InschrijfFormulier />
     </Layout>
