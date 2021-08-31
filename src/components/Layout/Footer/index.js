@@ -134,27 +134,10 @@ const Footer = ({ showNewsLetter = true }) => (
 
                 <address>
                     <span>
-                        <b>Delft</b>
-                    </span>
-                    <span>Doelenplein 10</span>
-                    <span>2611 BP Delft</span>
-                </address>
-
-                <address>
-                    <span>
                         <b>Laren</b>
                     </span>
                     <span>Brink 33</span>
                     <span>1251 KT Laren</span>
-                </address>
-
-                <address>
-                    <span>
-                        <b>Haarlem</b>
-                    </span>
-                    <span>Kennemer Lyceum</span>
-                    <span>Adriaan Stoopplein 7</span>
-                    <span>2051 KA Overveen</span>
                 </address>
 
                 {/* <address>
