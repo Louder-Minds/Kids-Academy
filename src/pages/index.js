@@ -11,8 +11,16 @@ import FlexContainer from '../components/FlexContainer';
 import Numberblock from '../components/Numberblock';
 import SEO from '../components/SEO';
 import { graphql } from 'gatsby';
+import styled from "styled-components";
 
 import { injectIntl } from 'gatsby-plugin-intl';
+
+const TempContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const query = graphql`
     query Home {
@@ -76,29 +84,32 @@ const index = ({ intl, data }) => {
                 videotext,
             } = node;
             return (
-                <Layout key={j}>
-                    <SEO />
-                    <FlexContainer>
-                        <OpeningHome titel={bannerTitel} foto={bannerFoto} />
-                        <ReasonsContainer
-                            main={mainTitel}
-                            sub={subMainTitel}
-                            points={bulletPoints}
-                        />
-                    </FlexContainer>
-                    <CursusContainer headline={kop1} content={paragraaf1} />
-                    <Numberblock />
-                    <ExplanationContainer
-                        headline={kop2}
-                        content1={paragraaf21}
-                        content2={paragraaf22}
-                        content3={paragraaf23}
-                        content4={paragraaf24}
-                        text={videotext}
-                    />
-                    {/* <Divider />
-                    <VideoContainer video={video} /> */}
-                </Layout>
+              <TempContainer>
+                We zijn binnenkort terug met een nieuwe site.
+              </TempContainer>
+                //  <Layout key={j}>
+                //  <SEO />
+                //      <FlexContainer>
+                //         <OpeningHome titel={bannerTitel} foto={bannerFoto} />
+                //         <ReasonsContainer
+                //             main={mainTitel}
+                //             sub={subMainTitel}
+                //             points={bulletPoints}
+                //         />
+                //     </FlexContainer>
+                //     <CursusContainer headline={kop1} content={paragraaf1} />
+                //     <Numberblock />
+                //     <ExplanationContainer
+                //         headline={kop2}
+                //         content1={paragraaf21}
+                //         content2={paragraaf22}
+                //         content3={paragraaf23}
+                //         content4={paragraaf24}
+                //         text={videotext}
+                //     />
+                //      <Divider />
+                //     <VideoContainer video={video} /> */}
+                // </Layout>
             );
         }
     });
